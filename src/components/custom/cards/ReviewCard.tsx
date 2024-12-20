@@ -3,7 +3,9 @@ import React from "react";
 
 const ReviewCard = () => {
   return (
+    // REVIEW CARD
     <div className="w-[888px] flex flex-col justify-center  gap-8 rounded-[20px] h-[480px] px-12 bg-accent-lightYellow">
+      {/* STARS */}
       <div className="flex items-center gap-1">
         {Array.from({ length: 5 }).map((_, index) => (
           <Image
@@ -15,6 +17,7 @@ const ReviewCard = () => {
           />
         ))}
       </div>
+      {/* REVIEW */}
       <p className="text-[20px] font-medium">
         "I used to score only 50-55% in math and science, and it created a lot
         of stress at home. My parents were always worried, and I felt stuck.
@@ -24,6 +27,7 @@ const ReviewCard = () => {
         noticed the change and appreciated my hard work. I finally feel
         confident in my studies."
       </p>
+      {/* USER DETAIL */}
       <div className="flex items-center gap-4">
         <Image
           src="/accets/cruasal/reviewProfile.jpg"

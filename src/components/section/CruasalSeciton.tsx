@@ -45,6 +45,7 @@ const CruasalSection = () => {
           ))}
         </div>
       </div>
+      {/* Review Card */}
       <ReviewCard />
     </section>
   );

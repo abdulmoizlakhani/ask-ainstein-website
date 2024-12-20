@@ -5,6 +5,7 @@ import Image from "next/image";
 const ComparisionSection = () => {
   return (
     <section className="#ECE6F5 relative flex min-h-[1000px] flex-col pt-[140px] items-center">
+      {/* TOP COMPONENT */}
       <div className="h-[200px] w-[200px] absolute top-[-100px] bg-accent-brown flex items-center justify-center rounded-[10px]">
         <Image
           src={"/accets/why/ainstien.svg"}

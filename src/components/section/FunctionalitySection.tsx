@@ -13,7 +13,9 @@ const card = [
 ];
 const FunctionalitySection = () => {
   return (
+    // FUN SECTION("Are you gearing up for your school or board exams?")
     <section className="bg-quaternary box-shadow py-28 gap-8   flex-col flex items-center relative h-[1151px]">
+      {/* TOP COMPONENT */}
       <div className="h-[200px] w-[200px] absolute top-[-100px] bg-accent-brown flex items-center justify-center rounded-[10px]">
         <Image
           src={"/accets/functionalitySection/ainstien.svg"}
@@ -22,19 +24,22 @@ const FunctionalitySection = () => {
           height={130}
         />
       </div>
+      {/* MAIN HEADING */}
       <h2 className="text-[32px] text-center tracking-tight max-w-[933px] font-semibold">
         "Are you gearing up for your school or board exams?"
         <br />
         ​"Need personalized attention that you are not finding outside?"
       </h2>
+      {/* SUB PARA */}
       <h4>
         With <span className="text-text-green text-xl">Ask Ainstein</span>, you
         can unlock access to
       </h4>
+      {/* ALL CARDS */}
       <div className="flex items-center justify-center gap-4">
         {card.map((item) => {
           return (
-            <div className="flex justify-center flex-col gap-6 rounded-[20px] shadow-xl  items-center text-center h-[225px] w-[535px] bg-[#EDEDED]">
+            <div key={item.text} className="flex justify-center flex-col gap-6 rounded-[20px] shadow-xl  items-center text-center h-[225px] w-[535px] bg-[#EDEDED]">
               <Image
                 alt="logo"
                 height={48}
@@ -46,6 +51,7 @@ const FunctionalitySection = () => {
           );
         })}
       </div>
+      {/* BOTTOM PARA */}
       <h4 className="text-[28px] mt-8 font-bold bg-text-bg px-2 rounded">
         Don’t just memorize! Get the guidance you need to excel in exams and
         beyond. ​

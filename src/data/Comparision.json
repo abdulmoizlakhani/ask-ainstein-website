@@ -1,0 +1,20 @@
+{
+  "comparision": [
+  {
+    "chatgpt": "Gives direct answers without encouraging logical thinking.",
+    "einstein":
+      "Acts as a tutor, helping you think critically and logically (based off 'first principles' approach)."
+  },
+  {
+    "chatgpt": "Struggles with complex mathematical questions.",
+    "einstein": "Excels at mathematical questions."
+  },
+  {
+    "chatgpt": "Generic chatbot, not aligned with specific curriculums.",
+    "einstein": "Curriculum-aligned to meet your academic needs."
+  },
+  {
+    "chatgpt": "No integration with a structured question bank.",
+    "einstein": "Integrated with a rich, adaptive question bank for revision."
+  }
+]}

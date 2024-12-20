@@ -3,32 +3,18 @@ import Cut from "../icons/Cut";
 import Tick from "../icons/Tick";
 import Image from "next/image";
 import ComparisionEinstien from "../icons/ComparisionEinstien";
+import comparisionData from "@/data/Comparision.json"
 
+// type of Comparision
 interface ComparisonItem {
   chatgpt: string;
   einstein: string;
 }
 
+
+
 const ComparisonContainers = () => {
-  const comparisons: ComparisonItem[] = [
-    {
-      chatgpt: "Gives direct answers without encouraging logical thinking.",
-      einstein:
-        "Acts as a tutor, helping you think critically and logically (based off 'first principles' approach).",
-    },
-    {
-      chatgpt: "Struggles with complex mathematical questions.",
-      einstein: "Excels at mathematical questions.",
-    },
-    {
-      chatgpt: "Generic chatbot, not aligned with specific curriculums.",
-      einstein: "Curriculum-aligned to meet your academic needs.",
-    },
-    {
-      chatgpt: "No integration with a structured question bank.",
-      einstein: "Integrated with a rich, adaptive question bank for revision.",
-    },
-  ];
+  
 
   return (
     <div className="comparison-container max-w-6xl mx-auto border border-gray-300 rounded-lg">
@@ -48,7 +34,7 @@ const ComparisonContainers = () => {
     </div>
 
     <div>
-      {comparisons.map((item, index) => (
+      {comparisionData.comparision.map((item, index) => (
         <div key={index} className="flex items-center px-4 gap-3 border-[1px] border-gray-300 h-[80px] bg-purple-50">
           <div className="w-4 h-4">
           <Cut />
@@ -66,7 +52,7 @@ const ComparisonContainers = () => {
     </div>
 
     <div>
-      {comparisons.map((item, index) => (
+      {comparisionData.comparision.map((item, index) => (
         <div key={index} className="flex items-center px-4 gap-3 border-b-[1px] border-gray-300 h-[80px] bg-purple-50">
           <div className="w-4 h-4">
           <Tick />

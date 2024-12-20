@@ -3,7 +3,9 @@ import React from "react";
 
 const HeroReviewCard = () => {
   return (
+    // HERO REVIEW CARD
     <div className="flex h-[128px] max-w-[836px] p-12  bg-[#424242] rounded-[16px] justify-between items-center gap-16">
+      {/* LEFT SECTION STARS */}
       <div className="flex justify-center items-center gap-1">
         {Array.from({ length: 5 }).map((_, index) => (
           <Image
@@ -15,8 +17,9 @@ const HeroReviewCard = () => {
           />
         ))}
       </div>
-
+      {/* RIGHT SECTION */}
       <div className="flex flex-col gap-2">
+        {/* STUDENT IMAGES */}
         <div className="flex items-center">
           {Array.from({ length: 5 }).map((_, index) => (
             <div
@@ -35,6 +38,7 @@ const HeroReviewCard = () => {
             </div>
           ))}
         </div>
+        {/* PARA */}
         <p className="font-medium ">
           17,643 students are using the platform to improve their learning and
           exam performance using Ask Ainstein platform.
