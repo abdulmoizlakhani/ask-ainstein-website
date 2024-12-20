@@ -1,44 +1,73 @@
 import Image from "next/image";
 import React from "react";
 
-const ReviewCard = () => {
+interface ReviewCardProps {
+  stars: number; // Number of stars to display
+  review: string; // Review text
+  highlight?: string; // Highlighted part of the review
+  reviewerName: string; // Name of the reviewer
+  reviewerDetail: string; // Detail about the reviewer (e.g., Grade 10 Student)
+  profileImage: string; // Path to the reviewer's profile image
+  backgroundColor?: string; // Background color of the card
+}
+
+const ReviewCard: React.FC<ReviewCardProps> = ({
+  stars,
+  review,
+  highlight,
+  reviewerName,
+  reviewerDetail,
+  profileImage,
+  backgroundColor = "bg-accent-lightYellow", // Default background color
+}) => {
+  // Function to highlight the specific text in the review
+  const getHighlightedText = (text: string, highlight: string | undefined) => {
+    if (!highlight) return text;
+    const parts = text.split(new RegExp(`(${highlight})`, "gi")); // Split on the highlight word
+    return parts.map((part, index) =>
+      part.toLowerCase() === highlight.toLowerCase() ? (
+        <span key={index} className="font-semibold text-text-black">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  };
+
   return (
-    // REVIEW CARD
-    <div className="w-[888px] flex flex-col justify-center  gap-8 rounded-[20px] h-[480px] px-12 bg-accent-lightYellow">
+    <div
+      className={`w-[888px] flex flex-col justify-center gap-8 rounded-[20px] h-[480px] px-12 ${backgroundColor}`}
+    >
       {/* STARS */}
       <div className="flex items-center gap-1">
-        {Array.from({ length: 5 }).map((_, index) => (
+        {Array.from({ length: stars }).map((_, index) => (
           <Image
             key={index}
-            src={"/accets/icons/star.svg"}
-            alt="ask Ainstein"
+            src="/accets/icons/star.svg"
+            alt="Star"
             width={28}
             height={28}
           />
         ))}
       </div>
       {/* REVIEW */}
-      <p className="text-[20px] font-medium">
-        "I used to score only 50-55% in math and science, and it created a lot
-        of stress at home. My parents were always worried, and I felt stuck.
-        This platform helped me figure out where I was making mistakes and how
-        to fix them. After a few weeks, my score improved to 85%! My parents
-        were so <span className="font-semibold">PROUD</span>, and things at home are much better now. Even my teachers
-        noticed the change and appreciated my hard work. I finally feel
-        confident in my studies."
+      <p className="text-[20px]  font-medium">
+        {getHighlightedText(review, highlight)}
       </p>
       {/* USER DETAIL */}
       <div className="flex items-center gap-4">
         <Image
-          src="/accets/cruasal/reviewProfile.jpg"
-          alt="prfile image"
+          src={profileImage}
+          alt={`${reviewerName}'s profile`}
           width={100}
           height={100}
           className="rounded-full h-[100px] w-[100px] object-cover"
+          objectFit="cover"
         />
         <div className="flex flex-col items-center gap-1">
-          <h5 className="text-2xl font-bold">Riya Sharma</h5>
-          <p className="text-[#666666] font-medium">Grade 10 Student</p>
+          <h5 className="text-2xl font-bold">{reviewerName}</h5>
+          <p className="text-[#666666] font-medium">{reviewerDetail}</p>
         </div>
       </div>
     </div>

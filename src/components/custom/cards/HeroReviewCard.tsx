@@ -4,7 +4,7 @@ import React from "react";
 const HeroReviewCard = () => {
   return (
     // HERO REVIEW CARD
-    <div className="flex h-[128px] max-w-[836px] p-12  bg-[#424242] rounded-[16px] justify-between items-center gap-16">
+    <div className="flex h-[128px] max-w-[836px] p-12  bg-[#424242] rounded-[16px] text-[#FFFFFF] justify-between items-center gap-16">
       {/* LEFT SECTION STARS */}
       <div className="flex justify-center items-center gap-1">
         {Array.from({ length: 5 }).map((_, index) => (

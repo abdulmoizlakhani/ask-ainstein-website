@@ -1,7 +1,6 @@
 import React from "react";
 import MainButton from "../custom/buttons/MainButton";
 import HeroReviewCard from "../custom/cards/HeroReviewCard";
-import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -21,7 +20,6 @@ const Hero = () => {
       </p>
       <div className="mt-10 space-y-1">
         <MainButton />
-        <p className="text-text-secondary text-end">Free for limited time</p>
       </div>
       <HeroReviewCard />
     </section>

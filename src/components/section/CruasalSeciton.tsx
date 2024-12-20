@@ -46,7 +46,14 @@ const CruasalSection = () => {
         </div>
       </div>
       {/* Review Card */}
-      <ReviewCard />
+      <ReviewCard
+        stars={5}
+        review="I used to score only 50-55% in math and science, and it created a lot of stress at home. My parents were always worried, and I felt stuck. This platform helped me figure out where I was making mistakes and how to fix them. After a few weeks, my score improved to 85%! My parents were so PROUD, and things at home are much better now. Even my teachers noticed the change and appreciated my hard work. I finally feel confident in my studies."
+        highlight="PROUD"
+        reviewerName="Riya Sharma"
+        reviewerDetail="Grade 10 Student"
+        profileImage="/accets/profileImage/1.jpg"
+      />
     </section>
   );
 };
