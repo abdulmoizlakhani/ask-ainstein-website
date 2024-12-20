@@ -6,6 +6,7 @@ import CountdownTimer from "../custom/Timer";
 const SubHeader = () => {
   // State to manage whether the Countdown Timer and SubHeader are visible
   const [remainTime, setRemainTime] = useState(true);
+  console.log("subheader", remainTime);
 
   return (
     <>
@@ -24,7 +25,7 @@ const SubHeader = () => {
           {/* Countdown Timer Component */}
           <CountdownTimer
             gap={"gap-1"} // Gap between timer units
-            endTime="2024-12-20T00:00:00" // Countdown end date and time
+            endTime="2024-12-21T00:00:00" // Countdown end date and time
             imageSize={24} // Size of timer icons/images
             img="/accets/timer/subHeader.svg" // Path to timer image
             valueClassName="text-[#F4658C] second-font text-[12px] font-bold" // Styling for timer values

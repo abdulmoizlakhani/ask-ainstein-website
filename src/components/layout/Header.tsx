@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   // State to manage the visibility of SubHeader or Countdown Timer
   const [remainTime, setRemainTime] = useState(true);
-
+console.log("header",remainTime)
   // Get the current pathname using Next.js navigation
   const pathname = usePathname();
 
@@ -44,7 +44,7 @@ const Header = () => {
               {/* Countdown Timer Component */}
               <CountdownTimer
                 gap={"gap-3"}
-                endTime="2024-12-12T00:00:00"
+                endTime="2024-12-21T00:30:00"
                 imageSize={54}
                 img="/accets/timer/mainHeader.svg"
                 valueClassName="text-[#FF9D33] text-[28px] font-bold"

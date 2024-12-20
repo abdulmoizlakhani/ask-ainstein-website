@@ -8,3 +8,18 @@
 body {
   background: #f7f7f5;
 }
+
+.box-shadow {
+  box-shadow: 0px 0px 11px 7px #0000001a;
+}
+@media (min-width: 768px) {
+  .comparison-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-right: 1px solid #d1d5db; /* Gray-300 divider */
+  }
+
+  .comparison-container > .section:first-child {
+    border-right: 1px solid #d1d5db;
+  }
+}

@@ -12,6 +12,7 @@ export default {
         primary: "#F7F7F5",
         secondary: "#000000",
         tertiary: "#ECE6F5",
+        quaternary: "#FFFFFF",
         accent: {
           lightYellow: "#F5FFBC",
           green: "#00B75F",
@@ -22,6 +23,7 @@ export default {
         text: {
           primary: "#FFFFFF",
           black: "#000000",
+          bg: "#BADAFD",
           blue: "#1774D9",
           secondaryLight: "#AAAAAA",
           secondary: "#4C4A43",

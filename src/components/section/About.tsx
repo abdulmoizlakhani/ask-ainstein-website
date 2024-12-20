@@ -3,9 +3,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="flex  translate-y-[-400px] flex-col justify-center items-center">
+    <section className="flex relative pt-[350px] pb-[100px] flex-col justify-center items-center">
       {/* youtube container */}
-      <div className="w-[1064px]  flex relative justify-center items-center rounded-[20px] h-[699px] bg-[#D9D9D9]">
+<div className="absolute top-[-0%]">
+      <div className="w-[1064px] translate-y-[-50%]  flex relative justify-center items-center rounded-[20px] h-[699px] bg-[#D9D9D9]">
         <Image
           src="/accets/hero/action.png"
           alt="See its Action"
@@ -28,6 +29,7 @@ const About = () => {
             height={32}
           />
         </div>
+      </div>
       </div>
       {/* about */}
 
@@ -79,7 +81,7 @@ const About = () => {
           {" "}
           ​Now, I’ve taken this vision further by creating{" "}
           <span className="text-text-green">Ask Ainstein</span>-{" "}
-          <span className="bg-[#BADAFD] p-1 rounded">
+          <span className="bg-text-bg p-1 rounded">
             a platform designed to make learning accessible, engaging, and
             effective for everyone.
           </span>

@@ -60,7 +60,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
     const interval = setInterval(updateCountdown, 1000); // Update every second
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [endTime, setRemain]);
+  }, []);
 
   // Data structure for countdown elements
   const counterData = [
