@@ -65,5 +65,98 @@
       }
     ],
     "bottomText": "Don’t just memorize! Get the guidance you need to excel in exams and beyond."
+  },
+  "comparision": {
+    "sectionTitle": {
+      "mainHeading": "What makes ‘Ainstein’ unique vs ChatGPT",
+      "images": "/accets/icons/einsteinIdea.svg"
+    },
+    "comparisionCardData": [
+      {
+        "chatgpt": "Gives direct answers without encouraging logical thinking.",
+        "einstein": "Acts as a tutor, helping you think critically and logically (based off 'first principles' approach)."
+      },
+      {
+        "chatgpt": "Struggles with complex mathematical questions.",
+        "einstein": "Excels at mathematical questions."
+      },
+      {
+        "chatgpt": "Generic chatbot, not aligned with specific curriculums.",
+        "einstein": "Curriculum-aligned to meet your academic needs."
+      },
+      {
+        "chatgpt": "No integration with a structured question bank.",
+        "einstein": "Integrated with a rich, adaptive question bank for revision."
+      }
+    ]
+  },
+  "carousel": {
+    "images": [
+      {
+        "id": "1",
+        "src": "/accets/cruasal/1.png",
+        "alt": "Image 1"
+      },
+      {
+        "id": "2",
+        "src": "/accets/cruasal/2.png",
+        "alt": "Image 2"
+      },
+      {
+        "id": "3",
+        "src": "/accets/cruasal/3.png",
+        "alt": "Image 3"
+      }
+    ]
+  },
+  "review": {
+    "stars": 5,
+    "reviewText": "I used to score only 50-55% in math and science, and it created a lot of stress at home. My parents were always worried, and I felt stuck. This platform helped me figure out where I was making mistakes and how to fix them. After a few weeks, my score improved to 85%! My parents were so PROUD, and things at home are much better now. Even my teachers noticed the change and appreciated my hard work. I finally feel confident in my studies.",
+    "highlight": "PROUD",
+    "reviewer": {
+      "name": "Riya Sharma",
+      "detail": "Grade 10 Student",
+      "profileImage": "/accets/profileImage/1.jpg"
+    }
+  },
+  "featureSection": {
+    "features": [
+      {
+        "title": "1000+ Exam-Aligned Questions",
+        "description": "Tailored to your curriculum (starting with CBSE)",
+        "icon": "/accets/why/card/1.png"
+      },
+      {
+        "title": "Ask Ainstein - Your 24/7 Tutor",
+        "description": "Feel free to chat or simply talk to it in",
+        "heighlight": "Talk mode",
+        "icon": "/accets/why/card/2.png"
+      },
+      {
+        "title": "AI-Powered Grading",
+        "description": "Grading that feels human. Perfect for both short and long answers",
+        "icon": "/accets/why/card/3.png"
+      },
+      {
+        "title": "Adaptive Questions",
+        "description": "Never too easy, never too hard. Keeps you challenged at every level",
+        "icon": "/accets/why/card/4.png"
+      },
+      {
+        "title": "Progress Reports",
+        "description": "Visualize your strengths and weaknesses with clear, actionable insights",
+        "icon": "/accets/why/card/5.png"
+      },
+      {
+        "title": "Continuous Personalization",
+        "description": "Focus on areas that need improvement for maximum impact",
+        "icon": "/accets/why/card/6.png"
+      }
+    ],
+    "subHeading": "✨ Features That Make Learning Smarter and Simpler",
+    "image": {
+      "src": "/accets/why/ainstien.svg",
+      "alt": "ask Ainstein"
+    }
   }
 }

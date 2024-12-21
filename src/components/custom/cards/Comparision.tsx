@@ -2,10 +2,11 @@ import React from "react";
 
 import Image from "next/image";
 import ComparisionEinstien from "../icons/ComparisionEinstien";
-import comparisionData from "@/data/Comparision.json";
+import data from "@/data/landingPage/data.json";
 import ComparistionChatGpt from "../icons/ComparistionChatGpt";
 
 const ComparisonContainers = () => {
+  const comparisionData = data.comparision.comparisionCardData;
   return (
     <div className="max-w-9xl grid grid-cols-2 gap-[1.2px] rounded-[10px] overflow-hidden mx-auto border border-gray-300">
       {/* ChatGPT Section */}
@@ -17,7 +18,7 @@ const ComparisonContainers = () => {
           </div>
 
           <div>
-            {comparisionData.comparision.map((item, index) => (
+            {comparisionData.map((item, index) => (
               <div
                 key={index}
                 className={`flex items-center ${
@@ -48,7 +49,7 @@ const ComparisonContainers = () => {
           </div>
 
           <div>
-            {comparisionData.comparision.map((item, index) => (
+            {comparisionData.map((item, index) => (
               <div
                 key={index}
                 className={`flex items-center ${
