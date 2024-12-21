@@ -73,20 +73,33 @@
     },
     "comparisionCardData": [
       {
-        "chatgpt": "Gives direct answers without encouraging logical thinking.",
-        "einstein": "Acts as a tutor, helping you think critically and logically (based off 'first principles' approach)."
+        "chatgpt": {
+          "text": "Gives direct answers without encouraging logical thinking."
+        },
+        "einstein": {
+          "text": "Acts as a tutor, helping you think critically and logically",
+          "heighlight": "(based off 'first principles' approach)."
+        }
       },
       {
-        "chatgpt": "Struggles with complex mathematical questions.",
-        "einstein": "Excels at mathematical questions."
+        "chatgpt": { "text": "Struggles with complex mathematical questions." },
+        "einstein": { "text": "Excels at mathematical questions." }
       },
       {
-        "chatgpt": "Generic chatbot, not aligned with specific curriculums.",
-        "einstein": "Curriculum-aligned to meet your academic needs."
+        "chatgpt": {
+          "text": "Generic chatbot, not aligned with specific curriculums."
+        },
+        "einstein": {
+          "text": "Curriculum-aligned to meet your academic needs."
+        }
       },
       {
-        "chatgpt": "No integration with a structured question bank.",
-        "einstein": "Integrated with a rich, adaptive question bank for revision."
+        "chatgpt": {
+          "text": "No integration with a structured question bank."
+        },
+        "einstein": {
+          "text": "Integrated with a rich, adaptive question bank for revision."
+        }
       }
     ]
   },

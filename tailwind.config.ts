@@ -10,7 +10,7 @@ export default {
     extend: {
       boxShadow: {
         custom: "0px 0px 10px 2px #00000045",
-        dark: "0px 0px 13px 5px #00000078",
+        dark: "0px 0px 20px 0px #64646485",
       },
       colors: {
         border: "#EDF6F1",
@@ -19,7 +19,9 @@ export default {
         secondary: "#000000",
         tertiary: "#ECE6F5",
         quaternary: "#FFFFFF",
+        cardTitle: "#767676",
         card: "#FFF2DE",
+        darkRed: "#FF0000",
         megaCard: "#FFF3D1",
         megaCardBorder: "#EADEC0",
         bgLightYellow: "#FEFEEE",

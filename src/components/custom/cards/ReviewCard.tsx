@@ -18,7 +18,6 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   reviewerName,
   reviewerDetail,
   profileImage,
-  backgroundColor = "bg-megaCard", // Default background color
 }) => {
   // Function to highlight the specific text in the review
   const getHighlightedText = (text: string, highlight: string | undefined) => {
@@ -37,7 +36,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 
   return (
     <div
-      className={`w-[888px] relative flex border-[2px] border-megaCardBorder flex-col justify-center gap-8 rounded-[20px] h-[472px] px-12 ${backgroundColor}`}
+      className={`w-[888px] relative flex border-[2px] border-megaCardBorder flex-col justify-center gap-8 rounded-[20px] bg-megaCard h-[472px] px-12`}
     >
       {/* STARS */}
       <div className="flex items-center gap-1">
@@ -65,7 +64,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           className="rounded-full h-[100px] w-[100px] object-cover"
           objectFit="cover"
         />
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col gap-1">
           <h5 className="text-2xl font-bold">{reviewerName}</h5>
           <p className="text-[#666666] font-medium italic">{reviewerDetail}</p>
         </div>

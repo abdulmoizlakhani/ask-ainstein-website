@@ -2,13 +2,12 @@ import React from "react";
 
 import Image from "next/image";
 import ComparisionEinstien from "../icons/ComparisionEinstien";
-import data from "@/data/landingPage/data.json";
 import ComparistionChatGpt from "../icons/ComparistionChatGpt";
-
+import data from "@/data/landingPage/data.json";
 const ComparisonContainers = () => {
-  const comparisionData = data.comparision.comparisionCardData;
+  const comparisionData= data.comparision.comparisionCardData;
   return (
-    <div className="max-w-9xl grid grid-cols-2 gap-[1.2px] rounded-[10px] overflow-hidden mx-auto border border-gray-300">
+    <div className="max-w-9xl grid grid-cols-2 gap-[1.2px] text-text-smallLight rounded-[10px] overflow-hidden mx-auto ">
       {/* ChatGPT Section */}
 
       <div>
@@ -23,7 +22,9 @@ const ComparisonContainers = () => {
                 key={index}
                 className={`flex items-center ${
                   index === 0 ? "h-[8rem]" : "h-[5.65rem]"
-                } p-[2rem] gap-[2rem] border-b-[1.2px] border-gray-300 bg-purple-50`}
+                } p-[2rem] gap-[2rem] ${
+                  comparisionData.length - 1 !== index && "border-b-[1.2px]"
+                } border-gray-300 bg-purple-50`}
               >
                 <div className="w-12 h-8">
                   <Image
@@ -34,7 +35,10 @@ const ComparisonContainers = () => {
                     className="h-[32px] w-[32px]"
                   />
                 </div>
-                <span className="text-2xl font-semibold">{item.chatgpt}</span>
+                <p className="text-2xl font-semibold">
+                  {item.chatgpt.text}
+                  
+                </p>
               </div>
             ))}
           </div>
@@ -54,7 +58,9 @@ const ComparisonContainers = () => {
                 key={index}
                 className={`flex items-center ${
                   index === 0 ? "h-[8rem]" : "h-[5.65rem]"
-                } p-[2rem] gap-[2rem] border-b-[1.2px] border-gray-300 bg-purple-50`}
+                } p-[2rem] gap-[2rem] ${
+                  comparisionData.length - 1 !== index && "border-b-[1.2px]"
+                }  border-gray-300 bg-purple-50`}
               >
                 <div className="w-12 h-8">
                   <Image
@@ -65,7 +71,14 @@ const ComparisonContainers = () => {
                     className="h-[32px] w-[32px]"
                   />
                 </div>
-                <p className="text-2xl font-semibold">{item.einstein}</p>
+                <p className="text-2xl font-semibold">
+                  {item.einstein.text}{" "}
+                  {item.einstein.heighlight && (
+                    <span className="font-semibold text-black p-1 rounded bg-card">
+                      {item.einstein?.heighlight}
+                    </span>
+                  )}
+                </p>
               </div>
             ))}
           </div>

@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import FirstPrinciplesCard from "../custom/cards/FirstPrinciplesCard";
 import MainButton from "../custom/buttons/MainButton";
-import DoYouWatn from "../custom/cards/DoYouWant";
-import AskYourSelf from "../custom/cards/AskYourSelf";
 import StudyMistakes from "../custom/cards/StudyMistakes";
 import DoYouWant from "../custom/cards/DoYouWant";
 import ReviewCard from "../custom/cards/ReviewCard";
@@ -15,7 +13,7 @@ const FirstPrinciplesPage = () => {
       name: "Elon Musk",
       title: "Entrepreneur, CEO of Tesla and SpaceX",
       quote:
-        "I think it's important to reason from first principles rather than by analogy... And the things about first principles is, you have to boil things down to the most fundamental truths and then reason up from there.",
+        "I think it’s important to reason from first principles rather than by analogy... you boil things down to the most fundamental truths and then reason up from there.",
     },
     {
       name: "Charlie Munger",
@@ -59,14 +57,14 @@ const FirstPrinciplesPage = () => {
                 />
                 <div className="text-center space-y-2">
                   <h3 className="font-bold text-2xl">{person.name}</h3>
-                  <p className="font-semibold text-gray-600">{person.title}</p>
-                  <p className=" italic max-w-[450px]">"{person.quote}"</p>
+                  <p className="font-semibold text-cardTitle">{person.title}</p>
+                  <p className=" text-lg max-w-[420px]  tracking-tight">"{person.quote}"</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="flex justify-center">
-            <MainButton />
+            <MainButton shadow={true} />
           </div>
         </div>
         <div className="space-y-[3.75rem] flex items-center flex-col mt-[8rem]">
@@ -78,7 +76,7 @@ const FirstPrinciplesPage = () => {
             highlight={
               "After using this platform, we started seeing a big difference."
             }
-            reviewerName="Anjali Sharma"
+            reviewerName=" - Anjali Sharma"
             reviewerDetail="Parent of a Grade 10 Student"
             profileImage="/accets/profileImage/2.jpg"
             backgroundColor="bg-accent-lightYellow"

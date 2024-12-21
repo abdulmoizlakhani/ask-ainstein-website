@@ -19,9 +19,9 @@ const FunctionalitySection = () => {
 
       {/* MAIN HEADING */}
       <h2 className="text-[32px] text-center tracking-tight max-w-[933px] font-semibold">
-        {sectionTitle.mainHeading}
+        "{sectionTitle.mainHeading}"
         <br />
-        {sectionTitle.subHeading}
+        "{sectionTitle.subHeading}"
       </h2>
 
       {/* SUB PARA */}

@@ -139,7 +139,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 py-[2rem] text-[20px] flex justify-center h-full items-center text-center">
+        <div className="border-t border-[#535353] py-[2rem] text-[20px] flex justify-center h-full items-center text-center">
           <p className="text-[#D2D2D2]">
             Copyright ©{new Date().getFullYear()} Ask Ainstein. All Rights
             Reserved.

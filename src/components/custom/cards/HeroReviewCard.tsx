@@ -33,7 +33,7 @@ const HeroReviewCard = () => {
                 alt="ask Ainstein"
                 width={28}
                 height={28}
-                className="rounded-full h-[28px] w-[28px] "
+                className="rounded-full h-[28px] w-[28px] object-cover "
               />
             </div>
           ))}

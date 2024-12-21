@@ -36,7 +36,7 @@ const WhySection = () => {
           {/* SUB HEADING */}
           <p className="text-[#666666] text-[28px] text-center w-[90%] font-semibold">
             💡 Ask Ainstein is more than a study tool -{" "}
-            <span className="text-text-black bg-text-bg px-2 rounded">
+            <span className="text-text-black bg-text-bgBlue px-2 rounded">
               it’s your personalized guide to mastering exams and building
               confidence.
             </span>
