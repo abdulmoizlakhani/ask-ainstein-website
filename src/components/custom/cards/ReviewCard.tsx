@@ -71,6 +71,8 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         </div>
       </div>
       {/* Absolut quote */}
+
+      <span className="second-font text-[18.75rem] absolute bottom-0 right-52 leading-[0px] -mb-8 text-light-yellow">“</span>
     </div>
   );
 };

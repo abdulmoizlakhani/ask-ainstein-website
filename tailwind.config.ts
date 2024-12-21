@@ -45,7 +45,7 @@ export default {
           yellow: "#FED300",
           red: "#FF1A1A",
         },
-
+        'light-yellow': "#F7E6BC",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
