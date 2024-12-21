@@ -65,15 +65,17 @@ const About = () => {
         {/* Second paragraph */}
         <div className="text-[20px] font-bold">
           <h3>🌟 Why I Created Ask Ainstein</h3>
-          <p>
+          <p className="text-text-secondary">
+          <span className="bg-card p-1 rounded text-black">
+
             Drawing from my own challenges as a student with ADHD,{" "}
-            <span className="text-text-secondary">
+            </span>
+
               I deeply understand what it’s like to have a short attention span
               and struggle with distractions. These experiences shaped my
               teaching style, allowing me to cater to students who learn
               differently. This personalized approach has been my winning
               formula, helping students not only succeed but thrive.
-            </span>
           </p>
         </div>
 
@@ -81,7 +83,7 @@ const About = () => {
         <p className="text-[20px] font-bold text-text-secondary">
           ​Now, I’ve taken this vision further by creating{" "}
           <span className="text-text-green">Ask Ainstein</span>-{" "}
-          <span className="bg-text-bg p-1 rounded">
+          <span className="bg-text-bgBlue p-1 rounded text-black">
             a platform designed to make learning accessible, engaging, and
             effective for everyone.
           </span>

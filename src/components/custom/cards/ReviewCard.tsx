@@ -37,7 +37,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 
   return (
     <div
-      className={`w-[888px] flex border-[2px] border-megaCardBorder flex-col justify-center gap-8 rounded-[20px] h-[472px] px-12 ${backgroundColor}`}
+      className={`w-[888px] relative flex border-[2px] border-megaCardBorder flex-col justify-center gap-8 rounded-[20px] h-[472px] px-12 ${backgroundColor}`}
     >
       {/* STARS */}
       <div className="flex items-center gap-1">
@@ -70,6 +70,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
           <p className="text-[#666666] font-medium italic">{reviewerDetail}</p>
         </div>
       </div>
+      {/* Absolut quote */}
     </div>
   );
 };

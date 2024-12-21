@@ -10,7 +10,7 @@ export default {
     extend: {
       boxShadow: {
         custom: "0px 0px 10px 2px #00000045",
-        dark: "0px 0px 13px 5px #00000078"
+        dark: "0px 0px 13px 5px #00000078",
       },
       colors: {
         border: "#EDF6F1",
@@ -36,6 +36,7 @@ export default {
           orange: "#FF9D33",
           smallLight: "#444444",
           bg: "#C6FFE3",
+          bgBlue: "#BADAFD",
           blue: "#1774D9",
           secondaryLight: "#AAAAAA",
           secondary: "#4C4A43",
@@ -49,7 +50,6 @@ export default {
         foreground: "var(--foreground)",
       },
       maxWidth: {
-
         "8xl": "95rem",
         "9xl": "104.68rem",
       },

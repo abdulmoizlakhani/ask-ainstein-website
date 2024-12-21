@@ -43,9 +43,9 @@ const FirstPrinciplesPage = () => {
           Here are some famous personalities shaped by this approach
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem]">
           {personalities.map((person, index) => (
-            <div key={index} className="flex flex-col items-center space-y-4">
+            <div key={index} className="flex flex-col max-w-[480px] items-center space-y-4">
             
               <Image
                 src={`/accets/FirstPrinciple/${index + 1}.png`}
@@ -57,7 +57,7 @@ const FirstPrinciplesPage = () => {
               <div className="text-center space-y-2">
                 <h3 className="font-bold text-2xl">{person.name}</h3>
                 <p className="font-semibold text-gray-600">{person.title}</p>
-                <p className=" italic">"{person.quote}"</p>
+                <p className=" italic max-w-[450px]">"{person.quote}"</p>
               </div>
             </div>
           ))}

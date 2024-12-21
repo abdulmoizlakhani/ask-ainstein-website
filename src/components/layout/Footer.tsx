@@ -3,6 +3,11 @@ import React from "react";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
+import Message from "../custom/icons/Message";
+import Facebook from "../custom/icons/Facebook";
+import Youtube from "../custom/icons/Youtube";
+import Instagram from "../custom/icons/Instagram";
+import Linkdin from "../custom/icons/Linkdin";
 
 interface FooterLink {
   label: string;
@@ -35,31 +40,31 @@ const Footer = () => {
     {
       platform: "Facebook",
       href: "#",
-      icon: <FaFacebook className="w-5 h-5" />,
+      icon: <Facebook />,
     },
-    { platform: "Youtube", href: "#", icon: <FaYoutube className="w-5 h-5" /> },
+    { platform: "Youtube", href: "#", icon: <Youtube/> },
     {
       platform: "Instagram",
       href: "#",
-      icon: <FaInstagram className="w-5 h-5" />,
+      icon: <Instagram />,
     },
     {
       platform: "LinkedIn",
       href: "#",
-      icon: <FaLinkedin className="w-5 h-5" />,
+      icon: <Linkdin />,
     },
   ];
 
   return (
-    <footer className="bg-black  min-h-[27.375rem]">
-      <div className="max-w-8xl flex flex-col  mx-auto px-4 ">
+    <footer className="bg-black ">
+      <div className="max-w-8xl  min-h-[27.375rem] flex h-full flex-col  mx-auto px-4 ">
         <div className="grid grid-cols-1 py-[4rem] text-xl md:grid-cols-4 ">
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-text-primary mb-[30px]">
               Quick Links
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-[25px]">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
@@ -78,14 +83,15 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="font-semibold text-text-primary mb-4">
+            <h3 className="font-semibold text-text-primary mb-[30px]">
               Contact Information
             </h3>
-            <div className="flex items-center space-x-2">
-              <MdMailOutline className="w-5 h-5" />
+            <div className="flex items-center text-[#D2D2D2] gap-3">
+              <Message/>
+
               <a
                 href="mailto:support@askaainstein.com"
-                className="text-[#D2D2D2] transition-colors"
+                className=" transition-colors"
               >
                 support@askaainstein.com
               </a>
@@ -94,18 +100,19 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-semibold text-text-primary mb-4">
+            <h3 className="font-semibold text-text-primary mb-[30px]">
               Social Media
             </h3>
-            <div className="flex space-x-4">
+            <div className="flex flex-col gap-[2rem] items-start">
               {socialLinks.map((social) => (
                 <a
                   key={social.platform}
                   href={social.href}
-                  className="text-[#D2D2D2] transition-colors"
+                  className="text-[#D2D2D2] transition-colors flex items-center gap-3"
                   aria-label={social.platform}
                 >
-                  {social.icon}
+                  
+                  <div className="h-7">{social.icon}</div><p>{social.platform}</p>
                 </a>
               ))}
             </div>
@@ -113,10 +120,10 @@ const Footer = () => {
 
           {/* Trust Badges */}
           <div>
-            <h3 className="font-semibold text-text-primary mb-4">
+            <h3 className="font-semibold text-text-primary mb-[30px]">
               Trust Badges
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-[25px]">
               {trustBadges.map((badge) => (
                 <li key={badge.label}>
                   <a
@@ -132,7 +139,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-2 border-t border-gray-800 flex justify-center items-center text-center">
+        <div className="border-t border-gray-800 py-[2rem] text-[20px] flex justify-center h-full items-center text-center">
           <p className="text-[#D2D2D2]">
             Copyright ©{new Date().getFullYear()} Ask Ainstein. All Rights
             Reserved.
