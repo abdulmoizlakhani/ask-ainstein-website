@@ -5,7 +5,7 @@ import CruasalSeciton from "@/components/section/CruasalSeciton";
 import FirstPrinciplesPage from "@/components/section/FirstPrinciplesSection";
 import FunctionalitySection from "@/components/section/FunctionalitySection";
 import Hero from "@/components/section/Hero";
-import StudyMistakes from "@/components/section/StudyMistakes";
+import StudyMistakes from "@/components/custom/cards/StudyMistakes";
 import WhySection from "@/components/section/WhySection";
 
 export default function Home() {
@@ -18,8 +18,8 @@ export default function Home() {
       <WhySection/>
       <ComparisionSection/>
       <FirstPrinciplesPage/>
-      <StudyMistakes/>
-      <AskYourSelf/>
+      {/* <StudyMistakes/> */}
+      {/* <AskYourSelf/> */}
     </main>
   );
 }    

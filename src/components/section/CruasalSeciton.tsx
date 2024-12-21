@@ -17,14 +17,14 @@ const CruasalSection = () => {
     <section className="flex items-center py-[550px]  justify-center relative">
       <div className="absolute gap-4 top-[-28%] flex flex-col items-center">
         {/* Carousel Container */}
-        <div className="h-[856px] w-[1152px] border-[15px] rounded-[50px] border-text-bg overflow-hidden">
+        <div className="h-[856px] max-w-8xl border-[15px] rounded-[50px] border-border shadow-custom overflow-hidden">
           <div className="w-full flex items-center justify-center">
             <Image
               src={`/accets/cruasal/${images[currentIndex]}.png`}
               alt={`Image ${images[currentIndex]}`}
-              className="w-[1152px] h-[856px] transition-transform duration-700 ease-in-out"
+              className="max-w-8xl h-[856px] transition-transform duration-700 ease-in-out"
               height={856}
-              width={1152}
+              width={1520}
             />
           </div>
         </div>

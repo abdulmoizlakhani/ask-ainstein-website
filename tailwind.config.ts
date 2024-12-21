@@ -8,11 +8,21 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        custom: "0px 0px 10px 2px #00000045",
+        dark: "0px 0px 13px 5px #00000078"
+      },
       colors: {
+        border: "#EDF6F1",
+        borderYellow: "#FFD63D",
         primary: "#F7F7F5",
         secondary: "#000000",
         tertiary: "#ECE6F5",
         quaternary: "#FFFFFF",
+        card: "#FFF2DE",
+        megaCard: "#FFF3D1",
+        megaCardBorder: "#EADEC0",
+        bgLightYellow: "#FEFEEE",
         accent: {
           lightYellow: "#F5FFBC",
           green: "#00B75F",
@@ -23,7 +33,9 @@ export default {
         text: {
           primary: "#FFFFFF",
           black: "#000000",
-          bg: "#BADAFD",
+          orange: "#FF9D33",
+          smallLight: "#444444",
+          bg: "#C6FFE3",
           blue: "#1774D9",
           secondaryLight: "#AAAAAA",
           secondary: "#4C4A43",
@@ -35,6 +47,11 @@ export default {
 
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      maxWidth: {
+
+        "8xl": "95rem",
+        "9xl": "104.68rem",
       },
     },
   },

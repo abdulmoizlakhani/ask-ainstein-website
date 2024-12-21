@@ -40,7 +40,8 @@ const StudyMistakes = () => {
   };
 
   return (
-    <div className="bg-black mb-2 text-white relative pt-28 pb-[300px] w-full mx-auto">
+    <div className="bg-bgLightYellow border border-borderYellow rounded-[20px] w-full max-w-[84.81rem] h-[73.37rem] mb-2 text-text-black relative pt-28 pb-[300px] mx-auto">
+
       {/* Ghost Image */}
       <Image
         src="/accets/icons/ghoast.png"
@@ -52,7 +53,7 @@ const StudyMistakes = () => {
 
       <div className="max-w-6xl mx-auto px-4">
         {/* Header Section */}
-        <div className="flex items-center flex-col gap-6 text-2xl text-text-lightGray font-semibold mb-12">
+        <div className="flex items-center flex-col gap-6 text-2xl text-text-smallLight font-semibold mb-12">
           <h1 className="text-5xl font-bold text-center">
             The <span className="text-text-red">{headerContent.redSpan}</span>{" "}
             most students make
@@ -74,7 +75,7 @@ const StudyMistakes = () => {
             <span className="text-text-red">do wrong..</span>
           </h2>
 
-          <p className="text-text-lightGray font-semibold text-2xl mb-8">
+          <p className="text-text-smallLight font-semibold text-2xl mb-8">
             🚨 Are you falling into these traps?
           </p>
 
@@ -87,7 +88,7 @@ const StudyMistakes = () => {
                   <span className="font-bold text-[26px] block">
                     {mistake.title}
                   </span>
-                  <span className="text-text-lightGray text-[24px] font-semibold">
+                  <span className="text-text-smallLight text-[24px] font-semibold">
                     {mistake.description}
                   </span>
                 </div>
@@ -97,9 +98,9 @@ const StudyMistakes = () => {
 
           {/* Footer Quote */}
           <p className="mt-12 text-2xl leading-relaxed font-semibold">
-            <span className="text-white">{footerContent.text} </span>
+            <span className="text-smallLight">{footerContent.text} </span>
             <span className="text-text-green">{footerContent.highlight}</span>
-            <span className="text-white"> - </span>
+            <span className="text-smallLight"> - </span>
             <span className="text-text-black bg-text-bg rounded px-3 py-1">
               {footerContent.description}
             </span>

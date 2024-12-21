@@ -1,20 +1,12 @@
 import Image from "next/image";
 import React from "react";
+import data from "@/data/landingPage/data.json"; // Update the path to your JSON file
 
-const card = [
-  {
-    text: "Tons of adaptive practice questions ",
-    image: "practice",
-  },
-  {
-    text: "Instant AI-powered help",
-    image: "ai",
-  },
-];
 const FunctionalitySection = () => {
+  const { sectionTitle, subPara, cards, bottomText } = data.functionalityData;
+
   return (
-    // FUN SECTION("Are you gearing up for your school or board exams?")
-    <section className="bg-quaternary box-shadow py-28 gap-8   flex-col flex items-center relative h-[1151px]">
+    <section className="bg-quaternary box-shadow py-32 gap-8 flex-col flex items-center relative h-[1151px]">
       {/* TOP COMPONENT */}
       <div className="h-[200px] w-[200px] absolute top-[-100px] bg-accent-brown flex items-center justify-center rounded-[10px]">
         <Image
@@ -24,24 +16,30 @@ const FunctionalitySection = () => {
           height={130}
         />
       </div>
+
       {/* MAIN HEADING */}
       <h2 className="text-[32px] text-center tracking-tight max-w-[933px] font-semibold">
-        "Are you gearing up for your school or board exams?"
+        {sectionTitle.mainHeading}
         <br />
-        ​"Need personalized attention that you are not finding outside?"
+        {sectionTitle.subHeading}
       </h2>
+
       {/* SUB PARA */}
-      <h4>
-        With <span className="text-text-green text-xl">Ask Ainstein</span>, you
+      <h4 className="font-semibold text-text-smallLight text-xl">
+        With <span className="text-text-green font-bold">Ask Ainstein</span>, you
         can unlock access to
       </h4>
+
       {/* ALL CARDS */}
-      <div className="flex items-center justify-center gap-4">
-        {card.map((item) => {
+      <div className="flex items-center justify-center gap-[30px]">
+        {cards.map((item) => {
           return (
-            <div key={item.text} className="flex justify-center flex-col gap-6 rounded-[20px] shadow-xl  items-center text-center h-[225px] w-[535px] bg-[#EDEDED]">
+            <div
+              key={item.text}
+              className="flex justify-center border-dashed border-[#EDEDED] border-[2px] flex-col gap-6 rounded-[20px] shadow-custom items-center text-center h-[225px] w-[535px] bg-card"
+            >
               <Image
-                alt="logo"
+                alt={item.text}
                 height={48}
                 width={48}
                 src={`/accets/functionalitySection/${item.image}.svg`}
@@ -51,10 +49,10 @@ const FunctionalitySection = () => {
           );
         })}
       </div>
+
       {/* BOTTOM PARA */}
       <h4 className="text-[28px] mt-8 font-bold bg-text-bg px-2 rounded">
-        Don’t just memorize! Get the guidance you need to excel in exams and
-        beyond. ​
+        {bottomText}
       </h4>
     </section>
   );

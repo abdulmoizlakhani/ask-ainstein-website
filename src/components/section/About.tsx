@@ -1,68 +1,68 @@
 import Image from "next/image";
 import React from "react";
+import data from "@/data/landingPage/data.json"; // Update the path to your JSON file
 
 const About = () => {
+  const { heroAction, youtubeShape, youtubeCenter, profileImage, profileText } = data.about;
+
   return (
     <section className="flex relative pt-[350px] pb-[100px] flex-col justify-center items-center">
-      {/* youtube container */}
-<div className="absolute top-[-0%]">
-      <div className="w-[1064px] translate-y-[-50%]  flex relative justify-center items-center rounded-[20px] h-[699px] bg-[#D9D9D9]">
-        <Image
-          src="/accets/hero/action.png"
-          alt="See its Action"
-          height={226}
-          width={318}
-          className="absolute left-[-235px] top-[-231px]"
-        />
-        <div className="flex justify-center items-center relative">
+      {/* YouTube container */}
+      <div className="absolute top-[-0%]">
+        <div className="w-[1064px] translate-y-[-50%] flex relative justify-center items-center rounded-[20px] h-[699px] bg-[#D9D9D9]">
           <Image
-            src="/accets/icons/youtubeShape.svg"
-            alt="youtubeButton"
-            width={107}
-            height={75}
+            src={heroAction}
+            alt="See its Action"
+            height={226}
+            width={318}
+            className="absolute left-[-235px] top-[-231px]"
           />
-          <Image
-            className="absolute"
-            src="/accets/icons/youtubeCenter.svg"
-            alt="click"
-            width={28}
-            height={32}
-          />
+          <div className="flex justify-center items-center relative">
+            <Image
+              src={youtubeShape}
+              alt="YouTube Button"
+              width={107}
+              height={75}
+            />
+            <Image
+              className="absolute"
+              src={youtubeCenter}
+              alt="Click"
+              width={28}
+              height={32}
+            />
+          </div>
         </div>
       </div>
-      </div>
-      {/* about */}
 
+      {/* About section */}
       <div className="flex mx-auto py-20 max-w-[874px] justify-center items-center flex-col gap-6">
-        {/* first para */}
+        {/* First paragraph */}
         <div className="flex justify-center items-center gap-1 tracking-tight">
           <p className="text-[20px] text-text-secondary font-semibold">
             👋 Hi,{" "}
             <span className="text-text-blue underline decoration-text-blue underline-offset-4">
-              I&apos;m Aamir
+              I&apos;m {profileText.name}
             </span>
             , the founder of{" "}
-            <span className="text-text-green">Ask Ainstein</span>. As a CFA
-            Charterholder with over 10 years of experience tutoring thousands of
-            students at various levels, I’ve had the privilege of witnessing
-            remarkable transformations. I’ve seen students who once struggled in
-            class go on to achieve extraordinary success, often surprising their
-            parents and teachers alike.
+            <span className="text-text-green">Ask Ainstein</span>. {profileText.description}
           </p>
           <div className="flex flex-col w-full justify-center items-center gap-4">
-            <div className="rounded-full overflow-hidden h-[110px] w-[110px] bg-white">
+            <div className="rounded overflow-hidden h-[110px] w-[110px] bg-white">
               <Image
-                src="/accets/about/profile.png"
-                alt="profile"
+                src={profileImage}
+                alt="Profile"
                 objectFit="contain"
-                width={100}
-                height={100}
+                width={110}
+                height={110}
+                className="object-contain"
               />
             </div>
-            <h2 className="font-bold">Founder & Educator</h2>
+            <h2 className="font-bold">{profileText.role}</h2>
           </div>
         </div>
-        {/* second para */}
+
+        {/* Second paragraph */}
         <div className="text-[20px] font-bold">
           <h3>🌟 Why I Created Ask Ainstein</h3>
           <p>
@@ -76,9 +76,9 @@ const About = () => {
             </span>
           </p>
         </div>
-        {/* third para */}
+
+        {/* Third paragraph */}
         <p className="text-[20px] font-bold text-text-secondary">
-          {" "}
           ​Now, I’ve taken this vision further by creating{" "}
           <span className="text-text-green">Ask Ainstein</span>-{" "}
           <span className="bg-text-bg p-1 rounded">

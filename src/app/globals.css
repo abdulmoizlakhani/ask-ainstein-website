@@ -7,6 +7,8 @@
 }
 body {
   background: #f7f7f5;
+  width: 1920px;
+  margin: auto;
 }
 
 .box-shadow {

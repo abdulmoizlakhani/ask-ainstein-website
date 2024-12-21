@@ -42,13 +42,14 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
         remainTime.days <= 0 &&
         remainTime.hours <= 0 &&
         remainTime.minutes <= 0 &&
-        remainTime.seconds <= 0
+        remainTime.seconds <= 0 &&
+        remainTime.weeks <= 0
       ) {
         setRemain(false); // Set countdown as complete
       } else {
         setRemain(true); // Countdown still active
         setTimeRemaining({
-          days: remainTime.days,
+          days: remainTime.days + remainTime.weeks * 7,
           hours: remainTime.hours,
           minutes: remainTime.minutes,
           seconds: remainTime.seconds,

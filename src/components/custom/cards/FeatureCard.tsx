@@ -16,14 +16,14 @@ const FeatureCard = ({
 }) => {
   return (
     // Feature Card
-    <div className="bg-quaternary p-4 shadow-xl flex flex-col justify-center gap-6 relative h-[200px] max-w-[500px] w-full rounded-[28px] border-[1px] border-dashed">
+    <div className="bg-quaternary p-6 shadow-custom flex flex-col justify-center gap-6 relative h-[200px] max-w-[500px] w-full rounded-[28px] border-[1px] border-dashed">
       {/* bottom icon */}
       <Image
         src={data.icon}
         alt={data.title}
         width={35}
         height={35}
-        className="h-[35px] w-[35px] absolute bottom-2 right-2"
+        className="h-[35px] w-[35px] absolute bottom-6 right-6"
       />
       {/* top section */}
       <div className="flex items-center gap-4">
@@ -35,7 +35,7 @@ const FeatureCard = ({
           className="h-[35px] w-[35px]"
         />
         <h4
-          className={`text-[20px] tracking-tighter font-bold ${
+          className={`text-[26px] tracking-tight font-bold ${
             first
               ? "bg-text-bg  text-text-black px-1 rounded"
               : "text-text-black"
@@ -45,7 +45,7 @@ const FeatureCard = ({
         </h4>
       </div>
       {/* Paragraph */}
-      <p className="text-[#444444] text[18px] italic font-medium">
+      <p className="text-[#444444] text-[22px] italic font-medium">
         {data.description}
         <br />{" "}
         {data.heighlight && (
