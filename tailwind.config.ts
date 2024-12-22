@@ -20,6 +20,7 @@ export default {
         tertiary: "#ECE6F5",
         quaternary: "#FFFFFF",
         cardTitle: "#767676",
+        lightText: "#666666",
         card: "#FFF2DE",
         darkRed: "#FF0000",
         megaCard: "#FFF3D1",

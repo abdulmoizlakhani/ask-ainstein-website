@@ -1,8 +1,4 @@
 import React from "react";
-
-import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { MdMailOutline } from "react-icons/md";
 import Message from "../custom/icons/Message";
 import Facebook from "../custom/icons/Facebook";
 import Youtube from "../custom/icons/Youtube";

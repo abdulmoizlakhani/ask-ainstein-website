@@ -3,7 +3,7 @@ import React from "react";
 import FirstPrinciplesCard from "../custom/cards/FirstPrinciplesCard";
 import MainButton from "../custom/buttons/MainButton";
 import StudyMistakes from "../custom/cards/StudyMistakes";
-import DoYouWant from "../custom/cards/DoYouWant";
+import DoYouWant from "../custom/cards/AskYourSelf";
 import ReviewCard from "../custom/cards/ReviewCard";
 
 const FirstPrinciplesPage = () => {

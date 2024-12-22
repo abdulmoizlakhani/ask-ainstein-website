@@ -5,10 +5,6 @@ const StudyMistakes = () => {
   const headerContent = {
     title: "The 3 biggest mistakes most students make",
     redSpan: "3 biggest mistakes",
-    paragraphs: [
-      "Having been a student myself and coping with ADHD, I deeply understand the challenges that many face. At a young age, we are full of energy and eager to explore and express ourselves. Yet, the pressure for academic excellence, imposed by parents and society, can be overwhelming.",
-      "While we can't change the rat race, we can empower the youth of today to be better prepared for the future by helping them avoid key mistakes in their learning journey.",
-    ],
   };
 
   const mistakes = [
@@ -57,10 +53,19 @@ const StudyMistakes = () => {
             The <span className="text-darkRed">{headerContent.redSpan}</span>{" "}
             most students make
           </h1>
-
-          {headerContent.paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+          <p>
+            {" "}
+            Having been a student myself and coping with ADHD, I deeply
+            understand the challenges that many face. At a young age, we are
+            full of energy and eager to explore and express ourselves. Yet, the
+            pressure for academic excellence, imposed by parents and society,
+            can be overwhelming.
+          </p>
+          <p>
+          <span className="text-black bg-card p-1 rounded">While we can't change the rat race, we can empower the youth of
+          today</span> to be better prepared for the future by helping them avoid key
+            mistakes in their learning journey.
+          </p>
         </div>
 
         <hr className="border-[#DEE4EC] border-[2px] mb-12" />
