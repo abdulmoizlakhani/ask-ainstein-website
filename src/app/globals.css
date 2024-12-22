@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-x: hidden;
+}
 .second-font {
   font-family: var(--font-source-sans-3);
-}
-body {
-  background: #f7f7f5;
-  width: 1920px;
-  margin: auto;
 }
 
 .box-shadow {

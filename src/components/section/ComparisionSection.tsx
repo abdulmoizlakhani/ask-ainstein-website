@@ -1,5 +1,5 @@
 import React from "react";
-import ComparisonContainers from "../custom/cards/Comparision";
+import ComparisonContainers from "@/components/custom/cards/Comparision";
 import Image from "next/image";
 import data from "@/data/landingPage/data.json";
 
