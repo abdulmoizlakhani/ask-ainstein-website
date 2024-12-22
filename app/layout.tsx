@@ -3,6 +3,8 @@ import { Inter, Source_Sans_3 as SourceSans3 } from "next/font/google";
 import React from "react";
 import "./globals.css";
 
+import Header from "@/components/Header";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -27,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${sourceSans.variable} antialiased`}>
+        <Header />
         {children}
       </body>
     </html>

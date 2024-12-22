@@ -66,7 +66,7 @@ export default {
         },
       },
       maxWidth: {
-        "8xl": "95rem",
+        "8xl": "98rem",
         "9xl": "104.68rem",
       },
       fontFamily: {
