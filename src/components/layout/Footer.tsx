@@ -38,7 +38,7 @@ const Footer = () => {
       href: "#",
       icon: <Facebook />,
     },
-    { platform: "Youtube", href: "#", icon: <Youtube/> },
+    { platform: "Youtube", href: "#", icon: <Youtube /> },
     {
       platform: "Instagram",
       href: "#",
@@ -69,7 +69,7 @@ const Footer = () => {
                   >
                     {link.label}
                     {link.comingSoon && (
-                      <span className="ml-2 text-gray-400">(Coming soon)</span>
+                      <span className="ml-2 text-sm ">(Coming soon)</span>
                     )}
                   </a>
                 </li>
@@ -83,7 +83,7 @@ const Footer = () => {
               Contact Information
             </h3>
             <div className="flex items-center text-[#D2D2D2] gap-3">
-              <Message/>
+              <Message />
 
               <a
                 href="mailto:support@askaainstein.com"
@@ -107,8 +107,8 @@ const Footer = () => {
                   className="text-[#D2D2D2] transition-colors flex items-center gap-3"
                   aria-label={social.platform}
                 >
-                  
-                  <div className="h-7">{social.icon}</div><p>{social.platform}</p>
+                  <div className="h-7">{social.icon}</div>
+                  <p>{social.platform}</p>
                 </a>
               ))}
             </div>

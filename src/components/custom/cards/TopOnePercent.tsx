@@ -5,7 +5,7 @@ import HeroReviewCard from "./HeroReviewCard";
 const DoYouWant = () => {
   return (
     <div
-      className="bg-white w-full  max-w-[76.125rem] p-14 rounded-[20px]    text-[#000000] flex justify-center items-center flex-col
+      className="bg-white w-full  max-w-[76.125rem] p-14 rounded-[20px] border-dashed border-[2px] border-[#DDDDDD]   text-[#000000] flex justify-center items-center flex-col
       gap-[3rem]"
     >
       <p className="text-[#999999] font-bold text-lg uppercase">Ask Yourself</p>

@@ -51,7 +51,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         ))}
       </div>
       {/* REVIEW */}
-      <p className="text-xl  font-medium">
+      <p className="text-xl text-text-smallLight  font-medium">
         "{getHighlightedText(review, highlight)}"
       </p>
       {/* USER DETAIL */}
