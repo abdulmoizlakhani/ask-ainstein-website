@@ -66,42 +66,71 @@
     ],
     "bottomText": "Don't just memorize! Get the guidance you need to excel in exams and beyond."
   },
-  "comparision": {
+  "comparisionSection": {
     "sectionTitle": {
       "mainHeading": "What makes 'Ainstein' unique vs ChatGPT",
-      "images": "/assets/icons/einsteinIdea.svg"
+      "images": "/assets/ainstein-cheer.svg"
     },
-    "tickIcon": "/assets/icons/green-tick.svg",
-    "cutIcon": "/assets/icons/red-cross.svg",
-    "comparisionCardData": [
+    "comparisonTable": [
       {
-        "chatgpt": {
-          "text": "Gives direct answers without encouraging logical thinking."
+        "title": "ChatGPT",
+        "image": {
+          "src": "/assets/chatgpt.svg",
+          "alt": "ChatGPT",
+          "w": 148,
+          "h": 44
         },
-        "einstein": {
-          "text": "Acts as a tutor, helping you think critically and logically",
-          "heighlight": "(based off 'first principles' approach)."
-        }
+
+        "points": [
+          {
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "Gives direct answers without encouraging logical thinking"
+          },
+          {
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "Struggles with complex mathematical questions"
+          },
+          {
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "Generic chatbot, not aligned with specific curriculums"
+          },
+          {
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "No integration with a structured question bank"
+          }
+        ]
       },
       {
-        "chatgpt": { "text": "Struggles with complex mathematical questions." },
-        "einstein": { "text": "Excels at mathematical questions." }
-      },
-      {
-        "chatgpt": {
-          "text": "Generic chatbot, not aligned with specific curriculums."
+        "title": "Ainstein",
+        "image": {
+          "src": "/assets/ask-ainstein-ai.png",
+          "alt": "Ainstein",
+          "w": 204,
+          "h": 48
         },
-        "einstein": {
-          "text": "Curriculum-aligned to meet your academic needs."
-        }
-      },
-      {
-        "chatgpt": {
-          "text": "No integration with a structured question bank."
-        },
-        "einstein": {
-          "text": "Integrated with a rich, adaptive question bank for revision."
-        }
+
+        "points": [
+          {
+            "icon": "/assets/icons/red-cross.svg",
+            "text": "Acts as a tutor, helping you think critically and logically (based off 'first principles' approach)",
+            "highlight": "(based off 'first principles' approach)"
+          },
+          {
+            "icon": "/assets/icons/red-cross.svg",
+
+            "text": "Excels at mathematical questions"
+          },
+          {
+            "icon": "/assets/icons/red-cross.svg",
+
+            "text": "Curriculum-aligned to meet your academic needs"
+          },
+          {
+            "icon": "/assets/icons/red-cross.svg",
+
+            "text": "Integrated with a rich, adaptive question bank for revision"
+          }
+        ]
       }
     ]
   },
@@ -113,7 +142,7 @@
       "reviewer": {
         "name": "Riya Sharma",
         "detail": "Grade 10 Student",
-        "profileImage": "/assets/profileImage/1.jpg"
+        "profileImage": "/assets/riya-sharma.png"
       }
     },
     "images": [

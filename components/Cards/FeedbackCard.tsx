@@ -1,5 +1,7 @@
+import { TextHighlight } from "@/components/ui/TextHighlisht";
 import Image from "next/image";
 import React from "react";
+import ReviewStar from "../ReviewStar";
 
 interface FeebackCardProps {
   stars: number;
@@ -18,34 +20,15 @@ const FeebackCard: React.FC<FeebackCardProps> = ({
   reviewerDetail,
   profileImage,
 }) => {
-  const getHighlightedText = (text: string, highlight?: string) =>
-    !highlight
-      ? text
-      : text.split(new RegExp(`(${highlight})`, "gi")).map((part, i) =>
-          part.toLowerCase() === highlight.toLowerCase() ? (
-            <span key={i} className="font-semibold text-secondary-900">
-              {part}
-            </span>
-          ) : (
-            part
-          )
-        );
-
   return (
-    <div className="w-[888px] h-[472px] flex flex-col justify-center gap-8 px-12 relative rounded-[20px] border-[2px] border-secondary-900 bg-yellow-light">
-      <div className="flex gap-1">
-        {Array.from({ length: stars }, (_, i) => (
-          <Image
-            key={i}
-            src="/accets/icons/star.svg"
-            alt="Star"
-            width={28}
-            height={28}
-          />
-        ))}
-      </div>
-      <p className="text-xl text-secondary font-medium">
-        "{getHighlightedText(review, highlight)}"
+    <div className="max-w-[888px] p-12 pb-16 flex flex-col justify-center gap-8 relative rounded-[1.25rem] border-2 border-yellow-900 bg-yellow-700">
+      <ReviewStar />
+      <p className="text-xl text-secondary-800 font-medium">
+        <TextHighlight
+          variant="DEFUALT"
+          text={review}
+          highlightText={highlight}
+        />
       </p>
       <div className="flex items-center gap-4">
         <Image
@@ -53,7 +36,7 @@ const FeebackCard: React.FC<FeebackCardProps> = ({
           alt={`${reviewerName}'s profile`}
           width={100}
           height={100}
-          className="rounded-full h-[100px] w-[100px] object-cover"
+          className="rounded-full object-cover"
         />
         <div>
           <h5 className="text-2xl font-bold">{reviewerName}</h5>
@@ -62,7 +45,7 @@ const FeebackCard: React.FC<FeebackCardProps> = ({
           </p>
         </div>
       </div>
-      <span className="absolute bottom-0 right-52 text-yellow-light text-[18.75rem] leading-[0px] -mb-8 second-font">
+      <span className="absolute bottom-0 right-52 text-yellow-600 text-[18.75rem] leading-[0px] -mb-8 font-source-sans">
         “
       </span>
     </div>

@@ -52,6 +52,7 @@ export default {
           900: "#EADEC0",
           800: "#FFD63D",
           700: "#FFF3D1",
+          600: "#F7E6BC",
           light: "#FFF2DE",
         },
         blue: {
