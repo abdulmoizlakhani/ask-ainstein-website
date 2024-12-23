@@ -1,43 +1,39 @@
-import React from "react";
-import data from "@/data/landingPage/data.json";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+
+import data from "@/data/landingPage/data.json";
 
 const Footer = () => {
   const footerData = data.footer;
 
   return (
-    <footer className="bg-black">
-      <div className="max-w-8xl min-h-[27.375rem] flex flex-col mx-auto px-4">
-        <div className="flex flex-wrap justify-between py-[4rem] text-xl">
-          {footerData.map((section, sectionIndex) => (
+    <footer className="bg-secondary-dark">
+      <div className="mx-auto flex max-w-8xl flex-col text-xl">
+        <div className="flex justify-between gap-8 py-16">
+          {footerData.links.map((section, sectionIndex) => (
             <div key={`${section.title}-${sectionIndex}`}>
-              <h3 className="font-semibold text-secondary-light mb-[30px]">
+              <h3 className="mb-[1.875rem] font-semibold text-secondary-light">
                 {section.title}
               </h3>
-              <ul className="space-y-[25px]">
+              <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
-                  <li
-                    key={`${"platform" in link ? link.platform : link.label}-${linkIndex}`}
-                  >
+                  <li key={`footer-menu-${linkIndex}`}>
                     <Link
-                      href={link.href || "#"}
-                      className="text-[#D2D2D2] transition-colors flex items-center gap-3"
+                      href={link.href}
+                      className="flex items-center gap-3 text-secondary-400"
                     >
-                      {"icon" in link && (
+                      {link.icon && (
                         <Image
                           src={`/assets/icons/social/${link.icon.src}`}
-                          alt={
-                            link.icon.alt ||
-                            ("label" in link ? link.label : link.platform)
-                          }
+                          alt={link.icon.alt || link.label}
                           height={link.icon.size}
                           width={link.icon.size}
                         />
                       )}
-                      {"platform" in link ? link.platform : link.label}
-                      {"comingSoon" in link && link.comingSoon && (
-                        <span className="ml-2 text-sm">(Coming soon)</span>
+                      {link.label}
+                      {link.comingSoon && (
+                        <span className="text-sm">{link.comingSoonText}</span>
                       )}
                     </Link>
                   </li>
@@ -47,11 +43,8 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="border-t border-[#535353] py-[2rem] text-[20px] flex justify-center items-center text-center">
-          <p className="text-[#D2D2D2]">
-            Copyright ©{new Date().getFullYear()} Ask Ainstein. All Rights
-            Reserved.
-          </p>
+        <div className="flex items-center justify-center border-t border-secondary-750 py-10 text-center">
+          <p className="text-secondary-400">{footerData.copyrightText}</p>
         </div>
       </div>
     </footer>
