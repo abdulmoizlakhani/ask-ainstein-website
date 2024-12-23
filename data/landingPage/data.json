@@ -26,7 +26,7 @@
       "signIn": "Sign In"
     }
   },
-  "hero": {
+"hero": {
     "background": "#000000",
     "heading": {
       "highlight": "Student in high school?",
@@ -39,8 +39,7 @@
   },
   "about": {
     "heroAction": "/accets/hero/action.png",
-    "youtubeShape": "/accets/icons/youtubeShape.svg",
-    "youtubeCenter": "/accets/icons/youtubeCenter.svg",
+    "video":"https://www.youtube.com/embed/19g66ezsKAg",
     "profileImage": "/accets/about/founderImage.jpg",
     "profileText": {
       "name": "Aamir",
@@ -50,6 +49,7 @@
   },
   "functionalityData": {
     "sectionTitle": {
+      "images":"/accets/functionalitySection/ainstien.svg",
       "mainHeading": "Are you gearing up for your school or board exams?",
       "subHeading": "Need personalized attention that you are not finding outside?"
     },
@@ -70,7 +70,10 @@
     "sectionTitle": {
       "mainHeading": "What makes ‘Ainstein’ unique vs ChatGPT",
       "images": "/accets/icons/einsteinIdea.svg"
+      
     },
+    "tickIcon":"/accets/icons/tick.svg",
+      "cutIcon":"/accets/icons/cut.svg",
     "comparisionCardData": [
       {
         "chatgpt": {
@@ -104,6 +107,16 @@
     ]
   },
   "carousel": {
+    "review": {
+      "stars": 5,
+      "reviewText": "I used to score only 50-55% in math and science, and it created a lot of stress at home. My parents were always worried, and I felt stuck. This platform helped me figure out where I was making mistakes and how to fix them. After a few weeks, my score improved to 85%! My parents were so PROUD, and things at home are much better now. Even my teachers noticed the change and appreciated my hard work. I finally feel confident in my studies.",
+      "highlight": "PROUD",
+      "reviewer": {
+        "name": "Riya Sharma",
+        "detail": "Grade 10 Student",
+        "profileImage": "/accets/profileImage/1.jpg"
+      }
+    },
     "images": [
       {
         "id": "1",
@@ -121,16 +134,6 @@
         "alt": "Image 3"
       }
     ]
-  },
-  "review": {
-    "stars": 5,
-    "reviewText": "I used to score only 50-55% in math and science, and it created a lot of stress at home. My parents were always worried, and I felt stuck. This platform helped me figure out where I was making mistakes and how to fix them. After a few weeks, my score improved to 85%! My parents were so PROUD, and things at home are much better now. Even my teachers noticed the change and appreciated my hard work. I finally feel confident in my studies.",
-    "highlight": "PROUD",
-    "reviewer": {
-      "name": "Riya Sharma",
-      "detail": "Grade 10 Student",
-      "profileImage": "/accets/profileImage/1.jpg"
-    }
   },
   "featureSection": {
     "features": [
@@ -171,5 +174,87 @@
       "src": "/accets/why/ainstien.svg",
       "alt": "ask Ainstein"
     }
-  }
+  },
+  "firstPrinciple":{
+    "personalities": [
+      {
+        "name": "Elon Musk",
+        "title": "Entrepreneur, CEO of Tesla and SpaceX",
+        "quote": "I think it’s important to reason from first principles rather than by analogy... you boil things down to the most fundamental truths and then reason up from there."
+      },
+      {
+        "name": "Charlie Munger",
+        "title": "Partner, Vice Chairman of Berkshire Hathaway",
+        "quote": "You have to think about the big ideas that really work and see them coming... First principles thinking is essential to real process."
+      },
+      {
+        "name": "Steve Jobs",
+        "title": "Entrepreneur, co-founder of Apple",
+        "quote": "You have to work hard to get your thinking clean to make it simple. But it's worth it in the end, because once you get there, you can move mountains."
+      }
+    ],
+    "review": {
+      "stars": 5,
+      "review": "My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn’t know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We’re really proud of her progress, and I’m so glad we found this platform.",
+      "highlight": "After using this platform, we started seeing a big difference.",
+      "reviewerName": " - Anjali Sharma",
+      "reviewerDetail": "Parent of a Grade 10 Student",
+      "profileImage": "/accets/profileImage/2.jpg",
+      "backgroundColor": "bg-accent-lightYellow"
+    }
+  },
+  "footer":[
+    { "title":"Quick Links",
+      "links": [
+      { "label": "Learn", "href": "/learn" },
+      { "label": "Co-Teach", "href": "/co-teach", "comingSoon": true },
+      { "label": "Sign Up", "href": "/signup" },
+      { "label": "Sign In", "href": "/signin" }
+    ]},
+    {
+      "title":"Contact Information",
+      "links": [
+      { "label": "support@askaainstein.com", "href": "mailto:9ZSdM@example.com", "icon": {
+        "src": "email.svg",
+        "alt": "Email",
+        "size": 22
+      } }
+      ]
+    },
+
+    {   "title":"Social Links",
+    "links": [
+      { "platform": "Facebook", "href": "#", "icon": {
+        "src": "facebook.svg",
+        "alt": "Facebook",
+        "size": 27
+
+      } },
+      { "platform": "Youtube", "href": "#", "icon": {
+        "src": "youtube.svg",
+        "alt": "Youtube",
+        "size": 27
+      } },
+      { "platform": "Instagram", "href": "#", "icon":{
+        "src": "instagram.svg",
+        "alt": "Instagram",
+        "size": 27
+      } },
+      { "platform": "LinkedIn", "href": "#", "icon": {
+        "src": "linkedin.svg",
+        "alt": "LinkedIn",
+        "size": 27
+      } }
+      ]
+    },
+    {"title":"Trust Badges",
+      "links": [
+      { "label": "SSL certification", "href":"/ssl" },
+      { "label": "Terms and Conditions", "href": "/terms" },
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Legal Disclaimer", "href": "/legal" }
+    ]}
+
+
+  ]
 }
