@@ -1,6 +1,7 @@
 import React from "react";
 import data from "@/data/landingPage/data.json";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const footerData = data.footer;
@@ -8,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-black">
       <div className="max-w-8xl min-h-[27.375rem] flex flex-col mx-auto px-4">
-        <div className="flex justify-between py-[4rem] text-xl gap-8">
+        <div className="flex flex-wrap justify-between py-[4rem] text-xl">
           {footerData.map((section, sectionIndex) => (
             <div key={`${section.title}-${sectionIndex}`}>
               <h3 className="font-semibold text-secondary-light mb-[30px]">
@@ -16,15 +17,20 @@ const Footer = () => {
               </h3>
               <ul className="space-y-[25px]">
                 {section.links.map((link, linkIndex) => (
-                  <li key={`${'platform' in link ? link.platform : link.label}-${linkIndex}`}>
-                    <a
+                  <li
+                    key={`${"platform" in link ? link.platform : link.label}-${linkIndex}`}
+                  >
+                    <Link
                       href={link.href || "#"}
                       className="text-[#D2D2D2] transition-colors flex items-center gap-3"
                     >
                       {"icon" in link && (
                         <Image
                           src={`/assets/icons/social/${link.icon.src}`}
-                          alt={link.icon.alt || ('label' in link ? link.label : link.platform)}
+                          alt={
+                            link.icon.alt ||
+                            ("label" in link ? link.label : link.platform)
+                          }
                           height={link.icon.size}
                           width={link.icon.size}
                         />
@@ -33,7 +39,7 @@ const Footer = () => {
                       {"comingSoon" in link && link.comingSoon && (
                         <span className="ml-2 text-sm">(Coming soon)</span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -43,7 +49,8 @@ const Footer = () => {
 
         <div className="border-t border-[#535353] py-[2rem] text-[20px] flex justify-center items-center text-center">
           <p className="text-[#D2D2D2]">
-            Copyright ©{new Date().getFullYear()} Ask Ainstein. All Rights Reserved.
+            Copyright ©{new Date().getFullYear()} Ask Ainstein. All Rights
+            Reserved.
           </p>
         </div>
       </div>
