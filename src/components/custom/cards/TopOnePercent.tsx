@@ -6,7 +6,7 @@ const DoYouWant = () => {
   return (
     <div
       className="bg-white w-full  max-w-[76.125rem] p-14 rounded-[20px] border-dashed border-[2px] border-[#DDDDDD]   text-[#000000] flex justify-center items-center flex-col
-      gap-[3rem]"
+      gap-[2rem]"
     >
       <p className="text-[#999999] font-bold text-lg uppercase">Ask Yourself</p>
       <h2 className="text-5xl font-bold text-text-black w-[90%] leading-normal text-center">

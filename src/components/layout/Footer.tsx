@@ -1,55 +1,20 @@
 import React from "react";
+import data from "@/data/landingPage/data.json";
 import Message from "../custom/icons/Message";
 import Facebook from "../custom/icons/Facebook";
 import Youtube from "../custom/icons/Youtube";
 import Instagram from "../custom/icons/Instagram";
 import Linkdin from "../custom/icons/Linkdin";
 
-interface FooterLink {
-  label: string;
-  href: string;
-  comingSoon?: boolean;
-}
-
-interface SocialLink {
-  platform: string;
-  href: string;
-  icon: React.ReactNode;
-}
+const iconComponents: Record<string, React.ReactNode> = {
+  Facebook: <Facebook />,
+  Youtube: <Youtube />,
+  Instagram: <Instagram />,
+  Linkdin: <Linkdin />,
+};
 
 const Footer = () => {
-  const quickLinks: FooterLink[] = [
-    { label: "Learn", href: "/learn" },
-    { label: "Co-Teach", href: "/co-teach", comingSoon: true },
-    { label: "Sign Up", href: "/signup" },
-    { label: "Sign In", href: "/signin" },
-  ];
-
-  const trustBadges: FooterLink[] = [
-    { label: "SSL certification", href: "/ssl" },
-    { label: "Terms and Conditions", href: "/terms" },
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Legal Disclaimer", href: "/legal" },
-  ];
-
-  const socialLinks: SocialLink[] = [
-    {
-      platform: "Facebook",
-      href: "#",
-      icon: <Facebook />,
-    },
-    { platform: "Youtube", href: "#", icon: <Youtube /> },
-    {
-      platform: "Instagram",
-      href: "#",
-      icon: <Instagram />,
-    },
-    {
-      platform: "LinkedIn",
-      href: "#",
-      icon: <Linkdin />,
-    },
-  ];
+  const { quickLinks, trustBadges, socialLinks } = data.footer;
 
   return (
     <footer className="bg-black ">
@@ -107,7 +72,7 @@ const Footer = () => {
                   className="text-[#D2D2D2] transition-colors flex items-center gap-3"
                   aria-label={social.platform}
                 >
-                  <div className="h-7">{social.icon}</div>
+                  <div className="h-7">{iconComponents[social.icon]}</div>
                   <p>{social.platform}</p>
                 </a>
               ))}

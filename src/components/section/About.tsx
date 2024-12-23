@@ -3,28 +3,30 @@ import React from "react";
 import data from "@/data/landingPage/data.json"; // Update the path to your JSON file
 
 const About = () => {
-  const { heroAction, youtubeShape, youtubeCenter, profileImage, profileText } =
-    data.about;
+  const { heroAction, profileImage, profileText, video } = data.about;
 
   return (
-    <section className="flex relative pt-[350px] pb-[100px] flex-col justify-center items-center">
+    <section className="flex relative pt-[330px] pb-[100px] flex-col justify-center items-center">
       {/* YouTube container */}
-      <div className="absolute top-[-0%]">
-        <iframe
-          height={"100%"}
-          width={"100%"}
-          className="w-[1064px] translate-y-[-50%] flex relative justify-center items-center rounded-[20px] h-[699px] bg-[#D9D9D9]"
-          src="https://www.youtube.com/embed/19g66ezsKAg"
-          allowFullScreen
-        />
-
-        {/* <Image
+      <div className="absolute top-[-35%]">
+        <div className="relative">
+          <iframe
+            height={"100%"}
+            width={"100%"}
+            className="w-[1064px] flex justify-center items-center rounded-[20px] h-[699px] bg-[#D9D9D9]"
+            src={video}
+            allowFullScreen
+          />
+          <Image
             src={heroAction}
             alt="See its Action"
             height={226}
             width={318}
-            className="absolute left-[-235px] top-[-231px]"
+            className="absolute top-[-230px] left-[-230px]"
           />
+        </div>
+
+        {/* 
           <div className="flex justify-center items-center relative">
             <Image
               src={youtubeShape}

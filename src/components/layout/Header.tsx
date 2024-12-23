@@ -19,7 +19,7 @@ const Header = () => {
       {/* SubHeader displayed only when remainTime is false */}
       {remainTime === false && <SubHeader />}
       <header className="bg-accent-brown">
-        <div className="mx-auto lg:max-w-8xl min-h-[7.25rem] gap-4 justify-center flex-wrap w-full flex lg:justify-between items-center">
+        <div className="mx-auto lg:max-w-8xl border-lightGray/20 border-b min-h-[7.25rem] gap-4 justify-center flex-wrap w-full flex lg:justify-between items-center">
           {/* Logo Section */}
           <img
             className="object-contain"

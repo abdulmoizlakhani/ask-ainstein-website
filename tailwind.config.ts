@@ -21,6 +21,7 @@ export default {
         quaternary: "#FFFFFF",
         cardTitle: "#767676",
         lightText: "#666666",
+        lightGray: "#EFEFEF",
         card: "#FFF2DE",
         darkRed: "#FF0000",
         megaCard: "#FFF3D1",

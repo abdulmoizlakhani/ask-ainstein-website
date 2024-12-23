@@ -5,29 +5,10 @@ import MainButton from "../custom/buttons/MainButton";
 import StudyMistakes from "../custom/cards/StudyMistakes";
 import DoYouWant from "../custom/cards/TopOnePercent";
 import ReviewCard from "../custom/cards/ReviewCard";
+import data from "@/data/landingPage/data.json"; // Adjust the path as needed
 
 const FirstPrinciplesPage = () => {
-  const personalities = 
-  [
-    {
-      name: "Elon Musk",
-      title: "Entrepreneur, CEO of Tesla and SpaceX",
-      quote:
-        "I think it’s important to reason from first principles rather than by analogy... you boil things down to the most fundamental truths and then reason up from there.",
-    },
-    {
-      name: "Charlie Munger",
-      title: "Partner, Vice Chairman of Berkshire Hathaway",
-      quote:
-        "You have to think about the big ideas that really work and see them coming... First principles thinking is essential to real process.",
-    },
-    {
-      name: "Steve Jobs",
-      title: "Entrepreneur, co-founder of Apple",
-      quote:
-        "You have to work hard to get your thinking clean to make it simple. But it's worth it in the end, because once you get there, you can move mountains.",
-    },
-  ];
+  const { personalities, review } = data.firstPrinciple;
 
   return (
     <section className="flex relative px-10 pb-[3.75rem] pt-[700px] flex-col items-center">
@@ -51,14 +32,16 @@ const FirstPrinciplesPage = () => {
                 <Image
                   src={`/accets/FirstPrinciple/${index + 1}.png`}
                   alt={person.name}
-                  className=" h-[380px] object-contain w-[380px] grayscale"
+                  className="h-[380px] object-contain w-[380px] grayscale"
                   width={380}
                   height={380}
                 />
                 <div className="text-center space-y-2">
                   <h3 className="font-bold text-2xl">{person.name}</h3>
                   <p className="font-semibold text-cardTitle">{person.title}</p>
-                  <p className=" text-lg max-w-[420px]  tracking-tight">"{person.quote}"</p>
+                  <p className="text-lg max-w-[420px] tracking-tight">
+                    "{person.quote}"
+                  </p>
                 </div>
               </div>
             ))}
@@ -71,15 +54,13 @@ const FirstPrinciplesPage = () => {
           <StudyMistakes />
           <DoYouWant />
           <ReviewCard
-            stars={5}
-            review={`My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn’t know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We’re really proud of her progress, and I’m so glad we found this platform.`}
-            highlight={
-              "After using this platform, we started seeing a big difference."
-            }
-            reviewerName=" - Anjali Sharma"
-            reviewerDetail="Parent of a Grade 10 Student"
-            profileImage="/accets/profileImage/2.jpg"
-            backgroundColor="bg-accent-lightYellow"
+            stars={review.stars}
+            review={review.review}
+            highlight={review.highlight}
+            reviewerName={review.reviewerName}
+            reviewerDetail={review.reviewerDetail}
+            profileImage={review.profileImage}
+            backgroundColor={review.backgroundColor}
           />
         </div>
       </div>

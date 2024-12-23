@@ -9,7 +9,7 @@ const CruasalSection = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   const { images } = data.carousel;
-  const { stars, reviewText, highlight, reviewer } = data.review;
+  const { stars, reviewText, highlight, reviewer } = data.carousel.review;
 
   // Handle navigation to a specific image
   const handleImageChange = (index: number) => {
@@ -30,9 +30,9 @@ const CruasalSection = () => {
   }, [isPaused, images.length]);
 
   return (
-    <section className="flex items-center py-[550px] justify-center relative">
+    <section className="flex items-center pt-[550px] pb-[500px] justify-center relative">
       <div
-        className="absolute gap-4 top-[-28%] flex flex-col items-center"
+        className="absolute gap-4 top-[-30%] flex flex-col items-center"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >

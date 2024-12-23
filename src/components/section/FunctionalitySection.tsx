@@ -10,7 +10,7 @@ const FunctionalitySection = () => {
       {/* TOP COMPONENT */}
       <div className="h-[200px] w-[200px] absolute top-[-100px] bg-accent-brown flex items-center justify-center rounded-[10px]">
         <Image
-          src={"/accets/functionalitySection/ainstien.svg"}
+          src={sectionTitle.images}
           alt="ask Ainstein"
           width={130}
           height={130}

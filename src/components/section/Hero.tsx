@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       {/* Description */}
-      <p className="text-[22px] mt-[2.25rem] mb-[3rem]">
+      <p className="text-[22px] mt-[2.25rem] text-text-secondaryLight mb-[3rem]">
         {hero.description}{" "}
         <span className="text-text-green">{hero.emphasis}</span>
       </p>

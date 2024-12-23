@@ -37,7 +37,7 @@ const FeatureCard = ({
         <h4
           className={`text-[26px] tracking-tight font-bold ${
             first
-              ? "bg-text-bg  text-text-black px-1 rounded"
+              ? "bg-card  text-text-black px-1 rounded"
               : "text-text-black"
           }`}
         >
@@ -49,7 +49,7 @@ const FeatureCard = ({
         {data.description}
         <br />{" "}
         {data.heighlight && (
-          <span className="text-black font-semibold bg-text-bg p-1 rounded">
+          <span className="text-black font-semibold bg-card p-1 rounded">
             {" "}
             {data.heighlight}
           </span>

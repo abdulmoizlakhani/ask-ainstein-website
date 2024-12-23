@@ -1,6 +1,6 @@
 import React from "react";
 
-const ComparistionChatGpt = () => {
+const GptIcon = () => {
   return (
     <svg
       width="149"
@@ -124,4 +124,4 @@ const ComparistionChatGpt = () => {
   );
 };
 
-export default ComparistionChatGpt;
+export default GptIcon;
