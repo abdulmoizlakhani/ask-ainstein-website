@@ -22,6 +22,18 @@ body {
   .flex-start {
     @apply flex justify-start items-center;
   }
+
+  .btn-filled {
+    @apply px-7 py-3 rounded-lg bg-primary-300 text-secondary-light font-semibold;
+  }
+
+  .btn-outlined {
+    @apply px-7 py-3 rounded-lg bg-transparent text-primary-300 border-2 border-primary-300 font-semibold;
+  }
+
+  .btn-large {
+    @apply w-[28.125rem] h-[5.5rem] rounded-xl bg-yellow-dark text-secondary-dark font-semibold font-source-sans text-[1.75rem];
+  }
 }
 
 @layer base {
