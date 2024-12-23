@@ -26,7 +26,7 @@
       "signIn": "Sign In"
     }
   },
-"hero": {
+  "hero": {
     "background": "#000000",
     "heading": {
       "highlight": "Student in high school?",
@@ -39,7 +39,7 @@
   },
   "about": {
     "heroAction": "/accets/hero/action.png",
-    "video":"https://www.youtube.com/embed/19g66ezsKAg",
+    "video": "https://www.youtube.com/embed/19g66ezsKAg",
     "profileImage": "/accets/about/founderImage.jpg",
     "profileText": {
       "name": "Aamir",
@@ -49,7 +49,7 @@
   },
   "functionalityData": {
     "sectionTitle": {
-      "images":"/accets/functionalitySection/ainstien.svg",
+      "images": "/accets/functionalitySection/ainstien.svg",
       "mainHeading": "Are you gearing up for your school or board exams?",
       "subHeading": "Need personalized attention that you are not finding outside?"
     },
@@ -70,10 +70,9 @@
     "sectionTitle": {
       "mainHeading": "What makes ‘Ainstein’ unique vs ChatGPT",
       "images": "/accets/icons/einsteinIdea.svg"
-      
     },
-    "tickIcon":"/accets/icons/tick.svg",
-      "cutIcon":"/accets/icons/cut.svg",
+    "tickIcon": "/accets/icons/tick.svg",
+    "cutIcon": "/accets/icons/cut.svg",
     "comparisionCardData": [
       {
         "chatgpt": {
@@ -175,7 +174,7 @@
       "alt": "ask Ainstein"
     }
   },
-  "firstPrinciple":{
+  "firstPrinciple": {
     "personalities": [
       {
         "name": "Elon Musk",
@@ -203,58 +202,140 @@
       "backgroundColor": "bg-accent-lightYellow"
     }
   },
-  "footer":[
-    { "title":"Quick Links",
-      "links": [
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Co-Teach", "href": "/co-teach", "comingSoon": true },
-      { "label": "Sign Up", "href": "/signup" },
-      { "label": "Sign In", "href": "/signin" }
-    ]},
-    {
-      "title":"Contact Information",
-      "links": [
-      { "label": "support@askaainstein.com", "href": "mailto:9ZSdM@example.com", "icon": {
-        "src": "email.svg",
-        "alt": "Email",
-        "size": 22
-      } }
-      ]
-    },
-
-    {   "title":"Social Links",
+  "footer": {
+    "copyrightText": "Copyright ©2024 Ask Ainstein. All Rights Reserved.",
     "links": [
-      { "platform": "Facebook", "href": "#", "icon": {
-        "src": "facebook.svg",
-        "alt": "Facebook",
-        "size": 27
-
-      } },
-      { "platform": "Youtube", "href": "#", "icon": {
-        "src": "youtube.svg",
-        "alt": "Youtube",
-        "size": 27
-      } },
-      { "platform": "Instagram", "href": "#", "icon":{
-        "src": "instagram.svg",
-        "alt": "Instagram",
-        "size": 27
-      } },
-      { "platform": "LinkedIn", "href": "#", "icon": {
-        "src": "linkedin.svg",
-        "alt": "LinkedIn",
-        "size": 27
-      } }
-      ]
-    },
-    {"title":"Trust Badges",
-      "links": [
-      { "label": "SSL certification", "href":"/ssl" },
-      { "label": "Terms and Conditions", "href": "/terms" },
-      { "label": "Privacy Policy", "href": "/privacy" },
-      { "label": "Legal Disclaimer", "href": "/legal" }
-    ]}
-
-
-  ]
+      {
+        "title": "Quick Links",
+        "links": [
+          {
+            "label": "Learn",
+            "href": "/learn",
+            "icon": null,
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "Co-Teach",
+            "href": "/co-teach",
+            "comingSoon": true,
+            "comingSoonText": "(Coming Soon)",
+            "icon": null
+          },
+          {
+            "label": "Sign Up",
+            "href": "/signup",
+            "icon": null,
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "Sign In",
+            "href": "/signin",
+            "icon": null,
+            "comingSoon": false,
+            "comingSoonText": ""
+          }
+        ]
+      },
+      {
+        "title": "Contact Information",
+        "links": [
+          {
+            "label": "support@askaainstein.com",
+            "href": "mailto:support@askaainstein.com",
+            "icon": {
+              "src": "email.svg",
+              "alt": "Email",
+              "size": 22
+            },
+            "comingSoon": false,
+            "comingSoonText": ""
+          }
+        ]
+      },
+      {
+        "title": "Social Links",
+        "links": [
+          {
+            "label": "Facebook",
+            "href": "#",
+            "icon": {
+              "src": "facebook.svg",
+              "alt": "Click to visit our Facebook page",
+              "size": 27
+            },
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "Youtube",
+            "href": "#",
+            "icon": {
+              "src": "youtube.svg",
+              "alt": "Click to visit our Youtube channel",
+              "size": 27
+            },
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "Instagram",
+            "href": "#",
+            "icon": {
+              "src": "instagram.svg",
+              "alt": "Click to visit our Instagram profile",
+              "size": 27
+            },
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "LinkedIn",
+            "href": "#",
+            "icon": {
+              "src": "linkedin.svg",
+              "alt": "Click to visit our LinkedIn page",
+              "size": 27
+            },
+            "comingSoon": false,
+            "comingSoonText": ""
+          }
+        ]
+      },
+      {
+        "title": "Trust Badges",
+        "links": [
+          {
+            "label": "SSL certification",
+            "href": "/ssl",
+            "icon": null,
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "Terms and Conditions",
+            "href": "/terms",
+            "icon": null,
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "/privacy",
+            "icon": null,
+            "comingSoon": false,
+            "comingSoonText": ""
+          },
+          {
+            "label": "Legal Disclaimer",
+            "href": "/legal",
+            "icon": null,
+            "comingSoon": false,
+            "comingSoonText": ""
+          }
+        ]
+      }
+    ]
+  }
 }
