@@ -1,7 +1,9 @@
+import ComparisonContainers from "@/components/Cards/Comparision";
+
 export default function Home() {
   return (
     <div>
-      <h1>Ask Ainstein</h1>
+      <ComparisonContainers />
     </div>
   );
 }

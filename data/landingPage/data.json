@@ -26,7 +26,7 @@
       "signIn": "Sign In"
     }
   },
-"hero": {
+  "hero": {
     "background": "#000000",
     "heading": {
       "highlight": "Student in high school?",
@@ -38,9 +38,9 @@
     "reviewCard": "HeroReviewCard"
   },
   "about": {
-    "heroAction": "/accets/hero/action.png",
-    "video":"https://www.youtube.com/embed/19g66ezsKAg",
-    "profileImage": "/accets/about/founderImage.jpg",
+    "heroAction": "/assets/hero/action.png",
+    "video": "https://www.youtube.com/embed/19g66ezsKAg",
+    "profileImage": "/assets/about/founderImage.jpg",
     "profileText": {
       "name": "Aamir",
       "role": "Founder & Educator",
@@ -49,7 +49,7 @@
   },
   "functionalityData": {
     "sectionTitle": {
-      "images":"/accets/functionalitySection/ainstien.svg",
+      "images": "/assets/functionalitySection/ainstien.svg",
       "mainHeading": "Are you gearing up for your school or board exams?",
       "subHeading": "Need personalized attention that you are not finding outside?"
     },
@@ -69,11 +69,10 @@
   "comparision": {
     "sectionTitle": {
       "mainHeading": "What makes ‘Ainstein’ unique vs ChatGPT",
-      "images": "/accets/icons/einsteinIdea.svg"
-      
+      "images": "/assets/icons/einsteinIdea.svg"
     },
-    "tickIcon":"/accets/icons/tick.svg",
-      "cutIcon":"/accets/icons/cut.svg",
+    "tickIcon": "/assets/icons/green-tick.svg",
+    "cutIcon": "/assets/icons/red-cross.svg",
     "comparisionCardData": [
       {
         "chatgpt": {
@@ -114,23 +113,23 @@
       "reviewer": {
         "name": "Riya Sharma",
         "detail": "Grade 10 Student",
-        "profileImage": "/accets/profileImage/1.jpg"
+        "profileImage": "/assets/profileImage/1.jpg"
       }
     },
     "images": [
       {
         "id": "1",
-        "src": "/accets/cruasal/1.png",
+        "src": "/assets/cruasal/1.png",
         "alt": "Image 1"
       },
       {
         "id": "2",
-        "src": "/accets/cruasal/2.png",
+        "src": "/assets/cruasal/2.png",
         "alt": "Image 2"
       },
       {
         "id": "3",
-        "src": "/accets/cruasal/3.png",
+        "src": "/assets/cruasal/3.png",
         "alt": "Image 3"
       }
     ]
@@ -140,42 +139,42 @@
       {
         "title": "1000+ Exam-Aligned Questions",
         "description": "Tailored to your curriculum (starting with CBSE)",
-        "icon": "/accets/why/card/1.png"
+        "icon": "/assets/why/card/1.png"
       },
       {
         "title": "Ask Ainstein - Your 24/7 Tutor",
         "description": "Feel free to chat or simply talk to it in",
         "heighlight": "Talk mode",
-        "icon": "/accets/why/card/2.png"
+        "icon": "/assets/why/card/2.png"
       },
       {
         "title": "AI-Powered Grading",
         "description": "Grading that feels human. Perfect for both short and long answers",
-        "icon": "/accets/why/card/3.png"
+        "icon": "/assets/why/card/3.png"
       },
       {
         "title": "Adaptive Questions",
         "description": "Never too easy, never too hard. Keeps you challenged at every level",
-        "icon": "/accets/why/card/4.png"
+        "icon": "/assets/why/card/4.png"
       },
       {
         "title": "Progress Reports",
         "description": "Visualize your strengths and weaknesses with clear, actionable insights",
-        "icon": "/accets/why/card/5.png"
+        "icon": "/assets/why/card/5.png"
       },
       {
         "title": "Continuous Personalization",
         "description": "Focus on areas that need improvement for maximum impact",
-        "icon": "/accets/why/card/6.png"
+        "icon": "/assets/why/card/6.png"
       }
     ],
     "subHeading": "✨ Features That Make Learning Smarter and Simpler",
     "image": {
-      "src": "/accets/why/ainstien.svg",
+      "src": "/assets/why/ainstien.svg",
       "alt": "ask Ainstein"
     }
   },
-  "firstPrinciple":{
+  "firstPrinciple": {
     "personalities": [
       {
         "name": "Elon Musk",
@@ -199,62 +198,84 @@
       "highlight": "After using this platform, we started seeing a big difference.",
       "reviewerName": " - Anjali Sharma",
       "reviewerDetail": "Parent of a Grade 10 Student",
-      "profileImage": "/accets/profileImage/2.jpg",
+      "profileImage": "/assets/profileImage/2.jpg",
       "backgroundColor": "bg-accent-lightYellow"
     }
   },
-  "footer":[
-    { "title":"Quick Links",
-      "links": [
-      { "label": "Learn", "href": "/learn" },
-      { "label": "Co-Teach", "href": "/co-teach", "comingSoon": true },
-      { "label": "Sign Up", "href": "/signup" },
-      { "label": "Sign In", "href": "/signin" }
-    ]},
+  "footer": [
     {
-      "title":"Contact Information",
+      "title": "Quick Links",
       "links": [
-      { "label": "support@askaainstein.com", "href": "mailto:9ZSdM@example.com", "icon": {
-        "src": "email.svg",
-        "alt": "Email",
-        "size": 22
-      } }
+        { "label": "Learn", "href": "/learn" },
+        { "label": "Co-Teach", "href": "/co-teach", "comingSoon": true },
+        { "label": "Sign Up", "href": "/signup" },
+        { "label": "Sign In", "href": "/signin" }
+      ]
+    },
+    {
+      "title": "Contact Information",
+      "links": [
+        {
+          "label": "support@askaainstein.com",
+          "href": "mailto:9ZSdM@example.com",
+          "icon": {
+            "src": "email.svg",
+            "alt": "Email",
+            "size": 22
+          }
+        }
       ]
     },
 
-    {   "title":"Social Links",
-    "links": [
-      { "platform": "Facebook", "href": "#", "icon": {
-        "src": "facebook.svg",
-        "alt": "Facebook",
-        "size": 27
-
-      } },
-      { "platform": "Youtube", "href": "#", "icon": {
-        "src": "youtube.svg",
-        "alt": "Youtube",
-        "size": 27
-      } },
-      { "platform": "Instagram", "href": "#", "icon":{
-        "src": "instagram.svg",
-        "alt": "Instagram",
-        "size": 27
-      } },
-      { "platform": "LinkedIn", "href": "#", "icon": {
-        "src": "linkedin.svg",
-        "alt": "LinkedIn",
-        "size": 27
-      } }
+    {
+      "title": "Social Links",
+      "links": [
+        {
+          "platform": "Facebook",
+          "href": "#",
+          "icon": {
+            "src": "facebook.svg",
+            "alt": "Facebook",
+            "size": 27
+          }
+        },
+        {
+          "platform": "Youtube",
+          "href": "#",
+          "icon": {
+            "src": "youtube.svg",
+            "alt": "Youtube",
+            "size": 27
+          }
+        },
+        {
+          "platform": "Instagram",
+          "href": "#",
+          "icon": {
+            "src": "instagram.svg",
+            "alt": "Instagram",
+            "size": 27
+          }
+        },
+        {
+          "platform": "LinkedIn",
+          "href": "#",
+          "icon": {
+            "src": "linkedin.svg",
+            "alt": "LinkedIn",
+            "size": 27
+          }
+        }
       ]
     },
-    {"title":"Trust Badges",
+    {
+      "title": "Trust Badges",
       "links": [
-      { "label": "SSL certification", "href":"/ssl" },
-      { "label": "Terms and Conditions", "href": "/terms" },
-      { "label": "Privacy Policy", "href": "/privacy" },
-      { "label": "Legal Disclaimer", "href": "/legal" }
-    ]}
-
-
+        { "label": "SSL certification", "href": "/ssl" },
+        { "label": "Terms and Conditions", "href": "/terms" },
+        { "label": "Privacy Policy", "href": "/privacy" },
+        { "label": "Legal Disclaimer", "href": "/legal" }
+      ]
+    }
   ]
 }

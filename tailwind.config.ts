@@ -36,6 +36,7 @@ export default {
           300: "#767676",
           200: "#4C4A43",
           100: "#AAAAAA",
+          50: "#EBEBEB",
           bg: "#F7F7F5",
           lighter: "#DDDDDD",
           light: "#FFFFFF",
