@@ -3,13 +3,14 @@ import { useTextHighlight } from "@/hooks/useHighlightedText";
 interface TextHighlightProps {
   text: string;
   highlightText?: string;
-  variant: "primary" | "secondary" | "DEFUALT";
+  variant: "primary" | "secondary" | "DEFUALT" | "ask-ainstein";
   className?: string;
 }
 const classes = {
   primary: "bg-blue-light text-highlight",
   secondary: "bg-yellow-light text-highlight",
-  DEFUALT: "",
+  DEFUALT: "text-secondary-dark",
+  "ask-ainstein": "bg-yellow-800 text-highlight",
 };
 export const TextHighlight = ({
   text,
@@ -24,10 +25,7 @@ export const TextHighlight = ({
     <>
       {parts.map((part, index) =>
         part.isHighlight ? (
-          <span
-            key={index}
-            className={`text-secondary-dark ${classes[variant]} ${className}`}
-          >
+          <span key={index} className={` ${classes[variant]} ${className}`}>
             {part.text}
           </span>
         ) : (

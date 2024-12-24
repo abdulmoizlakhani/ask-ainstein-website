@@ -16,12 +16,19 @@ export default function Home() {
       <StartLearningButton />
       <ComparisionTable />
       <FeebackCard
-        stars={stars}
+        variant="primary"
         review={reviewText}
         highlight={highlight}
         reviewerName={reviewer.name}
         reviewerDetail={reviewer.detail}
         profileImage={reviewer.profileImage}
+      />
+      <FeebackCard
+        variant="secondary"
+        review={
+          " 17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform."
+        }
+        profileImage={"/assets/review-people.png"}
       />
     </div>
   );
