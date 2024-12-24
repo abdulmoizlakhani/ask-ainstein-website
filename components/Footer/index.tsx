@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 import data from "@/data/landingPage/data.json";
@@ -18,7 +19,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={`footer-menu-${linkIndex}`}>
-                    <a
+                    <Link
                       href={link.href}
                       className="flex items-center gap-3 text-secondary-400"
                     >
@@ -34,7 +35,7 @@ const Footer = () => {
                       {link.comingSoon && (
                         <span className="text-sm">{link.comingSoonText}</span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

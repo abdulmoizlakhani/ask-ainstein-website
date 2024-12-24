@@ -37,6 +37,7 @@ export default {
           300: "#767676",
           200: "#4C4A43",
           100: "#AAAAAA",
+          50: "#EBEBEB",
           bg: "#F7F7F5",
           lighter: "#DDDDDD",
           light: "#FFFFFF",
@@ -51,6 +52,7 @@ export default {
           900: "#EADEC0",
           800: "#FFD63D",
           700: "#FFF3D1",
+          600: "#F7E6BC",
           light: "#FFF2DE",
         },
         blue: {
@@ -78,6 +80,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      borderWidth: {
+        "1.5": "1.5px",
       },
     },
   },
