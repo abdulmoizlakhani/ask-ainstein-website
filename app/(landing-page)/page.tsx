@@ -1,6 +1,6 @@
 import Button from "@/components/Button";
 import StartLearningButton from "@/components/Button/StartLearningButton";
-import ComparisionTable from "@/components/Cards/ComparisionTable";
+import ComparisionTable from "@/components/ServiceComparisonTable";
 import FeebackCard from "@/components/Cards/FeedbackCard";
 import data from "@/data/landingPage/data.json";
 

@@ -1,69 +1,63 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
 import data from "@/data/landingPage/data.json";
+import { TextHighlight } from "../ui/TextHighlisht";
 
-const ComparisonContainers = () => {
-  const { comparisionCardData, tickIcon, cutIcon } = data.comparision;
-
-  const ComparisonSection = ({ isEinstein }: { isEinstein: boolean }) => (
-    <div className="">
-      <div className="flex  h-[70px] items-center gap-2 bg-purple-dark px-4 text-white sm:h-[80px] sm:gap-3 sm:px-6 md:h-[90px] md:px-8">
-        <Image
-          alt="Einstein Logo"
-          src={
-            isEinstein ? "/assets/ask-ainstein-ai.png" : "/assets/chatgpt.svg"
-          }
-          width={isEinstein ? 204 : 148}
-          height={isEinstein ? 48 : 44}
-          className="object-contain"
-        />
-      </div>
-      <div>
-        {comparisionCardData.map((item, index) => (
-          <div
-            key={index}
-            className={`flex items-start ${
-              index === 0 ? "min-h-32" : "min-h-[5.65rem]"
-            } p-4 sm:p-6 md:p-8 ${
-              comparisionCardData.length - 1 !== index && "border-b-[1.2px]"
-            } border-secondary-50 bg-purple-50`}
-          >
-            <div className="h-6 w-8 shrink-0 sm:h-7 sm:w-10 md:h-8 md:w-12">
-              <Image
-                alt={`${isEinstein ? "tick" : "cut"} Logo`}
-                src={isEinstein ? tickIcon : cutIcon}
-                width={32}
-                height={32}
-                className="size-[24px] sm:size-[28px] md:size-[32px]"
-              />
-            </div>
-            <p className="text-base font-semibold sm:text-xl md:text-2xl">
-              {isEinstein ? (
-                <>
-                  {item.einstein.text}{" "}
-                  {item.einstein.heighlight && (
-                    <span className="rounded bg-yellow-light p-1 text-black">
-                      {item.einstein.heighlight}
-                    </span>
-                  )}
-                </>
-              ) : (
-                item.chatgpt.text
-              )}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+const ComparisionTable = () => {
+  const tableData = data.comparisionSection.comparisonTable;
 
   return (
-    <div className="mx-auto grid max-w-9xl grid-cols-1 overflow-hidden rounded-[10px]  border-[1.2px] border-secondary-50 text-secondary-800 md:grid-cols-2">
-      <ComparisonSection isEinstein={false} />
-      <ComparisonSection isEinstein={true} />
+    <div className="max-w-9xl grid grid-cols-1 md:grid-cols-2 border-[1.2px] border-secondary-50  text-secondary-800 rounded-[10px] overflow-hidden mx-auto">
+      {tableData.map((item) => {
+        return (
+          <div className="border-[1.2px] border-secondary-50 " key={item.title}>
+            <div
+              className="bg-purple-dark  h-[4.375rem] sm:h-[5rem] md:h-[5.625rem] px-4 sm:px-9  
+            md:px-[2rem] flex items-center gap-2 sm:gap-3"
+            >
+              <Image
+                alt="Einstein Logo"
+                src={item.image.src}
+                width={item.image.w}
+                height={item.image.h}
+                className="object-contain"
+              />
+            </div>
+            <div className="">
+              {item.points.map((point, index) => (
+                <div
+                  key={index}
+                  className={`flex items-start ${
+                    index === 0 ? "min-h-[8rem]" : "min-h-[5.65rem]"
+                  } p-4 sm:p-6 md:p-[2rem] gap-4 ${
+                    item.points.length - 1 !== index && "border-b-[1.2px]"
+                  } border-secondary-50`}
+                >
+                  <div className="flex-shrink-0">
+                    <Image
+                      alt={point.text}
+                      src={point.icon}
+                      width={32}
+                      height={32}
+                      className=""
+                    />
+                  </div>
+                  <p className="text-base sm:text-xl md:text-2xl font-semibold">
+                    <TextHighlight
+                      text={point.text}
+                      highlightText={point.highlight}
+                      variant="secondary"
+                    />
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
 
-export default ComparisonContainers;
+export default ComparisionTable;
