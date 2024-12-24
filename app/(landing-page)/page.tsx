@@ -5,9 +5,11 @@ import FeebackCard from "@/components/Cards/FeedbackCard";
 import data from "@/data/landingPage/data.json";
 import TopOnePercentCard from "@/components/Cards/TopOnePercentCard";
 import BiggestMistakesCard from "@/components/Cards/BiggestMistakes";
+import FamousPErsonality from "@/components/Cards/FamousPErsonality";
 
 export default function Home() {
-  const { stars, reviewText, highlight, reviewer } = data.carousel.review;
+  const { reviewText, highlight, reviewer } = data.carousel.review;
+  const personalities = data.personalityCardData.personalities;
   return (
     <div>
       <Button>Login</Button>
@@ -34,6 +36,11 @@ export default function Home() {
       />
       <TopOnePercentCard />
       <BiggestMistakesCard />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem]">
+        {personalities.map((person, index) => (
+          <FamousPErsonality key={index} person={person} />
+        ))}
+      </div>
     </div>
   );
 }

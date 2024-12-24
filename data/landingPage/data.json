@@ -231,6 +231,29 @@
       "backgroundColor": "bg-accent-lightYellow"
     }
   },
+  "personalityCardData": {
+    "title": "Here are some famous personalities shaped by this approach",
+    "personalities": [
+      {
+        "name": "Elon Musk",
+        "image": "/assets/elon-musk.png",
+        "title": "Entrepreneur, CEO of Tesla and SpaceX",
+        "quote": "I think it’s important to reason from first principles rather than by analogy... you boil things down to the most fundamental truths and then reason up from there."
+      },
+      {
+        "name": "Charlie Munger",
+        "image": "/assets/charlie-munger.png",
+        "title": "Partner, Vice Chairman of Berkshire Hathaway",
+        "quote": "You have to think about the big ideas that really work and see them coming... First principles thinking is essential to real process."
+      },
+      {
+        "name": "Steve Jobs",
+        "image": "/assets/steve-jobs.png",
+        "title": "Entrepreneur, co-founder of Apple",
+        "quote": "You have to work hard to get your thinking clean to make it simple. But it's worth it in the end, because once you get there, you can move mountains."
+      }
+    ]
+  },
   "TopOnePercentCard": {
     "questionText": "Ask Yourself",
     "mainHeading": {
