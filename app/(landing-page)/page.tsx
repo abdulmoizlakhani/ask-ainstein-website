@@ -4,6 +4,7 @@ import ComparisionTable from "@/components/ServiceComparisonTable";
 import FeebackCard from "@/components/Cards/FeedbackCard";
 import data from "@/data/landingPage/data.json";
 import TopOnePercentCard from "@/components/Cards/TopOnePercentCard";
+import BiggestMistakesCard from "@/components/Cards/BiggestMistakes";
 
 export default function Home() {
   const { stars, reviewText, highlight, reviewer } = data.carousel.review;
@@ -32,6 +33,7 @@ export default function Home() {
         profileImage={"/assets/review-people.png"}
       />
       <TopOnePercentCard />
+      <BiggestMistakesCard />
     </div>
   );
 }
