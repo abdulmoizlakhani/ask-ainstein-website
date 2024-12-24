@@ -25,8 +25,7 @@ const FeebackCard: React.FC<FeebackCardProps> = ({
   return (
     <div
       className={`
-        ${isPrimary ? "max-w-[888px] p-12 pb-16 flex flex-col gap-8 border-2 border-yellow-900 bg-yellow-700" : "h-[128px] max-w-[836px] p-12 bg-secondary-700 text-secondary-light flex items-center gap-16"}
-        rounded-${isPrimary ? "[1.25rem]" : "2xl"}
+        ${isPrimary ? "max-w-[888px] p-12 pb-16  rounded-[1.25rem] flex-col gap-8 border-2 border-yellow-900 bg-yellow-700" : "h-[128px] max-w-[836px] p-12 bg-secondary-700 rounded-2xl text-secondary-light  items-center gap-16"} flex
         relative justify-${isPrimary ? "center" : "between"}`}
     >
       <ReviewStar />

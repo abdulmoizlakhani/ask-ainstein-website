@@ -231,6 +231,20 @@
       "backgroundColor": "bg-accent-lightYellow"
     }
   },
+  "TopOnePercentCard": {
+    "questionText": "Ask Yourself",
+    "mainHeading": {
+      "text": "Do you want to think like the top 1% or do you want to be like everyone else?",
+      "highlight": "top 1%"
+    },
+    "subHeading": {
+      "text": "Consistent practice with Ask Ainstein, can save you several hours and still better prepare you for your examinations.",
+      "highlight": "Ask Ainstein"
+    },
+    "feedback": {
+      "review": "17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform."
+    }
+  },
   "footer": {
     "copyrightText": "Copyright ©2024 Ask Ainstein. All Rights Reserved.",
     "links": [
