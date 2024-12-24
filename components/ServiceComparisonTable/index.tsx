@@ -43,7 +43,6 @@ const ComparisionTable = () => {
                       src={point.icon}
                       width={32}
                       height={32}
-                      className=""
                     />
                   </div>
                   <p className="text-base sm:text-xl text-secondary-800 md:text-2xl font-semibold">
