@@ -35,7 +35,7 @@ const ComparisionTable = () => {
                     index === 0 ? "min-h-[8rem]" : "min-h-[5.65rem]"
                   } p-4 sm:p-6 md:p-[2rem] gap-4 ${
                     item.points.length - 1 !== index && "border-b-[1.2px]"
-                  } border-secondary-50`}
+                  } border-secondary-50 `}
                 >
                   <div className="flex-shrink-0">
                     <Image
@@ -46,7 +46,7 @@ const ComparisionTable = () => {
                       className=""
                     />
                   </div>
-                  <p className="text-base sm:text-xl md:text-2xl font-semibold">
+                  <p className="text-base sm:text-xl text-secondary-800 md:text-2xl font-semibold">
                     <TextHighlight
                       text={point.text}
                       highlightText={point.highlight}
