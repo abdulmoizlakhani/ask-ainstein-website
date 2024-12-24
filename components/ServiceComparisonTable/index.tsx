@@ -8,12 +8,15 @@ const ComparisionTable = () => {
   const tableData = data.comparisionSection.comparisonTable;
 
   return (
-    <div className="max-w-9xl grid grid-cols-1 md:grid-cols-2 border-[1.2px] border-secondary-50  text-secondary-800 rounded-[10px] overflow-hidden mx-auto">
+    <div className="max-w-9xl grid grid-cols-1 w-full gap-5 md:gap-0 md:grid-cols-2   rounded-xl overflow-hidden mx-auto">
       {tableData.map((item) => {
         return (
-          <div className="border-[1.2px] border-secondary-50 " key={item.title}>
+          <div
+            className="border-[1.2px] md:rounded-none rounded-xl border-secondary-50 "
+            key={item.title}
+          >
             <div
-              className="bg-purple-dark  h-[4.375rem] sm:h-[5rem] md:h-[5.625rem] px-4 sm:px-9  
+              className="bg-purple-dark  h-16 md:h-[5.625rem] px-4 sm:px-9  
             md:px-[2rem] flex items-center gap-2 sm:gap-3"
             >
               <Image
@@ -21,7 +24,7 @@ const ComparisionTable = () => {
                 src={item.image.src}
                 width={item.image.w}
                 height={item.image.h}
-                className="object-contain"
+                className={` w-auto h-6 md:h-auto `}
               />
             </div>
             <div className="">
