@@ -3,7 +3,7 @@ import React from "react";
 import data from "@/data/landingPage/data.json"; // Update the path to your JSON file
 
 const About = () => {
-  const { heroAction, profileImage, profileText, video } = data.about;
+  const { heroActionImage, profileImage, profileText, video } = data.about;
 
   return (
     <section className="flex relative pt-[100px] lg:pt-[330px] lg:pb-[100px] flex-col justify-center items-center">
@@ -18,7 +18,7 @@ const About = () => {
             allowFullScreen
           />
           <Image
-            src={heroAction}
+            src={heroActionImage}
             alt="See its Action"
             height={72}
             width={102}

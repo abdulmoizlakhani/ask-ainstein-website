@@ -27,18 +27,23 @@
     }
   },
   "hero": {
-    "background": "#000000",
     "heading": {
       "highlight": "Student in high school?",
       "title": "Exams Around the Corner? We've Got You Covered!"
     },
     "description": "Master every topic with personalized, Ai-powered guidance and curriculum-aligned practice questions.",
     "emphasis": "Learn by doing.",
-    "buttons": ["MainButton"],
-    "reviewCard": "HeroReviewCard"
+    "feedback": {
+      "text": "17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform.",
+      "rating": 5,
+      "image": {
+        "src": "/assets/review-people.png",
+        "alt": "review-people"
+      }
+    }
   },
   "about": {
-    "heroAction": "/assets/hero/action.png",
+    "heroActionImage": "/assets/see-it-in-action.png",
     "video": "https://www.youtube.com/embed/19g66ezsKAg",
     "profileImage": "/assets/about/founderImage.jpg",
     "profileText": {
@@ -265,8 +270,8 @@
       "highlight": "Ask Ainstein"
     },
     "feedback": {
-      "text": "17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform.",
       "rating": 5,
+      "text": "17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform.",
       "image": {
         "src": "/assets/review-people.png",
         "alt": "review-people"
@@ -278,10 +283,13 @@
       "image": "/assets/icons/shock.png",
       "title": "The 3 biggest mistakes most students make",
       "redSpan": "3 biggest mistakes",
-      "introduction": [
-        "Having been a student myself and coping with ADHD, I deeply understand the challenges that many face. At a young age, we are full of energy and eager to explore and express ourselves. Yet, the pressure for academic excellence, imposed by parents and society, can be overwhelming.",
-        "While we can't change the rat race, we can empower the youth of today to be better prepared for the future by helping them avoid key mistakes in their learning journey."
-      ]
+      "introduction": {
+        "text": [
+          "Having been a student myself and coping with ADHD, I deeply understand the challenges that many face. At a young age, we are full of energy and eager to explore and express ourselves. Yet, the pressure for academic excellence, imposed by parents and society, can be overwhelming.",
+          "While we can't change the rat race, we can empower the youth of today to be better prepared for the future by helping them avoid key mistakes in their learning journey."
+        ],
+        "highlight": "While we can't change the rat race, we can empower the youth of today"
+      }
     },
     "mistakes": [
       {

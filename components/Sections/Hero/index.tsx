@@ -2,6 +2,7 @@ import React from "react";
 import landingPageData from "@/data/landingPage/data.json"; // Import JSON data
 import StartLearningButton from "@/components/Button/StartLearningButton";
 import FeebackCard from "@/components/Cards/FeedbackCard";
+import RatingCard from "@/components/Cards/RatingCard";
 
 const Hero = () => {
   const { hero } = landingPageData;
@@ -31,10 +32,10 @@ const Hero = () => {
 
       {/* Review Card */}
       <div className="mt-4 lg:mt-[1.7rem]">
-        <FeebackCard
-          variant="secondary"
-          review={hero.reviewCard.text}
-          profileImage={hero.reviewCard.image}
+        <RatingCard
+          image={hero.feedback.image}
+          rating={hero.feedback.rating}
+          text={hero.feedback.text}
         />
       </div>
     </section>

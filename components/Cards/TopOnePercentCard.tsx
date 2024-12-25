@@ -9,7 +9,7 @@ const TopOnePercentCard = () => {
   const topOnePercentCardData = textData.TopOnePercentCard;
 
   return (
-    <div className="bg-white w-full max-w-[76.125rem] p-14 rounded-[20px] border-dashed border-[2px] border-secondary-lighter text-secondary-dark flex justify-center items-center flex-col gap-[2rem]">
+    <div className="bg-white w-full max-w-[76.125rem] p-14 rounded-[1.25rem] border-dashed border-2 border-secondary-lighter text-secondary-dark flex justify-center items-center flex-col gap-[2rem]">
       <p className="text-secondary-500 font-bold text-lg uppercase">
         {topOnePercentCardData.questionText}
       </p>

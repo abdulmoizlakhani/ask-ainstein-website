@@ -7,7 +7,7 @@ const StudyMistakes = () => {
   const { header, mistakes, footer } = content.biggestMistakeData; // Destructure JSON data
 
   return (
-    <div className="bg-yellow-650 border-4 border-yellow-800 rounded-[20px] w-full max-w-[84.81rem] h-[73.37rem] text-secondary-800 relative pt-32 pb-[300px] mx-auto mt-12">
+    <div className="bg-yellow-650 border-4 border-yellow-800 rounded-[1.25rem] w-full max-w-[84.81rem] h-[73.37rem] text-secondary-800 relative pt-32 pb-[18.75rem] mx-auto mt-12">
       {/* Ghost Image */}
       <Image
         src={header.image}
@@ -27,12 +27,20 @@ const StudyMistakes = () => {
               variant="red"
             />
           </h1>
-          {header.introduction.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+          {header.introduction.text.map((paragraph, index) => (
+            <p>
+              <TextHighlight
+                text={paragraph}
+                highlightText={header.introduction.highlight}
+                key={index}
+                variant="secondary"
+                className="text-secondary-dark"
+              />
+            </p>
           ))}
         </div>
 
-        <hr className="border-silver-dark border-[2px] mb-12" />
+        <hr className="border-silver-dark border-2 mb-12" />
 
         {/* Main Content Section */}
         <div className="space-y-8">
@@ -44,7 +52,7 @@ const StudyMistakes = () => {
             />
           </h2>
 
-          <p className="text-text-smallLight font-semibold text-2xl mb-12">
+          <p className="text-secondary-800 font-semibold text-2xl mb-12">
             {footer.quote}
           </p>
 
@@ -57,13 +65,13 @@ const StudyMistakes = () => {
                   src={mistake.image}
                   width={32}
                   height={32}
-                  className="h-[32px] w-[32px]"
+                  className="h-8 w-8"
                 />
                 <div className="space-y-1">
-                  <span className="font-bold text-[26px] text-black">
+                  <span className="font-bold text-[1.625rem] text-black">
                     {mistake.title}
                   </span>
-                  <span className="text-secondary-800 text-[24px] font-semibold">
+                  <span className="text-secondary-800 text-2xl font-semibold">
                     {mistake.description}
                   </span>
                 </div>
@@ -83,7 +91,7 @@ const StudyMistakes = () => {
               className="text-secondary-dark"
               text={footer.closing.split(" - ")[1]}
               highlightText={footer.highlight}
-              variant="primary"
+              variant="tertiary"
             />
           </p>
         </div>
