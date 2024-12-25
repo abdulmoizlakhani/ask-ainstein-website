@@ -2,6 +2,8 @@ import Button from "@/components/Button";
 import StartLearningButton from "@/components/Button/StartLearningButton";
 import FeedbackCard from "@/components/Cards/FeedbackCard";
 import RatingCard from "@/components/Cards/RatingCard";
+import StudyMistakes from "@/components/Cards/StudyMistakes";
+import TopOnePercentCard from "@/components/Cards/TopOnePercentCard";
 import ComparisionTable from "@/components/ServiceComparisonTable";
 import data from "@/data/landingPage/data.json";
 
@@ -30,6 +32,8 @@ export default function Home() {
         hightlightedText={highlight}
         reviewer={reviewer}
       />
+      <TopOnePercentCard />
+      <StudyMistakes />
     </div>
   );
 }
