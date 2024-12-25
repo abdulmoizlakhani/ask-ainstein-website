@@ -3,21 +3,21 @@ interface HighlightProps {
   highlight?: string;
 }
 
-interface HighlightPart {
+interface ReturnHighlightPart {
   text: string;
   isHighlight: boolean;
 }
 
-export const useTextHighlight = ({
+const useTextHighlight = ({
   text,
   highlight,
-}: HighlightProps): { parts: HighlightPart[] } => {
+}: HighlightProps): { parts: ReturnHighlightPart[] } => {
   if (!highlight || !text) {
     return { parts: [{ text, isHighlight: false }] };
   }
 
   const splitParts = text.split(highlight);
-  const result: HighlightPart[] = [];
+  const result: ReturnHighlightPart[] = [];
 
   splitParts.forEach((part, index) => {
     if (part) {
@@ -30,3 +30,5 @@ export const useTextHighlight = ({
 
   return { parts: result };
 };
+
+export default useTextHighlight;

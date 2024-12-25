@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { TextHighlight } from "../ui/TextHighlisht";
+import TextHighlight from "@/components/TextHighlight";
 import content from "@/data/landingPage/data.json"; // Import the JSON data
 
 const StudyMistakes = () => {
@@ -76,7 +76,7 @@ const StudyMistakes = () => {
             <TextHighlight
               text={footer.closing.split(" - ")[0]}
               highlightText="Ask Einstein"
-              variant="ask-ainstein"
+              variant="primary"
             />
             {" - "}
             <TextHighlight
