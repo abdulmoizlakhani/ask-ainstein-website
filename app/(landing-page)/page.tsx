@@ -2,10 +2,10 @@ import Button from "@/components/Button";
 import StartLearningButton from "@/components/Button/StartLearningButton";
 import FeedbackCard from "@/components/Cards/FeedbackCard";
 import RatingCard from "@/components/Cards/RatingCard";
+import StudyMistakes from "@/components/Cards/StudyMistakes";
+import TopOnePercentCard from "@/components/Cards/TopOnePercentCard";
 import ComparisionTable from "@/components/ServiceComparisonTable";
 import data from "@/data/landingPage/data.json";
-import TopOnePercentCard from "@/components/Cards/TopOnePercentCard";
-import BiggestMistakesCard from "@/components/Cards/BiggestMistakes";
 
 export default function Home() {
   const { reviewText, highlight, reviewer } = data.carousel.review;
@@ -33,7 +33,7 @@ export default function Home() {
         reviewer={reviewer}
       />
       <TopOnePercentCard />
-      <BiggestMistakesCard />
+      <StudyMistakes />
     </div>
   );
 }

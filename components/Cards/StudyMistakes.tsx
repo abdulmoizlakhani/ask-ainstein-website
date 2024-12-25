@@ -1,34 +1,34 @@
 import Image from "next/image";
 import React from "react";
+
 import TextHighlight from "@/components/TextHighlight";
-import content from "@/data/landingPage/data.json"; // Import the JSON data
+import landingPageData from "@/data/landingPage/data.json";
 
 const StudyMistakes = () => {
-  const { header, mistakes, footer } = content.biggestMistakeData; // Destructure JSON data
+  const { header, mistakes, footer } = landingPageData.studyMistakesData;
 
   return (
-    <div className="bg-yellow-650 border-4 border-yellow-800 rounded-[1.25rem] w-full max-w-[84.81rem] h-[73.37rem] text-secondary-800 relative pt-32 pb-[18.75rem] mx-auto mt-12">
-      {/* Ghost Image */}
+    <div className="relative mx-auto mt-12 h-[73.37rem] w-full max-w-[84.81rem] rounded-[1.25rem] border-4 border-yellow-800 bg-yellow-650 pb-[18.75rem] pt-32 text-secondary-800">
       <Image
         src={header.image}
         alt="ghost"
         width={150}
         height={150}
-        className="absolute top-[-8%] left-1/2 -translate-x-1/2"
+        className="absolute left-1/2 top-[-8%] -translate-x-1/2"
       />
 
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="mx-auto max-w-6xl px-4">
         {/* Header Section */}
-        <div className="flex items-center flex-col gap-10 text-2xl font-semibold mb-12">
-          <h1 className="text-5xl font-bold text-secondary-dark text-center">
+        <div className="mb-12 flex flex-col items-center gap-10 text-2xl font-semibold">
+          <h1 className="text-center text-5xl font-bold text-secondary-dark">
             <TextHighlight
               text={header.title}
               highlightText={header.redSpan}
-              variant="red"
+              variant="danger"
             />
           </h1>
           {header.introduction.text.map((paragraph, index) => (
-            <p>
+            <p key={`study_mistakes_${index}`}>
               <TextHighlight
                 text={paragraph}
                 highlightText={header.introduction.highlight}
@@ -40,19 +40,19 @@ const StudyMistakes = () => {
           ))}
         </div>
 
-        <hr className="border-silver-dark border-2 mb-12" />
+        <hr className="mb-12 border-2 border-silver-dark" />
 
         {/* Main Content Section */}
         <div className="space-y-8">
-          <h2 className="text-[2rem] text-black font-bold text-center mb-12">
+          <h2 className="mb-12 text-center text-[2rem] font-bold text-black">
             <TextHighlight
-              text={"Here is what most students do wrong..​"}
-              highlightText={"do wrong.."}
-              variant="red"
+              text="Here is what most students do wrong.."
+              highlightText="do wrong.."
+              variant="danger"
             />
           </h2>
 
-          <p className="text-secondary-800 font-semibold text-2xl mb-12">
+          <p className="mb-12 text-2xl font-semibold text-secondary-800">
             {footer.quote}
           </p>
 
@@ -65,13 +65,13 @@ const StudyMistakes = () => {
                   src={mistake.image}
                   width={32}
                   height={32}
-                  className="h-8 w-8"
+                  className="size-8"
                 />
                 <div className="space-y-1">
-                  <span className="font-bold text-[1.625rem] text-black">
+                  <span className="text-[1.625rem] font-bold text-black">
                     {mistake.title}
                   </span>
-                  <span className="text-secondary-800 text-2xl font-semibold">
+                  <span className="text-2xl font-semibold text-secondary-800">
                     {mistake.description}
                   </span>
                 </div>
@@ -80,7 +80,7 @@ const StudyMistakes = () => {
           </div>
 
           {/* Footer Quote */}
-          <p className="mt-12 text-2xl leading-relaxed font-semibold">
+          <p className="mt-12 text-2xl font-semibold leading-relaxed">
             <TextHighlight
               text={footer.closing.split(" - ")[0]}
               highlightText="Ask Einstein"

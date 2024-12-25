@@ -231,7 +231,7 @@
       "backgroundColor": "bg-accent-lightYellow"
     }
   },
-  "TopOnePercentCard": {
+  "topOnePercentCard": {
     "questionText": "Ask Yourself",
     "mainHeading": {
       "text": "Do you want to think like the top 1% or do you want to be like everyone else?",
@@ -250,7 +250,7 @@
       }
     }
   },
-  "biggestMistakeData": {
+  "studyMistakesData": {
     "header": {
       "image": "/assets/icons/shock.png",
       "title": "The 3 biggest mistakes most students make",
@@ -291,7 +291,6 @@
       "closing": "💡 Avoid these mistakes with Ask Einstein - where learning is personalized, practice is plentiful, and understanding always comes first."
     }
   },
-
   "footer": {
     "copyrightText": "Copyright ©2024 Ask Ainstein. All Rights Reserved.",
     "links": [
