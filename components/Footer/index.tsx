@@ -8,20 +8,20 @@ const Footer = () => {
   const footerData = data.footer;
 
   return (
-    <footer className="bg-secondary-dark">
-      <div className="mx-auto flex max-w-8xl flex-col text-xl">
-        <div className="flex justify-between gap-8 py-16">
+    <footer className="bg-secondary-dark p-4">
+      <div className="mx-auto  flex max-w-8xl flex-col ">
+        <div className="grid grid-cols-2  md:grid-cols-4 gap-6 md:gap-8 py-16">
           {footerData.links.map((section, sectionIndex) => (
-            <div key={`${section.title}-${sectionIndex}`}>
-              <h3 className="mb-[1.875rem] font-semibold text-secondary-light">
+            <div className="" key={`${section.title}-${sectionIndex}`}>
+              <h3 className="mb-[1.875rem] font-medium md:text-xl text-sm  md:font-semibold text-secondary-light">
                 {section.title}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 text-xs md:text-xl">
                 {section.links.map((link, linkIndex) => (
                   <li key={`footer-menu-${linkIndex}`}>
                     <Link
                       href={link.href}
-                      className="flex items-center gap-3 text-secondary-400"
+                      className="flex items-center  gap-3 text-secondary-400"
                     >
                       {link.icon && (
                         <Image
@@ -29,11 +29,14 @@ const Footer = () => {
                           alt={link.icon.alt || link.label}
                           height={link.icon.size}
                           width={link.icon.size}
+                          className={` h-4 w-4 md:h-auto md:w-auto`}
                         />
                       )}
-                      {link.label}
+                      <p className="text-wrap">{link.label}</p>
                       {link.comingSoon && (
-                        <span className="text-sm">{link.comingSoonText}</span>
+                        <span className="text-[0.625rem] md:text-xs ">
+                          {link.comingSoonText}
+                        </span>
                       )}
                     </Link>
                   </li>
@@ -43,8 +46,10 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-center border-t border-secondary-750 py-10 text-center">
-          <p className="text-secondary-400">{footerData.copyrightText}</p>
+        <div className="flex items-center justify-center border-t border-secondary-750 py-8 md:py-10 text-center">
+          <p className="text-secondary-400 md:text-xl text-sm">
+            {footerData.copyrightText}
+          </p>
         </div>
       </div>
     </footer>
