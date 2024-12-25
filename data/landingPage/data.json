@@ -242,7 +242,12 @@
       "highlight": "Ask Ainstein"
     },
     "feedback": {
-      "review": "17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform."
+      "rating": 5,
+      "text": "17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform.",
+      "image": {
+        "src": "/assets/review-people.png",
+        "alt": "review-people"
+      }
     }
   },
   "biggestMistakeData": {
