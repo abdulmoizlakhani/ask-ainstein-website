@@ -27,8 +27,16 @@ const StudyMistakes = () => {
               variant="red"
             />
           </h1>
-          {header.introduction.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+          {header.introduction.text.map((paragraph, index) => (
+            <p>
+              <TextHighlight
+                text={paragraph}
+                highlightText={header.introduction.highlight}
+                key={index}
+                variant="secondary"
+                className="text-secondary-dark"
+              />
+            </p>
           ))}
         </div>
 
@@ -44,7 +52,7 @@ const StudyMistakes = () => {
             />
           </h2>
 
-          <p className="text-text-smallLight font-semibold text-2xl mb-12">
+          <p className="text-secondary-800 font-semibold text-2xl mb-12">
             {footer.quote}
           </p>
 
