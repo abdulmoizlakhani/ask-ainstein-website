@@ -81,9 +81,6 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      borderWidth: {
-        "1.5": "1.5px",
-      },
     },
   },
   plugins: [],

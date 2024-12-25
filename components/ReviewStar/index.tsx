@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-const ReviewStar = () => {
+const ReviewStar = ({ rating }: { rating: number }) => {
   return (
     <div className="flex gap-1">
-      {Array.from({ length: 5 }, (_, i) => (
+      {Array.from({ length: rating }, (_, i) => (
         <Image
           key={i}
           src="/assets/icons/star.svg"
