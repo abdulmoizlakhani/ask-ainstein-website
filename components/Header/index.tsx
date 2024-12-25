@@ -20,7 +20,7 @@ const Header = () => {
         />
         <div className="md:flex-between flex-center gap-3 flex-wrap md:gap-6 text-xs md:text-lg">
           <div className="flex items-center text-secondary-light">
-            <p className="font-bold">
+            <p className="font-bold md:text-start text-center">
               {countdown.heading}
               <span className="ml-2 font-medium">{countdown.subheading}</span>
             </p>
