@@ -1,9 +1,17 @@
 import Image from "next/image";
 import React from "react";
-import data from "@/data/landingPage/data.json"; // Update the path to your JSON file
+import data from "@/data/landingPage/data.json";
+import TextHighlight from "../TextHighlight";
 
 const About = () => {
-  const { heroActionImage, profileImage, profileText, video } = data.about;
+  const {
+    heroActionImage,
+    profileImage,
+    profileText,
+    video,
+    secondPara,
+    thirdPara,
+  } = data.about;
 
   return (
     <section className="flex relative pt-[100px] lg:pt-[330px] lg:pb-[100px] flex-col justify-center items-center">
@@ -57,27 +65,31 @@ const About = () => {
 
         {/* Second paragraph */}
         <div className="lg:text-xl text-sm font-bold">
-          <h3>🌟 Why I Created Ask Ainstein</h3>
-          <p className="text-secondary-600">
-            <span className="bg-primary-100 p-1 rounded text-secondary-900">
-              Drawing from my own challenges as a student with ADHD,{" "}
-            </span>
-            I deeply understand what it’s like to have a short attention span
-            and struggle with distractions. These experiences shaped my teaching
-            style, allowing me to cater to students who learn differently. This
-            personalized approach has been my winning formula, helping students
-            not only succeed but thrive.
+          <h3>{secondPara.title}</h3>
+          <p className="text-secondary-600 mt-2">
+            <TextHighlight
+              variant="secondary"
+              className=" text-secondary-dark"
+              text={secondPara.content}
+              highlightText={secondPara.highlight}
+            />
           </p>
         </div>
 
         {/* Third paragraph */}
         <p className="lg:text-xl text-sm font-bold text-secondary-600">
-          ​Now, I’ve taken this vision further by creating{" "}
-          <span className="text-primary-300">Ask Ainstein</span>-{" "}
-          <span className="bg-blue-light p-1 rounded text-secondary-900">
-            a platform designed to make learning accessible, engaging, and
-            effective for everyone.
-          </span>
+          <TextHighlight
+            text={thirdPara.content.split(" - ")[0]}
+            highlightText="Ask Ainstein"
+            variant="primary"
+          />
+          {" - "}
+          <TextHighlight
+            className="text-secondary-dark"
+            text={thirdPara.content.split(" - ")[1]}
+            highlightText={thirdPara.highlight}
+            variant="tertiary"
+          />
         </p>
       </div>
     </section>

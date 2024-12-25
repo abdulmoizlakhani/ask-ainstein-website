@@ -11,6 +11,7 @@ const ReviewStar = ({ rating }: { rating: number }) => {
           alt="Star"
           width={28}
           height={28}
+          className="lg:h-7 h-4 w-4 lg:w-7"
         />
       ))}
     </div>

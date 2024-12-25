@@ -8,7 +8,7 @@ const Footer = () => {
   const footerData = data.footer;
 
   return (
-    <footer className="bg-secondary-dark p-4">
+    <footer className="bg-secondary-dark p-4 overflow-hidden">
       <div className="mx-auto  flex max-w-8xl flex-col ">
         <div className="grid grid-cols-2  md:grid-cols-4 gap-6 md:gap-8 py-16">
           {footerData.links.map((section, sectionIndex) => (

@@ -50,6 +50,15 @@
       "name": "Aamir",
       "role": "Founder & Educator",
       "description": "As a CFA Charterholder with over 10 years of experience tutoring thousands of students at various levels, I’ve had the privilege of witnessing remarkable transformations. I’ve seen students who once struggled in class go on to achieve extraordinary success, often surprising their parents and teachers alike."
+    },
+    "secondPara": {
+      "title": "🌟 Why I Created Ask Ainstein",
+      "content": " Drawing from my own challenges as a student with ADHD, I deeply understand what it’s like to have a short attention span and struggle with distractions. These experiences shaped my teaching style, allowing me to cater to students who learn differently. This personalized approach has been my winning formula, helping students not only succeed but thrive.",
+      "highlight": "Drawing from my own challenges as a student with ADHD"
+    },
+    "thirdPara": {
+      "content": "​Now, I’ve taken this vision further by creating Ask Ainstein - a platform designed to make learning accessible, engaging, and effective for everyone.",
+      "highlight": "a platform designed to make learning accessible, engaging, and effective for everyone."
     }
   },
   "functionalityData": {
