@@ -3,7 +3,7 @@ import useTextHighlight from "@/hooks/useHighlightedText";
 interface TextHighlightProps {
   text: string;
   highlightText?: string;
-  variant: "DEFUALT" | "primary" | "secondary" | "tertiary" | "red";
+  variant: "DEFUALT" | "primary" | "secondary" | "tertiary" | "danger";
   className?: string;
 }
 
@@ -12,7 +12,7 @@ const classes = {
   primary: "text-primary-300",
   secondary: "bg-yellow-light text-highlight",
   tertiary: "bg-blue-light text-highlight",
-  red: "text-red-800",
+  danger: "text-red-800",
 };
 
 const TextHighlight = ({

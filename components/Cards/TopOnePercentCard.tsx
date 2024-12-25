@@ -1,29 +1,27 @@
 import React from "react";
-import StartLearningButton from "../Button/StartLearningButton";
-import FeebackCard from "./FeedbackCard";
-import textData from "@/data/landingPage/data.json";
+
 import TextHighlight from "@/components/TextHighlight";
+import landingPageData from "@/data/landingPage/data.json";
+
 import RatingCard from "./RatingCard";
+import StartLearningButton from "../Button/StartLearningButton";
 
 const TopOnePercentCard = () => {
-  const topOnePercentCardData = textData.TopOnePercentCard;
+  const topOnePercentCardData = landingPageData.topOnePercentCard;
 
   return (
-    <div className="bg-white w-full max-w-[76.125rem] p-14 rounded-[20px] border-dashed border-[2px] border-secondary-lighter text-secondary-dark flex justify-center items-center flex-col gap-[2rem]">
-      <p className="text-secondary-500 font-bold text-lg uppercase">
+    <div className="flex w-full max-w-[76.125rem] flex-col items-center justify-center gap-8 rounded-[1.25rem] border-2 border-dashed border-secondary-lighter bg-secondary-light p-14 text-secondary-dark">
+      <p className="text-lg font-bold uppercase text-secondary-500">
         {topOnePercentCardData.questionText}
       </p>
-      <h2 className="text-5xl font-bold text-text-black w-[90%] leading-normal text-center">
+      <h2 className="w-[90%] text-center text-5xl font-bold leading-normal text-secondary-dark">
         <TextHighlight
           text={topOnePercentCardData.mainHeading.text}
           highlightText={topOnePercentCardData.mainHeading.highlight}
           variant="primary"
         />
       </h2>
-      <h5
-        className="text-secondary-800 text-[1.625
-rem] font-semibold"
-      >
+      <h5 className="text-[1.625rem] font-semibold text-secondary-800">
         <TextHighlight
           text={topOnePercentCardData.subHeading.text}
           highlightText={topOnePercentCardData.subHeading.highlight}
@@ -32,8 +30,8 @@ rem] font-semibold"
       </h5>
       <StartLearningButton />
       <RatingCard
-        image={topOnePercentCardData.feedback.image}
         rating={topOnePercentCardData.feedback.rating}
+        image={topOnePercentCardData.feedback.image}
         text={topOnePercentCardData.feedback.text}
       />
     </div>
