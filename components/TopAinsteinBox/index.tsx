@@ -3,7 +3,7 @@ import React from "react";
 
 const TopAinsteinBox = ({ image }: { image: { src: string; alt: string } }) => {
   return (
-    <div className="h-[200px] w-[200px] absolute top-[-100px] bg-primary-600 flex-center rounded-[0.625rem]">
+    <div className="flex-center absolute top-[-100px] size-[200px] rounded-[0.625rem] bg-primary-600">
       <Image src={image.src} alt={image.alt} width={130} height={130} />
     </div>
   );

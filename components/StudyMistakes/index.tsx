@@ -18,7 +18,6 @@ const StudyMistakes = () => {
       />
 
       <div className="mx-auto max-w-6xl px-4">
-        {/* Header Section */}
         <div className="mb-12 flex flex-col items-center gap-10 text-2xl font-semibold">
           <h1 className="text-center text-5xl font-bold text-secondary-dark">
             <TextHighlight
@@ -42,7 +41,6 @@ const StudyMistakes = () => {
 
         <hr className="mb-12 border-2 border-silver-dark" />
 
-        {/* Main Content Section */}
         <div className="space-y-8">
           <h2 className="mb-12 text-center text-[2rem] font-bold text-black">
             <TextHighlight
@@ -56,7 +54,6 @@ const StudyMistakes = () => {
             {footer.quote}
           </p>
 
-          {/* Mistakes List */}
           <div className="space-y-8">
             {mistakes.map((mistake) => (
               <div key={mistake.id} className="flex items-start gap-4">
@@ -79,7 +76,6 @@ const StudyMistakes = () => {
             ))}
           </div>
 
-          {/* Footer Quote */}
           <p className="mt-12 text-2xl font-semibold leading-relaxed">
             <TextHighlight
               text={footer.closing.split(" - ")[0]}

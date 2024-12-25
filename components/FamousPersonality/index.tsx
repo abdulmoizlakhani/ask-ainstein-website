@@ -7,20 +7,21 @@ interface FamousPersonalityProps {
   quote: string;
   image: string;
 }
+
 const FamousPErsonality = ({ person }: { person: FamousPersonalityProps }) => {
   return (
-    <div className="flex flex-col max-w-[480px] items-center space-y-4">
+    <div className="flex max-w-[480px] flex-col items-center space-y-4">
       <Image
         src={person.image}
         alt={person.name}
-        className="h-[380px] object-contain w-[380px]"
+        className="size-[380px] object-contain"
         width={380}
         height={380}
       />
-      <div className="text-center space-y-2">
-        <h3 className="font-bold text-2xl">{person.name}</h3>
+      <div className="space-y-2 text-center">
+        <h3 className="text-2xl font-bold">{person.name}</h3>
         <p className="font-semibold text-secondary-300">{person.title}</p>
-        <p className="text-lg max-w-[420px] tracking-tight">
+        <p className="max-w-[420px] text-lg tracking-tight">
           {`"${person.quote}"`}
         </p>
       </div>

@@ -161,7 +161,8 @@
         "src": "/assets/app-screenshot-3.png",
         "alt": "Image 3"
       }
-    ]
+    ],
+    "slideChangeTime": 3000
   },
   "featureSection": {
     "features": [
@@ -237,15 +238,15 @@
   },
   "powerOfFirstPrinciple": {
     "title": "The Power of First Principles Thinking",
-    "description": "Several influential thinkers, entrepreneurs, and scientists have championed first principles thinking – a problem-solving framework that breaks down complex problems into their most basic, fundamental truths.",
+    "description": "Several influential thinkers, entrepreneurs, and scientists have championed first principles thinking - a problem-solving framework that breaks down complex problems into their most basic, fundamental truths.",
     "hardTruth": {
       "text": "Here's the HARD truth - Most schools don't teach this!",
       "highlight": "HARD truth - Most schools don't teach this!",
       "icon": "/assets/icons/danger.png"
     },
     "importantStatement": "It's not about what you learn.",
-    "highlightedStatement": "It's about how you think – and that's what truly sets you apart in the long run.",
-    "conclusion": "By mastering this approach, you gain the tools to tackle any challenge, innovate fearlessly, and achieve lasting",
+    "highlightedStatement": "It's about how you think and that's what truly sets you apart in the long run.",
+    "conclusion": "By mastering this approach, you gain the tools to tackle any challenge, innovate fearlessly, and achieve lasting success.",
     "images": {
       "lightIcon": "/assets/icons/light.png",
       "greenTick": "/assets/icons/green-tick.svg"

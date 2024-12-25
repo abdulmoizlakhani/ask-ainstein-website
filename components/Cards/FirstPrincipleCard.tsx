@@ -1,84 +1,79 @@
 import Image from "next/image";
 import React from "react";
-import { TextHighlight } from "../ui/TextHighlisht";
-import content from "@/data/landingPage/data.json"; // Import the JSON file
+
+import TextHighlight from "@/components/TextHighlight";
+import landingPageData from "@/data/landingPage/data.json";
 
 const FirstPrinciplesCard = () => {
-  const data = content.powerOfFirstPrinciple; // Get the data from the JSON file
+  const data = landingPageData.powerOfFirstPrinciple;
+
   return (
-    <div className="w-[91.12rem] h-[57.31rem] mx-auto rounded-[20px] flex pt-[7.375rem] justify-center bg-secondary-dark">
-      <div className="bg-yellow-650 relative max-w-[76.125rem] h-[730px] rounded-[20px] text-secondary-800 border-4 border-yellow-dark pb-[70px] px-[2.5rem] pt-[9.25rem]">
-        {/* Light Icon */}
+    <div className="mx-auto flex h-[57.31rem] w-[91.12rem] justify-center rounded-[20px] bg-secondary-dark pt-[7.375rem]">
+      <div className="relative h-[730px] max-w-[76.125rem] rounded-[20px] border-4 border-yellow-dark bg-yellow-650 px-10 pb-[70px] pt-[9.25rem] text-secondary-800">
         <Image
           height={180}
           width={180}
-          className="h-[180px] w-[180px] absolute left-1/2 -translate-x-1/2 top-[-90px] z-10"
+          className="absolute left-1/2 top-[-90px] z-10 size-[180px] -translate-x-1/2"
           alt="light icon"
           src={data.images.lightIcon}
         />
 
-        <div className="space-y-9 font-semibold text-2xl">
-          {/* Title with separator line */}
+        <div className="space-y-9 text-2xl font-semibold">
           <div className="space-y-4">
-            <h1 className="text-5xl font-bold text-secondary-dark mb-7 text-center">
+            <h1 className="mb-7 text-center text-5xl font-bold text-secondary-dark">
               {data.title}
             </h1>
-            <hr className="border-silver-dark border-2" />
+            <hr className="border border-silver-dark" />
           </div>
 
-          {/* Description */}
-          <p className="text-secondary-800 leading-relaxed text-2xl">
+          <p className="text-2xl leading-relaxed text-secondary-800">
             {data.description}
           </p>
 
-          {/* Hard Truth Section */}
           <div className="flex items-center gap-2 text-red-800">
             <Image
               height={32}
               width={32}
-              className="h-[32px] w-[32px]"
+              className="size-[32px]"
               alt="red tick icon"
               src={data.hardTruth.icon}
             />
             <p>
               <TextHighlight
                 highlightText={data.hardTruth.highlight}
-                variant="red"
+                variant="danger"
                 className="font-bold"
                 text={data.hardTruth.text}
               />
             </p>
           </div>
 
-          {/* Important Statement */}
-          <p className="pl-10 font-bold text-secondary-dark text-2xl">
+          <p className="pl-10 text-2xl font-bold text-secondary-dark">
             {data.importantStatement}
           </p>
 
-          {/* Highlighted Statement */}
           <div className="flex items-center gap-2">
             <Image
               height={32}
               width={32}
-              className="h-[32px] w-[32px]"
+              className="size-[32px]"
               alt="green tick icon"
               src={data.images.greenTick}
             />
             <p>
               <TextHighlight
                 highlightText="It's about how you think"
-                variant="primary"
-                className="text-text-black font-bold"
+                variant="tertiary"
+                className="font-bold text-secondary-dark"
                 text={data.highlightedStatement}
               />
             </p>
           </div>
 
-          {/* Conclusion */}
-          <p className="text-text-smallLight">
+          <p className="text-secondary-800">
             <TextHighlight
               variant="secondary"
-              highlightText="tackle any challenge, innovate fearlessly, and achieve lasting"
+              highlightText="tackle any challenge, innovate fearlessly, and achieve lasting success."
               text={data.conclusion}
             />
           </p>

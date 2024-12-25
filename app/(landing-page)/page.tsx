@@ -1,10 +1,12 @@
 import Button from "@/components/Button";
 import StartLearningButton from "@/components/Button/StartLearningButton";
 import FeedbackCard from "@/components/Cards/FeedbackCard";
+import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
 import RatingCard from "@/components/Cards/RatingCard";
-import StudyMistakes from "@/components/Cards/StudyMistakes";
-import TopOnePercentCard from "@/components/Cards/TopOnePercentCard";
+import Carousel from "@/components/Carousel";
 import ComparisionTable from "@/components/ServiceComparisonTable";
+import StudyMistakes from "@/components/StudyMistakes";
+import TopOnePercentCard from "@/components/TopOnePercentCard";
 import data from "@/data/landingPage/data.json";
 
 export default function Home() {
@@ -34,6 +36,8 @@ export default function Home() {
       />
       <TopOnePercentCard />
       <StudyMistakes />
+      <FirstPrinciplesCard />
+      <Carousel />
     </div>
   );
 }
