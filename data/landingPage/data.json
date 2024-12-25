@@ -83,20 +83,20 @@
 
         "points": [
           {
-            "icon": "/assets/icons/green-tick.svg",
-            "text": "Gives direct answers without encouraging logical thinking"
+            "icon": "/assets/icons/red-cross.svg",
+            "text": "Gives direct answers without encouraging logical thinking."
           },
           {
-            "icon": "/assets/icons/green-tick.svg",
-            "text": "Struggles with complex mathematical questions"
+            "icon": "/assets/icons/red-cross.svg",
+            "text": "Struggles with complex mathematical questions."
           },
           {
-            "icon": "/assets/icons/green-tick.svg",
-            "text": "Generic chatbot, not aligned with specific curriculums"
+            "icon": "/assets/icons/red-cross.svg",
+            "text": "Generic chatbot, not aligned with specific curriculums."
           },
           {
-            "icon": "/assets/icons/green-tick.svg",
-            "text": "No integration with a structured question bank"
+            "icon": "/assets/icons/red-cross.svg",
+            "text": "No integration with a structured question bank."
           }
         ]
       },
@@ -111,24 +111,21 @@
 
         "points": [
           {
-            "icon": "/assets/icons/red-cross.svg",
-            "text": "Acts as a tutor, helping you think critically and logically (based off 'first principles' approach)",
-            "highlight": "(based off 'first principles' approach)"
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "Acts as a tutor, helping you think critically and logically (based off 'first principles' approach).",
+            "highlight": "(based off 'first principles' approach)."
           },
           {
-            "icon": "/assets/icons/red-cross.svg",
-
-            "text": "Excels at mathematical questions"
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "Excels at mathematical questions."
           },
           {
-            "icon": "/assets/icons/red-cross.svg",
-
-            "text": "Curriculum-aligned to meet your academic needs"
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "Curriculum-aligned to meet your academic needs."
           },
           {
-            "icon": "/assets/icons/red-cross.svg",
-
-            "text": "Integrated with a rich, adaptive question bank for revision"
+            "icon": "/assets/icons/green-tick.svg",
+            "text": "Integrated with a rich, adaptive question bank for revision."
           }
         ]
       }
@@ -142,7 +139,10 @@
       "reviewer": {
         "name": "Riya Sharma",
         "detail": "Grade 10 Student",
-        "profileImage": "/assets/riya-sharma.png"
+        "image": {
+          "src": "/assets/riya-sharma.png",
+          "alt": "Riya Sharma's Image"
+        }
       }
     },
     "images": [
