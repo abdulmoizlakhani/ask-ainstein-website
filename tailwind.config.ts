@@ -53,6 +53,7 @@ export default {
           800: "#FFD63D",
           700: "#FFF3D1",
           600: "#F7E6BC",
+          650: "#FEFEEE",
           light: "#FFF2DE",
         },
         blue: {
