@@ -10,7 +10,7 @@ const classes = {
   primary: "bg-blue-light text-highlight",
   secondary: "bg-yellow-light text-highlight",
   red: "text-red-800",
-  DEFUALT: "text-secondary-dark",
+  DEFUALT: "",
   "ask-ainstein": "text-primary-300",
 };
 export const TextHighlight = ({

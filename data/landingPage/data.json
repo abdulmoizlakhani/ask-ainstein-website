@@ -148,17 +148,17 @@
     "images": [
       {
         "id": "1",
-        "src": "/assets/cruasal/1.png",
+        "src": "/assets/app-screenshot-1.png",
         "alt": "Image 1"
       },
       {
         "id": "2",
-        "src": "/assets/cruasal/2.png",
+        "src": "/assets/app-screenshot-2.png",
         "alt": "Image 2"
       },
       {
         "id": "3",
-        "src": "/assets/cruasal/3.png",
+        "src": "/assets/app-screenshot-3.png",
         "alt": "Image 3"
       }
     ]
@@ -203,33 +203,14 @@
       "alt": "ask Ainstein"
     }
   },
-  "firstPrinciple": {
-    "personalities": [
-      {
-        "name": "Elon Musk",
-        "title": "Entrepreneur, CEO of Tesla and SpaceX",
-        "quote": "I think it’s important to reason from first principles rather than by analogy... you boil things down to the most fundamental truths and then reason up from there."
-      },
-      {
-        "name": "Charlie Munger",
-        "title": "Partner, Vice Chairman of Berkshire Hathaway",
-        "quote": "You have to think about the big ideas that really work and see them coming... First principles thinking is essential to real process."
-      },
-      {
-        "name": "Steve Jobs",
-        "title": "Entrepreneur, co-founder of Apple",
-        "quote": "You have to work hard to get your thinking clean to make it simple. But it's worth it in the end, because once you get there, you can move mountains."
-      }
-    ],
-    "review": {
-      "stars": 5,
-      "review": "My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn’t know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We’re really proud of her progress, and I’m so glad we found this platform.",
-      "highlight": "After using this platform, we started seeing a big difference.",
-      "reviewerName": " - Anjali Sharma",
-      "reviewerDetail": "Parent of a Grade 10 Student",
-      "profileImage": "/assets/profileImage/2.jpg",
-      "backgroundColor": "bg-accent-lightYellow"
-    }
+  "secondReview": {
+    "stars": 5,
+    "review": "My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn’t know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We’re really proud of her progress, and I’m so glad we found this platform.",
+    "highlight": "After using this platform, we started seeing a big difference.",
+    "reviewerName": " - Anjali Sharma",
+    "reviewerDetail": "Parent of a Grade 10 Student",
+    "profileImage": "/assets/profileImage/2.jpg",
+    "backgroundColor": "bg-accent-lightYellow"
   },
   "personalityCardData": {
     "title": "Here are some famous personalities shaped by this approach",
@@ -254,6 +235,23 @@
       }
     ]
   },
+  "powerOfFirstPrinciple": {
+    "title": "The Power of First Principles Thinking",
+    "description": "Several influential thinkers, entrepreneurs, and scientists have championed first principles thinking – a problem-solving framework that breaks down complex problems into their most basic, fundamental truths.",
+    "hardTruth": {
+      "text": "Here's the HARD truth - Most schools don't teach this!",
+      "highlight": "HARD truth - Most schools don't teach this!",
+      "icon": "/assets/icons/danger.png"
+    },
+    "importantStatement": "It's not about what you learn.",
+    "highlightedStatement": "It's about how you think – and that's what truly sets you apart in the long run.",
+    "conclusion": "By mastering this approach, you gain the tools to tackle any challenge, innovate fearlessly, and achieve lasting",
+    "images": {
+      "lightIcon": "/assets/icons/light.png",
+      "greenTick": "/assets/icons/green-tick.svg"
+    }
+  },
+
   "TopOnePercentCard": {
     "questionText": "Ask Yourself",
     "mainHeading": {
@@ -352,7 +350,8 @@
             "icon": {
               "src": "email.svg",
               "alt": "Email",
-              "size": 22
+              "size": 22,
+              "sm": 16
             },
             "comingSoon": false,
             "comingSoonText": ""
@@ -368,7 +367,8 @@
             "icon": {
               "src": "facebook.svg",
               "alt": "Click to visit our Facebook page",
-              "size": 27
+              "size": 27,
+              "sm": 18
             },
             "comingSoon": false,
             "comingSoonText": ""
@@ -379,7 +379,8 @@
             "icon": {
               "src": "youtube.svg",
               "alt": "Click to visit our Youtube channel",
-              "size": 27
+              "size": 27,
+              "sm": 18
             },
             "comingSoon": false,
             "comingSoonText": ""
@@ -390,7 +391,8 @@
             "icon": {
               "src": "instagram.svg",
               "alt": "Click to visit our Instagram profile",
-              "size": 27
+              "size": 27,
+              "sm": 18
             },
             "comingSoon": false,
             "comingSoonText": ""
@@ -401,7 +403,8 @@
             "icon": {
               "src": "linkedin.svg",
               "alt": "Click to visit our LinkedIn page",
-              "size": 27
+              "size": 27,
+              "sm": 18
             },
             "comingSoon": false,
             "comingSoonText": ""
