@@ -91,7 +91,7 @@ const StudyMistakes = () => {
               className="text-secondary-dark"
               text={footer.closing.split(" - ")[1]}
               highlightText={footer.highlight}
-              variant="primary"
+              variant="tertiary"
             />
           </p>
         </div>
