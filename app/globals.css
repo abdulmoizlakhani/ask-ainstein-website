@@ -43,6 +43,9 @@ body {
   .box-round {
     @apply rounded-[0.625rem] md:rounded-[1.25rem];
   }
+  .font-2xl {
+    @apply md:text-2xl  text-xs;
+  }
 }
 
 @layer base {
