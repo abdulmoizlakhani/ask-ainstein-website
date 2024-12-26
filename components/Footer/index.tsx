@@ -2,18 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import data from "@/data/landingPage/data.json";
+import landingPageData from "@/data/landingPage/data.json";
 
 const Footer = () => {
-  const footerData = data.footer;
+  const footerData = landingPageData.footer;
+
+  const dataPlacements: { [x: string]: string } = {
+    start: "justify-self-start md:justify-self-start",
+    center: "justify-self-start md:justify-self-center",
+    end: "justify-self-start md:justify-self-end",
+  };
+
+  const placementoOrder: { [x: string]: string } = {
+    1: "order-1 md:order-1",
+    2: "order-4 md:order-2",
+    3: "order-3 md:order-3",
+    4: "order-2 md:order-4",
+  };
 
   return (
-    <footer className="bg-secondary-dark p-4 overflow-hidden">
-      <div className="mx-auto  flex max-w-8xl flex-col ">
-        <div className="grid grid-cols-2  md:grid-cols-4 gap-6 md:gap-8 py-16">
+    <footer className="overflow-hidden bg-secondary-dark">
+      <div className="mx-auto flex max-w-8xl flex-col">
+        <div className="grid grid-cols-2 gap-y-6 p-4 md:grid-cols-4 md:p-6 lg:p-14">
           {footerData.links.map((section, sectionIndex) => (
-            <div className="" key={`${section.title}-${sectionIndex}`}>
-              <h3 className="mb-[1.875rem] font-medium md:text-xl text-sm  md:font-semibold text-secondary-light">
+            <div
+              className={`${dataPlacements[section.placement]} ${placementoOrder[section.order]}`}
+              key={`${section.title}-${sectionIndex}`}
+            >
+              <h3 className="mb-3 text-sm font-medium text-secondary-light md:mb-5 md:text-xl md:font-semibold">
                 {section.title}
               </h3>
               <ul className="space-y-3 text-xs md:text-xl">
@@ -21,7 +37,7 @@ const Footer = () => {
                   <li key={`footer-menu-${linkIndex}`}>
                     <Link
                       href={link.href}
-                      className="flex items-center  gap-3 text-secondary-400"
+                      className="flex items-center gap-2 text-secondary-400"
                     >
                       {link.icon && (
                         <Image
@@ -29,12 +45,12 @@ const Footer = () => {
                           alt={link.icon.alt || link.label}
                           height={link.icon.size}
                           width={link.icon.size}
-                          className={` h-4 w-4 md:h-auto md:w-auto`}
+                          className="size-4 md:size-auto"
                         />
                       )}
                       <p className="text-wrap">{link.label}</p>
                       {link.comingSoon && (
-                        <span className="text-[0.625rem] md:text-xs ">
+                        <span className="text-[0.625rem] md:text-xs">
                           {link.comingSoonText}
                         </span>
                       )}
@@ -46,8 +62,8 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-center border-t border-secondary-750 py-8 md:py-10 text-center">
-          <p className="text-secondary-400 md:text-xl text-sm">
+        <div className="flex items-center justify-center border-t border-secondary-750 py-8 text-center">
+          <p className="font-source-sans text-xs text-secondary-400 md:text-xl">
             {footerData.copyrightText}
           </p>
         </div>

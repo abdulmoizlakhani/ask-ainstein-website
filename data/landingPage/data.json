@@ -331,6 +331,8 @@
     "links": [
       {
         "title": "Quick Links",
+        "placement": "",
+        "order": "1",
         "links": [
           {
             "label": "Learn",
@@ -364,6 +366,8 @@
       },
       {
         "title": "Contact Information",
+        "placement": "center",
+        "order": "2",
         "links": [
           {
             "label": "support@askaainstein.com",
@@ -381,6 +385,8 @@
       },
       {
         "title": "Social Links",
+        "placement": "center",
+        "order": "3",
         "links": [
           {
             "label": "Facebook",
@@ -434,6 +440,8 @@
       },
       {
         "title": "Trust Badges",
+        "placement": "end",
+        "order": "4",
         "links": [
           {
             "label": "SSL certification",
