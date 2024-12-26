@@ -14,13 +14,9 @@ export default function LandingPage() {
   return (
     <>
       <HeroSection />
-      <FeebackCard
-        rating={carouselReview.rating}
-        reviewText={carouselReview.reviewText}
-        hightlightedText={carouselReview.highlight}
-        reviewer={carouselReview.reviewer}
-      />
-      <ServiceComparisonTable />
+      <div className="px-4">
+        <ServiceComparisonTable />
+      </div>
       <FirstPrinciplesCard />
       <FamousPersonality />
       <StudyMistakes />
