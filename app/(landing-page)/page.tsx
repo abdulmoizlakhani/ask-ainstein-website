@@ -1,5 +1,6 @@
 import FeebackCard from "@/components/Cards/FeedbackCard";
-import Hero from "@/components/Sections/Hero";
+import HeroSection from "@/components/HeroSection";
+import TopOnePercentCard from "@/components/TopOnePercentCard";
 // import Button from "@/components/Button";
 // import StartLearningButton from "@/components/Button/StartLearningButton";
 // import FeedbackCard from "@/components/Cards/FeedbackCard";
@@ -12,17 +13,18 @@ import Hero from "@/components/Sections/Hero";
 import landingPageData from "@/data/landingPage/data.json";
 
 export default function LandingPage() {
-  const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
+  const { reviewText, highlight, reviewer } = landingPageData.secondReview;
 
   return (
-    <div className="bg-secondary-bg">
-      <Hero />
+    <>
+      <HeroSection />
+      <TopOnePercentCard />
       <FeebackCard
         rating={5}
         reviewText={reviewText}
         hightlightedText={highlight}
         reviewer={reviewer}
       />
-    </div>
+    </>
   );
 }

@@ -26,7 +26,7 @@
       "signIn": "Sign In"
     }
   },
-  "hero": {
+  "examsAroundCorner": {
     "heading": {
       "highlight": "Student in high school?",
       "title": "Exams Around the Corner? We've Got You Covered!"
@@ -43,7 +43,7 @@
     }
   },
   "about": {
-    "heroActionImage": "/assets/see-it-in-action.png",
+    "heroActionImage": "/assets/see-it-in-action.svg",
     "video": "https://www.youtube.com/embed/19g66ezsKAg",
     "profileImage": "/assets/founder-dp.png",
     "profileText": {
@@ -220,11 +220,16 @@
   },
   "secondReview": {
     "stars": 5,
-    "review": "My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn’t know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We’re really proud of her progress, and I’m so glad we found this platform.",
+    "reviewText": "My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn't know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We're really proud of her progress, and I'm so glad we found this platform.",
     "highlight": "After using this platform, we started seeing a big difference.",
-    "reviewerName": " - Anjali Sharma",
-    "reviewerDetail": "Parent of a Grade 10 Student",
-    "profileImage": "/assets/profileImage/2.jpg",
+    "reviewer": {
+      "name": "Anjali Sharma",
+      "detail": "Parent of a Grade 10 Student",
+      "image": {
+        "src": "/assets/anjali-sharma.png",
+        "alt": "Anjali Sharma's Image"
+      }
+    },
     "backgroundColor": "bg-accent-lightYellow"
   },
   "personalityCardData": {
