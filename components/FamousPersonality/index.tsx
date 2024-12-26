@@ -5,11 +5,9 @@ import data from "@/data/landingPage/data.json";
 import FamousPersonality from "@/components/FamousPersonality/FamousPersonalityCard";
 
 export default function LandingPage() {
-  const famousPersonality = data.personalityCardData;
+  const { personalities, title, slideChangeTime } = data.personalityCardData;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-
-  const { images, slideChangeTime } = data.carousel;
 
   const handleImageChange = (index: number) => {
     setCurrentIndex(index);
@@ -19,21 +17,19 @@ export default function LandingPage() {
     if (!isPaused) {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          prevIndex === personalities.length - 1 ? 0 : prevIndex + 1
         );
       }, slideChangeTime);
 
       return () => clearInterval(interval);
     }
-  }, [isPaused, images.length, slideChangeTime]);
+  }, [isPaused, personalities.length, slideChangeTime]);
 
   return (
     <div className=" space-y-9 px-4 md:space-y-16 ">
-      <h2 className=" text-xl md:text-3xl font-bold text-center">
-        {famousPersonality.title}
-      </h2>
+      <h2 className=" text-xl md:text-3xl font-bold text-center">{title}</h2>
       <div className="md:flex hidden gap-4 justify-between items-center">
-        {famousPersonality.personalities.map((person) => (
+        {personalities.map((person) => (
           <FamousPersonality person={person} />
         ))}
       </div>
@@ -42,12 +38,10 @@ export default function LandingPage() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <FamousPersonality
-          person={famousPersonality.personalities[currentIndex]}
-        />
+        <FamousPersonality person={personalities[currentIndex]} />
 
         <div className="flex justify-center gap-2 md:space-x-6">
-          {images.map((_, index) => (
+          {personalities.map((_, index) => (
             <button
               key={index}
               onClick={() => handleImageChange(index)}

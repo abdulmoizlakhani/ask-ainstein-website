@@ -228,6 +228,7 @@
     "backgroundColor": "bg-accent-lightYellow"
   },
   "personalityCardData": {
+    "slideChangeTime": 3000,
     "title": "Here are some famous personalities shaped by this approach",
     "personalities": [
       {
