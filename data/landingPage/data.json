@@ -87,7 +87,10 @@
   "comparisionSection": {
     "sectionTitle": {
       "mainHeading": "What makes 'Ainstein' unique vs ChatGPT",
-      "images": "/assets/ainstein-cheer.svg"
+      "images": {
+        "src": "/assets/ainstein-cheer.svg",
+        "alt": "Ainstein cheer"
+      }
     },
     "comparisonTable": [
       {
@@ -121,12 +124,11 @@
       {
         "title": "Ainstein",
         "image": {
-          "src": "/assets/ask-ainstein-ai.png",
+          "src": "/assets/ask-ainstein-ai.svg",
           "alt": "Ainstein",
           "w": 204,
           "h": 48
         },
-
         "points": [
           {
             "icon": "/assets/icons/green-tick.svg",
@@ -143,7 +145,7 @@
           },
           {
             "icon": "/assets/icons/green-tick.svg",
-            "text": "Integrated with a rich, adaptive question bank for revision."
+            "text": "Integrated with a rich, adaptive question bank for practice."
           }
         ]
       }

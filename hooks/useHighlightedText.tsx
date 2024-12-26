@@ -16,17 +16,22 @@ const useTextHighlight = ({
     return { parts: [{ text, isHighlight: false }] };
   }
 
-  // Sort highlights by length in descending order to avoid partial matches
-  const sortedHighlights = [...highlights].sort((a, b) => b.length - a.length);
+  // Escape special regex characters in the highlights
+  const escapeRegExp = (string: string) => {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  };
 
-  // Create a regular expression to match any of the highlights
+  const sortedHighlights = [...highlights]
+    .sort((a, b) => b.length - a.length)
+    .map(escapeRegExp);
+
   const highlightRegex = new RegExp(`(${sortedHighlights.join("|")})`, "gi");
 
   const splitParts = text.split(highlightRegex);
   const result: ReturnHighlightPart[] = splitParts.map((part) => ({
     text: part,
-    isHighlight: sortedHighlights.some((highlight) =>
-      new RegExp(`^${highlight}$`, "i").test(part)
+    isHighlight: highlights.some(
+      (highlight) => part.toLowerCase() === highlight.toLowerCase()
     ),
   }));
 
