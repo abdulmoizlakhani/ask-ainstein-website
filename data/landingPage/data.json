@@ -1,5 +1,9 @@
 {
   "header": {
+    "subHeading": {
+      "text": "Your first 200 credits are FREE to explore and improve. Share your  feedback  and help us make the platform even better for you!",
+      "highlight": ["first 200", "feedback"]
+    },
     "logo": {
       "src": "/assets/logo.png",
       "alt": "Ask Ainstein"

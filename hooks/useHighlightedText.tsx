@@ -1,6 +1,6 @@
 interface HighlightProps {
   text: string;
-  highlight?: string;
+  highlights?: string[];
 }
 
 interface ReturnHighlightPart {
@@ -10,23 +10,25 @@ interface ReturnHighlightPart {
 
 const useTextHighlight = ({
   text,
-  highlight,
+  highlights = [],
 }: HighlightProps): { parts: ReturnHighlightPart[] } => {
-  if (!highlight || !text) {
+  if (!highlights.length || !text) {
     return { parts: [{ text, isHighlight: false }] };
   }
 
-  const splitParts = text.split(highlight);
-  const result: ReturnHighlightPart[] = [];
+  // Sort highlights by length in descending order to avoid partial matches
+  const sortedHighlights = [...highlights].sort((a, b) => b.length - a.length);
 
-  splitParts.forEach((part, index) => {
-    if (part) {
-      result.push({ text: part, isHighlight: false });
-    }
-    if (index < splitParts.length - 1) {
-      result.push({ text: highlight, isHighlight: true });
-    }
-  });
+  // Create a regular expression to match any of the highlights
+  const highlightRegex = new RegExp(`(${sortedHighlights.join("|")})`, "gi");
+
+  const splitParts = text.split(highlightRegex);
+  const result: ReturnHighlightPart[] = splitParts.map((part) => ({
+    text: part,
+    isHighlight: sortedHighlights.some((highlight) =>
+      new RegExp(`^${highlight}$`, "i").test(part)
+    ),
+  }));
 
   return { parts: result };
 };
