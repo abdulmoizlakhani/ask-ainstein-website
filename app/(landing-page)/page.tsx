@@ -1,44 +1,21 @@
-import Button from "@/components/Button";
-import StartLearningButton from "@/components/Button/StartLearningButton";
-import FeedbackCard from "@/components/Cards/FeedbackCard";
-import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
-import RatingCard from "@/components/Cards/RatingCard";
-import Carousel from "@/components/Carousel";
-import ComparisionTable from "@/components/ServiceComparisonTable";
-import StudyMistakes from "@/components/StudyMistakes";
-import TopOnePercentCard from "@/components/TopOnePercentCard";
-import landingPageData from "@/data/landingPage/data.json";
+import Hero from "@/components/Sections/Hero";
+// import Button from "@/components/Button";
+// import StartLearningButton from "@/components/Button/StartLearningButton";
+// import FeedbackCard from "@/components/Cards/FeedbackCard";
+// import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
+// import RatingCard from "@/components/Cards/RatingCard";
+// import Carousel from "@/components/Carousel";
+// import ComparisionTable from "@/components/ServiceComparisonTable";
+// import StudyMistakes from "@/components/StudyMistakes";
+// import TopOnePercentCard from "@/components/TopOnePercentCard";
+// import landingPageData from "@/data/landingPage/data.json";
 
 export default function LandingPage() {
-  const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
+  // const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
 
   return (
     <div className="bg-secondary-bg">
-      <Button>Login</Button>
-      <Button variant="outlined">Login</Button>
-      <Button variant="large" shadow={true}>
-        Start Learning Today
-      </Button>
-      <StartLearningButton />
-      <ComparisionTable />
-      <RatingCard
-        rating={5}
-        text="17,643 students are using the platform to improve their learning and exam performance using Ask Ainstein platform."
-        image={{
-          src: "/assets/review-people.png",
-          alt: "Review People",
-        }}
-      />
-      <FeedbackCard
-        rating={5}
-        reviewText={reviewText}
-        hightlightedText={highlight}
-        reviewer={reviewer}
-      />
-      <TopOnePercentCard />
-      <StudyMistakes />
-      <FirstPrinciplesCard />
-      <Carousel />
+      <Hero />
     </div>
   );
 }

@@ -1,37 +1,33 @@
 import React from "react";
-import landingPageData from "@/data/landingPage/data.json"; // Import JSON data
+
 import StartLearningButton from "@/components/Button/StartLearningButton";
-import FeebackCard from "@/components/Cards/FeedbackCard";
 import RatingCard from "@/components/Cards/RatingCard";
+import landingPageData from "@/data/landingPage/data.json";
 
 const Hero = () => {
   const { hero } = landingPageData;
 
   return (
-    <section className=" py-9  px-3 md:py-[8.125rem] bg-secondary-dark h-[819px] md:h-[1215px] flex flex-col items-center text-secondary-light">
-      <div className=" max-w-[280px] sm:max-w-[888px]">
-        {/* Highlighted text */}
-        <p className="text-yellow-dark mb-2 lg:mb-4 text-xs md:text-[22px] font-medium">
+    <section className="h-[51.25rem] bg-secondary-dark px-6 py-9 lg:h-[76rem] lg:py-[8.25rem]">
+      <div className="mx-auto max-w-[55.5rem]">
+        <p className="ml-5 text-xs font-medium text-yellow-dark lg:ml-2 lg:text-[1.375rem]">
           {hero.heading.highlight}
         </p>
-
-        {/* Title */}
-        <h1 className=" text-3xl md:text-[70px] leading-[40px] text-center md:leading-[90px] font-bold tracking-tight">
+        <h1 className="text-center text-[2rem] font-bold leading-tight tracking-tight text-secondary-light lg:text-[4.375rem]">
           {hero.heading.title}
         </h1>
       </div>
 
-      {/* Description */}
-      <p className=" text-sm md:text-[22px] text-center mt-8 mb-9 lg:mt-[2.25rem] text-secondary-100 lg:mb-[3rem]">
+      <p className="my-4 text-center text-sm leading-normal text-secondary-100 lg:mb-12 lg:mt-9 lg:text-[1.375rem]">
         {hero.description}{" "}
         <span className="font-medium text-primary-300">{hero.emphasis}</span>
       </p>
 
-      {/* Buttons */}
-      <StartLearningButton />
+      <div className="flex-center">
+        <StartLearningButton />
+      </div>
 
-      {/* Review Card */}
-      <div className="mt-4 lg:mt-[1.7rem]">
+      <div className="flex-center mt-4 lg:mt-[1.7rem]">
         <RatingCard
           image={hero.feedback.image}
           rating={hero.feedback.rating}

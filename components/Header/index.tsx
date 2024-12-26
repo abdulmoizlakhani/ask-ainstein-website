@@ -8,7 +8,7 @@ const Header = () => {
   const { logo, countdown } = landingPageData.header;
 
   return (
-    <header className="flex-center relative max-h-[8.875rem] min-h-[7.25rem] bg-primary-600 px-4 md:px-8">
+    <header className="flex-center relative h-[8.875rem] bg-primary-600 px-4 md:px-8 lg:h-[7.25rem]">
       <main className="sm:flex-between flex-center w-full max-w-8xl flex-col py-14 md:flex-row md:gap-6">
         <Image
           src={logo.src}
