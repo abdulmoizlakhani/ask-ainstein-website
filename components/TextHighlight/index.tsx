@@ -2,13 +2,14 @@ import useTextHighlight from "@/hooks/useHighlightedText";
 
 interface TextHighlightProps {
   text: string;
-  highlightText?: string;
-  variant: "DEFUALT" | "primary" | "secondary" | "tertiary" | "danger";
+  highlightText?: string | string[];
+  variant: "DEFUALT" | "primary" | "secondary" | "tertiary" | "danger" | "none";
   className?: string;
 }
 
 const classes = {
   DEFUALT: "text-secondary-dark",
+  none: "",
   primary: "text-primary-300",
   secondary: "bg-yellow-light text-highlight",
   tertiary: "bg-blue-light text-highlight",
@@ -21,19 +22,29 @@ const TextHighlight = ({
   variant = "DEFUALT",
   className,
 }: TextHighlightProps) => {
-  const { parts } = useTextHighlight({ text, highlight: highlightText });
+  const highlights = Array.isArray(highlightText)
+    ? highlightText
+    : highlightText
+      ? [highlightText]
+      : [];
 
-  return parts.map((part, index) =>
-    part.isHighlight ? (
-      <span
-        key={`text_highlight_${index}`}
-        className={`${classes[variant]} ${className}`}
-      >
-        {part.text}
-      </span>
-    ) : (
-      <span key={`text_highlight_${index}`}>{part.text}</span>
-    )
+  const { parts } = useTextHighlight({ text, highlights });
+
+  return (
+    <>
+      {parts.map((part, index) =>
+        part.isHighlight ? (
+          <span
+            key={`text_highlight_${index}`}
+            className={`${classes[variant]} ${className}`}
+          >
+            {part.text}
+          </span>
+        ) : (
+          <span key={`text_highlight_${index}`}>{part.text}</span>
+        )
+      )}
+    </>
   );
 };
 
