@@ -32,7 +32,7 @@ body {
   }
 
   .btn-large {
-    @apply w-[28.125rem] h-[5.5rem] rounded-xl bg-yellow-dark text-secondary-dark font-semibold font-source-sans text-[1.75rem];
+    @apply lg:w-[28.125rem] lg:h-[5.5rem] w-[16.5rem] h-[3rem] rounded-xl bg-yellow-dark text-secondary-dark font-semibold font-source-sans text-base lg:text-[1.75rem];
   }
   .text-highlight {
     @apply rounded px-3 py-1 text-secondary-dark;

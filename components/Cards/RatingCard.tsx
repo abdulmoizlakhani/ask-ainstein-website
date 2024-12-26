@@ -14,16 +14,19 @@ interface RatingCardProps {
 
 const RatingCard = (props: RatingCardProps) => {
   return (
-    <div className="flex-center h-32 max-w-[52.25rem] gap-20 rounded-2xl bg-secondary-700 pl-10">
+    <div className="flex-between md:flex-row p-6 md:p-8 flex-col max-w-[52.25rem] md:gap-20 gap-4 rounded-2xl bg-secondary-700 ">
       <ReviewStar rating={props.rating} />
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col md:items-start items-center gap-2">
         <Image
           src={props.image.src}
           alt={props.image.alt}
           width={120}
           height={28}
+          className="h-5 w-[5.375rem] md:h-[1.75rem] md:w-[7.50rem]"
         />
-        <p className="font-medium text-secondary-light">{props.text}</p>
+        <p className="font-medium text-xs md:text-base text-secondary-light">
+          {props.text}
+        </p>
       </div>
     </div>
   );

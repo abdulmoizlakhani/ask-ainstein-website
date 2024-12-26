@@ -1,10 +1,9 @@
 import React from "react";
 
+import StartLearningButton from "@/components/Button/StartLearningButton";
 import RatingCard from "@/components/Cards/RatingCard";
 import TextHighlight from "@/components/TextHighlight";
 import landingPageData from "@/data/landingPage/data.json";
-
-import StartLearningButton from "../Button/StartLearningButton";
 
 const TopOnePercentCard = () => {
   const topOnePercentCardData = landingPageData.topOnePercentCard;
