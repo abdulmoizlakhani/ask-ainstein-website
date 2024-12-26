@@ -57,9 +57,11 @@ export default {
           700: "#FFF3D1",
           600: "#F7E6BC",
           650: "#FEFEEE",
+          500: "#F5FFBC",
           light: "#FFF2DE",
         },
         blue: {
+          900: "#0094C9",
           dark: "#1774D9",
           light: "#BADAFD",
         },

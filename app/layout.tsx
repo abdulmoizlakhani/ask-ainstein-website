@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import SubHeader from "@/components/Header/SubHeader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${sourceSans.variable} bg-secondary-bg antialiased`}
       >
+        <SubHeader />
         <Header />
         {children}
         <Footer />
