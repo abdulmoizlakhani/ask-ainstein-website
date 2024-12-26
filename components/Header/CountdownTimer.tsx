@@ -20,13 +20,13 @@ const CountdownTimer: React.FC = () => {
               alt="countdown"
               width={56.95}
               height={54.24}
-              className="h-[1.875rem] w-[1.875rem] md:h-auto md:w-auto"
+              className="size-[1.875rem] md:size-auto"
             />
-            <p className="absolute font-source-sans text-base md:text-3xl font-bold text-orange">
+            <p className="absolute font-source-sans text-base font-bold text-orange md:text-3xl">
               {item.value}
             </p>
           </div>
-          <p className="mt-1 font-source-sans text-[0.47rem] md:text-sm font-semibold text-secondary-light">
+          <p className="mt-1 font-source-sans text-[0.47rem] font-semibold text-secondary-light md:text-sm">
             {item.title}
           </p>
         </div>
