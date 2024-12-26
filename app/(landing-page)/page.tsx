@@ -1,5 +1,8 @@
+import FeebackCard from "@/components/Cards/FeedbackCard";
 import FamousPersonality from "@/components/FamousPersonality";
-import Hero from "@/components/Sections/Hero";
+import HeroSection from "@/components/HeroSection";
+import StudyMistakes from "@/components/StudyMistakes";
+import TopOnePercentCard from "@/components/TopOnePercentCard";
 // import Button from "@/components/Button";
 // import StartLearningButton from "@/components/Button/StartLearningButton";
 // import FeedbackCard from "@/components/Cards/FeedbackCard";
@@ -9,15 +12,23 @@ import Hero from "@/components/Sections/Hero";
 // import ComparisionTable from "@/components/ServiceComparisonTable";
 // import StudyMistakes from "@/components/StudyMistakes";
 // import TopOnePercentCard from "@/components/TopOnePercentCard";
-// import landingPageData from "@/data/landingPage/data.json";
+import landingPageData from "@/data/landingPage/data.json";
 
 export default function LandingPage() {
-  // const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
+  const { reviewText, highlight, reviewer } = landingPageData.secondReview;
 
   return (
-    <div className="bg-secondary-bg">
-      <Hero />
+    <>
+      <HeroSection />
       <FamousPersonality />
-    </div>
+      <StudyMistakes />
+      <TopOnePercentCard />
+      <FeebackCard
+        rating={5}
+        reviewText={reviewText}
+        hightlightedText={highlight}
+        reviewer={reviewer}
+      />
+    </>
   );
 }

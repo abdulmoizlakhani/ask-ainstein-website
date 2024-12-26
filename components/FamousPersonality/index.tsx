@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import data from "@/data/landingPage/data.json";
 import FamousPersonality from "@/components/FamousPersonality/FamousPersonalityCard";
+import data from "@/data/landingPage/data.json";
 
 export default function LandingPage() {
   const { personalities, title, slideChangeTime } = data.personalityCardData;
@@ -26,15 +26,15 @@ export default function LandingPage() {
   }, [isPaused, personalities.length, slideChangeTime]);
 
   return (
-    <div className=" space-y-9 px-4 md:space-y-16 ">
-      <h2 className=" text-xl md:text-3xl font-bold text-center">{title}</h2>
-      <div className="md:flex hidden gap-4 justify-between items-center">
-        {personalities.map((person) => (
-          <FamousPersonality person={person} />
+    <div className="space-y-9 px-4 md:space-y-16 ">
+      <h2 className="text-center text-xl font-bold md:text-3xl">{title}</h2>
+      <div className="hidden items-center justify-between gap-4 md:flex">
+        {personalities.map((person, i) => (
+          <FamousPersonality key={`famous_person_${i}`} person={person} />
         ))}
       </div>
       <div
-        className="flex md:hidden px-4 flex-col items-center gap-4 md:gap-12"
+        className="flex flex-col items-center gap-4 px-4 md:hidden md:gap-12"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -45,7 +45,7 @@ export default function LandingPage() {
             <button
               key={index}
               onClick={() => handleImageChange(index)}
-              className={`size-[6px] md:size-5 rounded-full transition-all duration-300 ${
+              className={`size-[6px] rounded-full transition-all duration-300 md:size-5 ${
                 index === currentIndex
                   ? "scale-150 bg-primary-300"
                   : "bg-secondary-150"
