@@ -37,6 +37,12 @@ body {
   .text-highlight {
     @apply rounded px-3 py-1 text-secondary-dark;
   }
+  .font-2xl {
+    @apply text-xs md:text-2xl;
+  }
+  .box-round {
+    @apply rounded-[0.625rem] md:rounded-[1.25rem];
+  }
 }
 
 @layer base {

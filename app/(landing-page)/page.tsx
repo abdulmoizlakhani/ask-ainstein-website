@@ -1,4 +1,5 @@
 import Hero from "@/components/Sections/Hero";
+import StudyMistakes from "@/components/StudyMistakes";
 // import Button from "@/components/Button";
 // import StartLearningButton from "@/components/Button/StartLearningButton";
 // import FeedbackCard from "@/components/Cards/FeedbackCard";
@@ -16,6 +17,7 @@ export default function LandingPage() {
   return (
     <div className="bg-secondary-bg">
       <Hero />
+      <StudyMistakes />
     </div>
   );
 }
