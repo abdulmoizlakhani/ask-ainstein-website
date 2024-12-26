@@ -8,26 +8,25 @@ const Header = () => {
   const { logo, countdown } = landingPageData.header;
 
   return (
-    <header className="flex-center py-4 md:py-0  max-h-[8.875rem] min-h-[7.25rem] bg-primary-600">
-      <main className="md:flex-between flex-center gap-4  md:gap-6 flex-wrap mx-12 w-full max-w-8xl">
+    <header className="flex-center relative max-h-[8.875rem] min-h-[7.25rem] bg-primary-600 px-4 md:px-8">
+      <main className="sm:flex-between flex-center w-full max-w-8xl flex-col py-14 md:flex-row md:gap-6">
         <Image
           src={logo.src}
           alt={logo.alt}
           width={228.16}
           height={84}
           priority
-          className="md:h-auto w-auto h-8"
+          className="h-14 w-auto md:h-auto"
         />
-        <div className="md:flex-between flex-center gap-3 flex-wrap md:gap-6 text-xs md:text-lg">
-          <div className="flex items-center text-secondary-light">
-            <p className="font-bold md:text-start text-center">
-              {countdown.heading}
-              <span className="ml-2 font-medium">{countdown.subheading}</span>
-            </p>
-          </div>
+        <div className="flex flex-1 flex-col items-center justify-end text-xs md:text-lg lg:flex-row lg:gap-6">
+          <p className="mb-2 text-center font-bold text-secondary-light md:text-start">
+            {countdown.heading}
+            <span className="ml-2 font-medium">{countdown.subheading}</span>
+          </p>
           <CountdownTimer />
         </div>
       </main>
+      <div className="absolute bottom-0 left-auto w-[95%] max-w-8xl border border-silver-100 opacity-20 lg:w-full" />
     </header>
   );
 };

@@ -21,9 +21,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="overflow-hidden bg-secondary-dark">
+    <footer className="overflow-hidden bg-secondary-dark px-4 md:px-8">
       <div className="mx-auto flex max-w-8xl flex-col">
-        <div className="grid grid-cols-2 gap-y-6 p-4 md:grid-cols-4 md:p-6 lg:p-14">
+        <div className="grid grid-cols-2 gap-y-6 py-14 md:grid-cols-4">
           {footerData.links.map((section, sectionIndex) => (
             <div
               className={`${dataPlacements[section.placement]} ${placementoOrder[section.order]}`}
@@ -48,7 +48,7 @@ const Footer = () => {
                           className="size-4 md:size-auto"
                         />
                       )}
-                      <p className="text-wrap">{link.label}</p>
+                      <p className="break-all">{link.label}</p>
                       {link.comingSoon && (
                         <span className="text-[0.625rem] md:text-xs">
                           {link.comingSoonText}
