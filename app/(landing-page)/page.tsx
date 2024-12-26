@@ -1,5 +1,6 @@
 import FeebackCard from "@/components/Cards/FeedbackCard";
 import HeroSection from "@/components/HeroSection";
+import StudyMistakes from "@/components/StudyMistakes";
 import TopOnePercentCard from "@/components/TopOnePercentCard";
 // import Button from "@/components/Button";
 // import StartLearningButton from "@/components/Button/StartLearningButton";
@@ -18,6 +19,7 @@ export default function LandingPage() {
   return (
     <>
       <HeroSection />
+      <StudyMistakes />
       <TopOnePercentCard />
       <FeebackCard
         rating={5}

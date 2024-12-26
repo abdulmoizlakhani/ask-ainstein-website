@@ -306,28 +306,30 @@
     "mistakes": [
       {
         "id": 1,
-        "title": "Memorizing Answers:",
+        "title": "Memorizing Answers: ",
         "image": "/assets/icons/red-cross.svg",
         "description": "🧠 Rote learning won't help you understand concepts or think critically. It will catch up to you at some point."
       },
       {
         "id": 2,
-        "title": "Not Practicing Enough Problems:",
+        "title": "Not Practicing Enough Problems: ",
         "image": "/assets/icons/red-cross.svg",
 
         "description": "📚 Without consistent practice, it's hard to identify and fill your learning gaps."
       },
       {
         "id": 3,
-        "title": "Relying on Group Tuitions:",
+        "title": "Relying on Group Tuitions: ",
         "image": "/assets/icons/red-cross.svg",
         "description": "👨‍🏫 These days, most outside tuitions are conducted in groups, replicating the same challenges as a regular classroom—limited personalized attention."
       }
     ],
     "footer": {
-      "quote": "🚨 Are you falling into these traps?",
+      "quote": {
+        "image": "/assets/icons/danger.png",
+        "text": " Are you falling into these traps?"
+      },
       "highlight": "where learning is personalized, practice is plentiful, and understanding always comes first.",
-
       "closing": "💡 Avoid these mistakes with Ask Einstein - where learning is personalized, practice is plentiful, and understanding always comes first."
     }
   },
