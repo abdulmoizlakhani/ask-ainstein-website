@@ -6,19 +6,26 @@ import TopOnePercentCard from "@/components/TopOnePercentCard";
 import landingPageData from "@/data/landingPage/data.json";
 
 export default function LandingPage() {
-  const { reviewText, highlight, reviewer } = landingPageData.secondReview;
+  const { review: carouselReview } = landingPageData.carousel;
+  const { secondReview } = landingPageData;
 
   return (
     <>
       <HeroSection />
+      <FeebackCard
+        rating={carouselReview.rating}
+        reviewText={carouselReview.reviewText}
+        hightlightedText={carouselReview.highlight}
+        reviewer={carouselReview.reviewer}
+      />
       <FirstPrinciplesCard />
       <StudyMistakes />
       <TopOnePercentCard />
       <FeebackCard
-        rating={5}
-        reviewText={reviewText}
-        hightlightedText={highlight}
-        reviewer={reviewer}
+        rating={secondReview.rating}
+        reviewText={secondReview.reviewText}
+        hightlightedText={secondReview.highlight}
+        reviewer={secondReview.reviewer}
       />
     </>
   );
