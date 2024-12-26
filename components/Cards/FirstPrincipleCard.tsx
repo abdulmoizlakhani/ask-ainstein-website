@@ -8,47 +8,45 @@ const FirstPrinciplesCard = () => {
   const data = landingPageData.powerOfFirstPrinciple;
 
   return (
-    <div className="mx-auto flex h-[57.31rem] w-[91.12rem] justify-center rounded-[20px] bg-secondary-dark pt-[7.375rem]">
-      <div className="relative h-[730px] max-w-[76.125rem] rounded-[20px] border-4 border-yellow-dark bg-yellow-650 px-10 pb-[70px] pt-[9.25rem] text-secondary-800">
+    <div className="mb-10 flex max-w-[91.12rem] justify-center rounded-[0.625rem] bg-secondary-dark px-4 pb-6 pt-[3.75rem] sm:mx-4 md:rounded-[1.25rem] md:pb-20 md:pt-28 xl:mx-auto">
+      <div className="relative max-w-[76.125rem] rounded-[0.625rem] border-2 border-yellow-dark bg-yellow-650 px-4 pb-8 pt-[3.75rem] text-secondary-800 md:rounded-[20px] md:border-4 md:px-10 md:pb-16 md:pt-[9.25rem]">
         <Image
           height={180}
           width={180}
-          className="absolute left-1/2 top-[-90px] z-10 size-[180px] -translate-x-1/2"
+          className="absolute left-1/2 top-[-40px] z-10 size-20 -translate-x-1/2 md:top-[-90px] md:size-[11.25rem]"
           alt="light icon"
           src={data.images.lightIcon}
         />
 
-        <div className="space-y-9 text-2xl font-semibold">
-          <div className="space-y-4">
-            <h1 className="mb-7 text-center text-5xl font-bold text-secondary-dark">
-              {data.title}
-            </h1>
-            <hr className="border border-silver-dark" />
-          </div>
-
-          <p className="text-2xl leading-relaxed text-secondary-800">
+        <div className="font-2xl space-y-4 font-semibold md:space-y-9">
+          <h1 className="mb-6 text-center text-base font-bold text-secondary-dark md:mb-7 md:text-5xl">
+            {data.title}
+          </h1>
+          <hr className="border border-silver-dark" />
+          <p className="font-2xl leading-relaxed text-secondary-800">
             {data.description}
           </p>
 
-          <div className="flex items-center gap-2 text-red-800">
+          <div className="flex gap-2 text-red-800">
             <Image
               height={32}
               width={32}
-              className="size-[32px]"
+              className="size-5 md:size-8"
               alt="red tick icon"
               src={data.hardTruth.icon}
             />
-            <p>
+            <p className="font-2xl font-bold">
               <TextHighlight
                 highlightText={data.hardTruth.highlight}
                 variant="danger"
-                className="font-bold"
-                text={data.hardTruth.text}
+                className="text-sm md:text-[1.75rem]"
+                text={data.hardTruth.hardText}
               />
+              <span className="font-semibold">{data.hardTruth.softText}</span>
             </p>
           </div>
 
-          <p className="pl-10 text-2xl font-bold text-secondary-dark">
+          <p className="font-2xl pl-0 font-bold text-secondary-dark md:pl-10">
             {data.importantStatement}
           </p>
 
@@ -56,11 +54,11 @@ const FirstPrinciplesCard = () => {
             <Image
               height={32}
               width={32}
-              className="size-[32px]"
+              className="size-4 md:size-8"
               alt="green tick icon"
               src={data.images.greenTick}
             />
-            <p>
+            <p className="font-2xl">
               <TextHighlight
                 highlightText="It's about how you think"
                 variant="tertiary"
@@ -70,7 +68,7 @@ const FirstPrinciplesCard = () => {
             </p>
           </div>
 
-          <p className="text-secondary-800">
+          <p className="font-2xl text-secondary-800">
             <TextHighlight
               variant="secondary"
               highlightText="tackle any challenge, innovate fearlessly, and achieve lasting success."
