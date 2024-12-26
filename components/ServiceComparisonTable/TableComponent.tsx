@@ -3,7 +3,7 @@ import React from "react";
 
 import TextHighlight from "@/components/TextHighlight";
 
-interface Props {
+interface ServiceComparisonTableComponentProps {
   title: string;
   image: {
     src: string;
@@ -21,33 +21,30 @@ interface Props {
 const ServiceComparisonTableComponent = ({
   tableData,
 }: {
-  tableData: Props[];
+  tableData: ServiceComparisonTableComponentProps[];
 }) => {
-  // const tableData = data.comparisionSection.comparisonTable;
-
   return (
-    <div className="mx-auto grid w-full   max-w-9xl grid-cols-1 gap-5 overflow-hidden rounded-xl md:grid-cols-2 md:gap-0">
+    <div className="mx-auto grid w-full max-w-9xl grid-cols-1 gap-5 overflow-hidden rounded-xl md:grid-cols-2 md:gap-0">
       {tableData.map((item) => {
         return (
           <div
-            className=" border-[1.2px] md:rounded-none rounded-xl overflow-hidden border-secondary-50 bg-secondary-light"
+            className="min-h-[21.875rem] overflow-hidden rounded-xl border-[1.2px] border-secondary-50 bg-secondary-light md:rounded-none"
             key={item.title}
           >
-            <div className="flex h-16  items-center gap-2 bg-purple-dark px-4 sm:gap-3 sm:px-9 md:h-[5.625rem] md:px-8">
+            <div className="flex h-16 items-center gap-2 bg-purple-dark px-4 sm:gap-3 sm:px-9 md:h-[5.625rem] md:px-8">
               <Image
                 alt="Einstein Logo"
                 src={item.image.src}
                 width={item.image.w}
                 height={item.image.h}
-                className="h-6 w-auto md:h-auto"
               />
             </div>
             {item.points.map((point, index) => (
               <div
                 key={index}
                 className={`flex items-start ${
-                  index === 0 ? "md:h-32" : "md:h-[5.65rem]"
-                } md:gap-4 gap-2 py-6 px-2 md:p-8 ${
+                  index === 0 ? "md:h-32" : "lg:h-[5.65rem]"
+                } gap-2 px-2 py-6 md:gap-4 md:p-8 ${
                   item.points.length - 1 !== index && "border-b-[1.2px]"
                 } border-secondary-50 `}
               >
@@ -57,10 +54,10 @@ const ServiceComparisonTableComponent = ({
                     src={point.icon}
                     width={32}
                     height={32}
-                    className="h-4 w-4 md:h-8 md:w-8"
+                    className="size-4 md:size-8"
                   />
                 </div>
-                <p className=" font-2xl font-semibold text-secondary-800">
+                <p className="font-2xl font-semibold text-secondary-800 md:text-base">
                   <TextHighlight
                     text={point.text}
                     highlightText={point.highlight}

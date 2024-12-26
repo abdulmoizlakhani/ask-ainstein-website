@@ -1,5 +1,4 @@
 import FeebackCard from "@/components/Cards/FeedbackCard";
-import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
 import FamousPersonality from "@/components/FamousPersonality";
 import HeroSection from "@/components/HeroSection";
 import ServiceComparisonTable from "@/components/ServiceComparisonTable";
@@ -14,10 +13,13 @@ export default function LandingPage() {
   return (
     <>
       <HeroSection />
-      <div className="px-4">
-        <ServiceComparisonTable />
-      </div>
-      <FirstPrinciplesCard />
+      <FeebackCard
+        rating={carouselReview.rating}
+        reviewText={carouselReview.reviewText}
+        hightlightedText={carouselReview.highlight}
+        reviewer={carouselReview.reviewer}
+      />
+      <ServiceComparisonTable />
       <FamousPersonality />
       <StudyMistakes />
       <TopOnePercentCard />

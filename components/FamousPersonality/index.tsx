@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 
 import StartLearningButton from "@/components/Button/StartLearningButton";
-import FamousPersonality from "@/components/FamousPersonality/FamousPersonalityCard";
+import FamousPersonalityCard from "@/components/FamousPersonality/FamousPersonalityCard";
 import data from "@/data/landingPage/data.json";
 
-export default function LandingPage() {
+const FamousPersonality = () => {
   const { personalities, title, slideChangeTime } = data.personalityCardData;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -27,11 +27,11 @@ export default function LandingPage() {
   }, [isPaused, personalities.length, slideChangeTime]);
 
   return (
-    <div className="mx-auto flex w-full max-w-8xl flex-col items-center gap-8 px-4 pb-14 md:gap-20 md:pb-40">
+    <div className="mx-auto flex w-full max-w-8xl flex-col items-center gap-8 px-4 pb-14 md:gap-20 md:pb-40 lg:mt-[44.25rem]">
       <h2 className="text-center text-xl font-bold md:text-3xl">{title}</h2>
       <div className="hidden w-full items-center justify-between gap-4 lg:flex">
         {personalities.map((person, i) => (
-          <FamousPersonality key={`famous_person_${i}`} person={person} />
+          <FamousPersonalityCard key={`famous_person_${i}`} person={person} />
         ))}
       </div>
       <div
@@ -39,7 +39,7 @@ export default function LandingPage() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <FamousPersonality person={personalities[currentIndex]} />
+        <FamousPersonalityCard person={personalities[currentIndex]} />
 
         <div className="flex justify-center gap-2 md:space-x-6">
           {personalities.map((_, index) => (
@@ -59,4 +59,6 @@ export default function LandingPage() {
       <StartLearningButton />
     </div>
   );
-}
+};
+
+export default FamousPersonality;
