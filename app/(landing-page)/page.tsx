@@ -1,25 +1,36 @@
-import Hero from "@/components/Sections/Hero";
+import FeebackCard from "@/components/Cards/FeedbackCard";
+import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
+import FamousPersonality from "@/components/FamousPersonality";
+import HeroSection from "@/components/HeroSection";
 import ServiceComparisonTable from "@/components/ServiceComparisonTable";
-// import Button from "@/components/Button";
-// import StartLearningButton from "@/components/Button/StartLearningButton";
-// import FeedbackCard from "@/components/Cards/FeedbackCard";
-// import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
-// import RatingCard from "@/components/Cards/RatingCard";
-// import Carousel from "@/components/Carousel";
-// import ComparisionTable from "@/components/ServiceComparisonTable";
-// import StudyMistakes from "@/components/StudyMistakes";
-// import TopOnePercentCard from "@/components/TopOnePercentCard";
-// import landingPageData from "@/data/landingPage/data.json";
+import StudyMistakes from "@/components/StudyMistakes";
+import TopOnePercentCard from "@/components/TopOnePercentCard";
+import landingPageData from "@/data/landingPage/data.json";
 
 export default function LandingPage() {
-  // const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
+  const { review: carouselReview } = landingPageData.carousel;
+  const { secondReview } = landingPageData;
 
   return (
-    <div className="bg-secondary-bg">
-      <Hero />
-      <div className="px-4">
-        <ServiceComparisonTable />
-      </div>
-    </div>
+    <>
+      <HeroSection />
+      <FeebackCard
+        rating={carouselReview.rating}
+        reviewText={carouselReview.reviewText}
+        hightlightedText={carouselReview.highlight}
+        reviewer={carouselReview.reviewer}
+      />
+      <ServiceComparisonTable />
+      <FirstPrinciplesCard />
+      <FamousPersonality />
+      <StudyMistakes />
+      <TopOnePercentCard />
+      <FeebackCard
+        rating={secondReview.rating}
+        reviewText={secondReview.reviewText}
+        hightlightedText={secondReview.highlight}
+        reviewer={secondReview.reviewer}
+      />
+    </>
   );
 }

@@ -1,5 +1,9 @@
 {
   "header": {
+    "subHeading": {
+      "text": "Your first 200 credits are FREE to explore and improve. Share your  feedback  and help us make the platform even better for you!",
+      "highlight": ["first 200", "feedback"]
+    },
     "logo": {
       "src": "/assets/logo.png",
       "alt": "Ask Ainstein"
@@ -26,7 +30,7 @@
       "signIn": "Sign In"
     }
   },
-  "hero": {
+  "examsAroundCorner": {
     "heading": {
       "highlight": "Student in high school?",
       "title": "Exams Around the Corner? We've Got You Covered!"
@@ -43,7 +47,7 @@
     }
   },
   "about": {
-    "heroActionImage": "/assets/see-it-in-action.png",
+    "heroActionImage": "/assets/see-it-in-action.svg",
     "video": "https://www.youtube.com/embed/19g66ezsKAg",
     "profileImage": "/assets/founder-dp.png",
     "profileText": {
@@ -83,7 +87,10 @@
   "comparisionSection": {
     "sectionTitle": {
       "mainHeading": "What makes 'Ainstein' unique vs ChatGPT",
-      "images": "/assets/ainstein-cheer.svg"
+      "images": {
+        "src": "/assets/ainstein-cheer.svg",
+        "alt": "Ainstein cheer"
+      }
     },
     "comparisonTable": [
       {
@@ -147,7 +154,7 @@
   },
   "carousel": {
     "review": {
-      "stars": 5,
+      "rating": 5,
       "reviewText": "I used to score only 50-55% in math and science, and it created a lot of stress at home. My parents were always worried, and I felt stuck. This platform helped me figure out where I was making mistakes and how to fix them. After a few weeks, my score improved to 85%! My parents were so PROUD, and things at home are much better now. Even my teachers noticed the change and appreciated my hard work. I finally feel confident in my studies.",
       "highlight": "PROUD",
       "reviewer": {
@@ -219,15 +226,21 @@
     }
   },
   "secondReview": {
-    "stars": 5,
-    "review": "My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn’t know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We’re really proud of her progress, and I’m so glad we found this platform.",
+    "rating": 5,
+    "reviewText": "My daughter was struggling with math and science, scoring only around 50-55%. It was frustrating for us because we knew she was capable but didn't know how to help her. After using this platform, we started seeing a big difference. Her understanding improved, and her scores jumped to 85%! She's more confident now. We're really proud of her progress, and I'm so glad we found this platform.",
     "highlight": "After using this platform, we started seeing a big difference.",
-    "reviewerName": " - Anjali Sharma",
-    "reviewerDetail": "Parent of a Grade 10 Student",
-    "profileImage": "/assets/profileImage/2.jpg",
+    "reviewer": {
+      "name": "Anjali Sharma",
+      "detail": "Parent of a Grade 10 Student",
+      "image": {
+        "src": "/assets/anjali-sharma.png",
+        "alt": "Anjali Sharma's Image"
+      }
+    },
     "backgroundColor": "bg-accent-lightYellow"
   },
   "personalityCardData": {
+    "slideChangeTime": 3000,
     "title": "Here are some famous personalities shaped by this approach",
     "personalities": [
       {
@@ -254,7 +267,9 @@
     "title": "The Power of First Principles Thinking",
     "description": "Several influential thinkers, entrepreneurs, and scientists have championed first principles thinking - a problem-solving framework that breaks down complex problems into their most basic, fundamental truths.",
     "hardTruth": {
-      "text": "Here's the HARD truth - Most schools don't teach this!",
+      "hardText": "Here's the HARD truth",
+      "softText": " - Most schools don't teach this!",
+
       "highlight": "HARD truth - Most schools don't teach this!",
       "icon": "/assets/icons/danger.png"
     },
@@ -301,28 +316,30 @@
     "mistakes": [
       {
         "id": 1,
-        "title": "Memorizing Answers:",
+        "title": "Memorizing Answers: ",
         "image": "/assets/icons/red-cross.svg",
         "description": "🧠 Rote learning won't help you understand concepts or think critically. It will catch up to you at some point."
       },
       {
         "id": 2,
-        "title": "Not Practicing Enough Problems:",
+        "title": "Not Practicing Enough Problems: ",
         "image": "/assets/icons/red-cross.svg",
 
         "description": "📚 Without consistent practice, it's hard to identify and fill your learning gaps."
       },
       {
         "id": 3,
-        "title": "Relying on Group Tuitions:",
+        "title": "Relying on Group Tuitions: ",
         "image": "/assets/icons/red-cross.svg",
         "description": "👨‍🏫 These days, most outside tuitions are conducted in groups, replicating the same challenges as a regular classroom—limited personalized attention."
       }
     ],
     "footer": {
-      "quote": "🚨 Are you falling into these traps?",
+      "quote": {
+        "image": "/assets/icons/danger.png",
+        "text": " Are you falling into these traps?"
+      },
       "highlight": "where learning is personalized, practice is plentiful, and understanding always comes first.",
-
       "closing": "💡 Avoid these mistakes with Ask Einstein - where learning is personalized, practice is plentiful, and understanding always comes first."
     }
   },
