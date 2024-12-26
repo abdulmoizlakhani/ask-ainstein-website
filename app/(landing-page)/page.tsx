@@ -1,3 +1,4 @@
+import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
 import Hero from "@/components/Sections/Hero";
 // import Button from "@/components/Button";
 // import StartLearningButton from "@/components/Button/StartLearningButton";
@@ -14,8 +15,9 @@ export default function LandingPage() {
   // const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
 
   return (
-    <div className="bg-secondary-bg">
+    <div className="bg-secondary-bg space-y-8 pb-8">
       <Hero />
+      <FirstPrinciplesCard />
     </div>
   );
 }

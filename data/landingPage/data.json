@@ -254,7 +254,9 @@
     "title": "The Power of First Principles Thinking",
     "description": "Several influential thinkers, entrepreneurs, and scientists have championed first principles thinking - a problem-solving framework that breaks down complex problems into their most basic, fundamental truths.",
     "hardTruth": {
-      "text": "Here's the HARD truth - Most schools don't teach this!",
+      "hardText": "Here's the HARD truth",
+      "softText": " - Most schools don't teach this!",
+
       "highlight": "HARD truth - Most schools don't teach this!",
       "icon": "/assets/icons/danger.png"
     },
