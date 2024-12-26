@@ -26,7 +26,7 @@
       "signIn": "Sign In"
     }
   },
-  "hero": {
+  "examsAroundCorner": {
     "heading": {
       "highlight": "Student in high school?",
       "title": "Exams Around the Corner? We've Got You Covered!"
@@ -43,7 +43,7 @@
     }
   },
   "about": {
-    "heroActionImage": "/assets/see-it-in-action.png",
+    "heroActionImage": "/assets/see-it-in-action.svg",
     "video": "https://www.youtube.com/embed/19g66ezsKAg",
     "profileImage": "/assets/founder-dp.png",
     "profileText": {
