@@ -1,32 +1,66 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 
-interface FamousPersonalityProps {
-  name: string;
-  title: string;
-  quote: string;
-  image: string;
-}
+import data from "@/data/landingPage/data.json";
+import FamousPersonality from "@/components/FamousPersonality/FamousPersonalityCard";
 
-const FamousPersonality = ({ person }: { person: FamousPersonalityProps }) => {
+export default function LandingPage() {
+  const famousPersonality = data.personalityCardData;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const { images, slideChangeTime } = data.carousel;
+
+  const handleImageChange = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      }, slideChangeTime);
+
+      return () => clearInterval(interval);
+    }
+  }, [isPaused, images.length, slideChangeTime]);
+
   return (
-    <div className="flex max-w-[480px] flex-col items-center space-y-4">
-      <Image
-        src={person.image}
-        alt={person.name}
-        className="size-[380px] object-contain"
-        width={380}
-        height={380}
-      />
-      <div className="space-y-2 text-center">
-        <h3 className="text-2xl font-bold">{person.name}</h3>
-        <p className="font-semibold text-secondary-300">{person.title}</p>
-        <p className="max-w-[420px] text-lg tracking-tight">
-          {`"${person.quote}"`}
-        </p>
+    <div className=" space-y-9 px-4 md:space-y-16 ">
+      <h2 className=" text-xl md:text-3xl font-bold text-center">
+        {famousPersonality.title}
+      </h2>
+      <div className="md:flex hidden gap-4 justify-between items-center">
+        {famousPersonality.personalities.map((person) => (
+          <FamousPersonality person={person} />
+        ))}
+      </div>
+      <div
+        className="flex md:hidden px-4 flex-col items-center gap-4 md:gap-12"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <FamousPersonality
+          person={famousPersonality.personalities[currentIndex]}
+        />
+
+        <div className="flex justify-center gap-2 md:space-x-6">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => handleImageChange(index)}
+              className={`size-[6px] md:size-5 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "scale-150 bg-primary-300"
+                  : "bg-secondary-150"
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            ></button>
+          ))}
+        </div>
       </div>
     </div>
   );
-};
-
-export default FamousPersonality;
+}
