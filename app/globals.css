@@ -35,7 +35,13 @@ body {
     @apply lg:w-[28.125rem] lg:h-[5.5rem] w-[16.5rem] h-[3rem] rounded-xl bg-yellow-dark text-secondary-dark font-semibold font-source-sans text-base lg:text-[1.75rem];
   }
   .text-highlight {
-    @apply rounded px-3 py-1 text-secondary-dark;
+    @apply rounded px-1 md:px-3 py-1 text-secondary-dark;
+  }
+  .font-2xl {
+    @apply text-xs md:text-2xl;
+  }
+  .box-round {
+    @apply rounded-[0.625rem] md:rounded-[1.25rem];
   }
   .font-2xl {
     @apply md:text-2xl  text-xs;

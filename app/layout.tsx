@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${sourceSans.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${sourceSans.variable} bg-secondary-bg antialiased`}
+      >
         <Header />
         {children}
         <Footer />
