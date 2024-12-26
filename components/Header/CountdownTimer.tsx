@@ -1,14 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 import landingPageData from "@/data/landingPage/data.json";
 import useCountdown from "@/hooks/useCountdown";
 
-const CountdownTimer: React.FC = () => {
+interface CountdownTimerProps {
+  handleCounterEnded: (status: boolean) => void;
+}
+
+const CountdownTimer: React.FC<CountdownTimerProps> = (
+  props: CountdownTimerProps
+) => {
   const { countdown } = landingPageData.header;
-  const counterData = useCountdown(countdown.endTime);
+  const { isCounterEnded, counterData } = useCountdown(countdown.endTime);
+
+  useEffect(() => {
+    if (isCounterEnded) {
+      props.handleCounterEnded(isCounterEnded);
+    }
+  }, [isCounterEnded, props]);
 
   return (
     <div className="flex-center gap-3">
