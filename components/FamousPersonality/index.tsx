@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 import FamousPersonality from "@/components/FamousPersonality/FamousPersonalityCard";
 import data from "@/data/landingPage/data.json";
+import StartLearningButton from "../Button/StartLearningButton";
 
 export default function LandingPage() {
   const { personalities, title, slideChangeTime } = data.personalityCardData;
@@ -26,15 +27,15 @@ export default function LandingPage() {
   }, [isPaused, personalities.length, slideChangeTime]);
 
   return (
-    <div className="space-y-9 px-4 md:space-y-16 ">
+    <div className="px-4 flex-col items-center pb-14 md:pb-40 gap-8 md:gap-20 flex w-full max-w-8xl mx-auto">
       <h2 className="text-center text-xl font-bold md:text-3xl">{title}</h2>
-      <div className="hidden items-center justify-between gap-4 md:flex">
+      <div className="hidden items-center w-full justify-between gap-4 lg:flex">
         {personalities.map((person, i) => (
           <FamousPersonality key={`famous_person_${i}`} person={person} />
         ))}
       </div>
       <div
-        className="flex flex-col items-center gap-4 px-4 md:hidden md:gap-12"
+        className="flex flex-col items-center gap-4 px-4 lg:hidden md:gap-12"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -55,6 +56,7 @@ export default function LandingPage() {
           ))}
         </div>
       </div>
+      <StartLearningButton />
     </div>
   );
 }
