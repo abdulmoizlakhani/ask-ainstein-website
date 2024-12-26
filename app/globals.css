@@ -37,6 +37,9 @@ body {
   .text-highlight {
     @apply rounded px-3 py-1 text-secondary-dark;
   }
+  .font-2xl {
+    @apply md:text-2xl text-xs;
+  }
 }
 
 @layer base {
