@@ -1,5 +1,6 @@
 import FeebackCard from "@/components/Cards/FeedbackCard";
 import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
+import FamousPersonality from "@/components/FamousPersonality";
 import HeroSection from "@/components/HeroSection";
 import StudyMistakes from "@/components/StudyMistakes";
 import TopOnePercentCard from "@/components/TopOnePercentCard";
@@ -19,6 +20,7 @@ export default function LandingPage() {
         reviewer={carouselReview.reviewer}
       />
       <FirstPrinciplesCard />
+      <FamousPersonality />
       <StudyMistakes />
       <TopOnePercentCard />
       <FeebackCard
