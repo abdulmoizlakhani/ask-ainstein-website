@@ -31,7 +31,7 @@ const FirstPrinciplesCard = () => {
             <Image
               height={32}
               width={32}
-              className="size-5 md:size-[32px]"
+              className="size-5 md:size-8"
               alt="red tick icon"
               src={data.hardTruth.icon}
             />
