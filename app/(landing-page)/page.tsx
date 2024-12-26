@@ -7,10 +7,11 @@ import Carousel from "@/components/Carousel";
 import ComparisionTable from "@/components/ServiceComparisonTable";
 import StudyMistakes from "@/components/StudyMistakes";
 import TopOnePercentCard from "@/components/TopOnePercentCard";
-import data from "@/data/landingPage/data.json";
+import landingPageData from "@/data/landingPage/data.json";
 
-export default function Home() {
-  const { reviewText, highlight, reviewer } = data.carousel.review;
+export default function LandingPage() {
+  const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
+
   return (
     <div className="bg-secondary-bg">
       <Button>Login</Button>
