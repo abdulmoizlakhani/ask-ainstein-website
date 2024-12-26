@@ -8,7 +8,7 @@ interface FamousPersonalityProps {
   image: string;
 }
 
-const FamousPErsonality = ({ person }: { person: FamousPersonalityProps }) => {
+const FamousPersonality = ({ person }: { person: FamousPersonalityProps }) => {
   return (
     <div className="flex max-w-[480px] flex-col items-center space-y-4">
       <Image
@@ -29,4 +29,4 @@ const FamousPErsonality = ({ person }: { person: FamousPersonalityProps }) => {
   );
 };
 
-export default FamousPErsonality;
+export default FamousPersonality;
