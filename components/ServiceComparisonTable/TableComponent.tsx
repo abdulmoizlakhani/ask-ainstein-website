@@ -57,7 +57,7 @@ const ServiceComparisonTableComponent = ({
                     className="size-4 md:size-8"
                   />
                 </div>
-                <p className="font-2xl font-semibold text-secondary-800 md:text-base">
+                <p className="font-2xl lg:font-2xl font-semibold text-secondary-800 md:text-base">
                   <TextHighlight
                     text={point.text}
                     highlightText={point.highlight}
