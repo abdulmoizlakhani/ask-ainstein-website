@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 const addZero = (num: number) => (num < 10 ? `0${num}` : num);
 
 const useCountdown = (endDate: string) => {
+  const [isCounterEnded, setCounterEnded] = useState(false);
   const [counterData, setCounterData] = useState({
     days: 0,
     hours: 0,
@@ -25,6 +26,7 @@ const useCountdown = (endDate: string) => {
 
     // Handle negative differences (when end date is earlier than current date)
     if (diffInMs < 0) {
+      setCounterEnded(true);
       throw new Error("End date must be later than the current date.");
     }
 
@@ -51,12 +53,15 @@ const useCountdown = (endDate: string) => {
     return () => clearInterval(interval);
   }, [startCountdown]);
 
-  return [
-    { title: "DAYS", value: addZero(counterData.days) },
-    { title: "HOURS", value: addZero(counterData.hours) },
-    { title: "MINUTES", value: addZero(counterData.minutes) },
-    { title: "SECONDS", value: addZero(counterData.seconds) },
-  ];
+  return {
+    isCounterEnded,
+    counterData: [
+      { title: "DAYS", value: addZero(counterData.days) },
+      { title: "HOURS", value: addZero(counterData.hours) },
+      { title: "MINUTES", value: addZero(counterData.minutes) },
+      { title: "SECONDS", value: addZero(counterData.seconds) },
+    ],
+  };
 };
 
 export default useCountdown;

@@ -1,14 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 import landingPageData from "@/data/landingPage/data.json";
 import useCountdown from "@/hooks/useCountdown";
 
-const CountdownTimer: React.FC = () => {
+interface CountdownTimerProps {
+  handleCounterEnded: (status: boolean) => void;
+}
+
+const CountdownTimer: React.FC<CountdownTimerProps> = (
+  props: CountdownTimerProps
+) => {
   const { countdown } = landingPageData.header;
-  const counterData = useCountdown(countdown.endTime);
+  const { isCounterEnded, counterData } = useCountdown(countdown.endTime);
+
+  useEffect(() => {
+    if (isCounterEnded) {
+      props.handleCounterEnded(isCounterEnded);
+    }
+  }, [isCounterEnded, props]);
 
   return (
     <div className="flex-center gap-3">
@@ -20,13 +32,13 @@ const CountdownTimer: React.FC = () => {
               alt="countdown"
               width={56.95}
               height={54.24}
-              className="h-[1.875rem] w-[1.875rem] md:h-auto md:w-auto"
+              className="size-[1.875rem] md:size-auto"
             />
-            <p className="absolute font-source-sans text-base md:text-3xl font-bold text-orange">
+            <p className="absolute font-source-sans text-base font-bold text-orange md:text-3xl">
               {item.value}
             </p>
           </div>
-          <p className="mt-1 font-source-sans text-[0.47rem] md:text-sm font-semibold text-secondary-light">
+          <p className="mt-1 font-source-sans text-[0.47rem] font-semibold text-secondary-light md:text-sm">
             {item.title}
           </p>
         </div>
