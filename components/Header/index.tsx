@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 import CountdownTimer from "@/components/Header/CountdownTimer";
+import NavigationMenu from "@/components/Header/NavigationMenu";
 import SubHeader from "@/components/Header/SubHeader";
 import landingPageData from "@/data/landingPage/data.json";
 
@@ -28,7 +29,7 @@ const Header = () => {
             priority
             className="h-14 w-auto md:h-auto"
           />
-          {!isCounterEnded && (
+          {!isCounterEnded ? (
             <div className="flex flex-1 flex-col items-center justify-end text-xs md:text-lg lg:flex-row lg:gap-6">
               <p className="mb-2 text-center font-bold text-secondary-light md:text-start">
                 {countdown.heading}
@@ -36,6 +37,8 @@ const Header = () => {
               </p>
               <CountdownTimer handleCounterEnded={handleCounterEnded} />
             </div>
+          ) : (
+            <NavigationMenu />
           )}
         </main>
         <div className="absolute bottom-0 left-auto w-[95%] max-w-8xl border border-silver-100 opacity-20 lg:w-full" />
