@@ -25,31 +25,38 @@ const FeebackCard: React.FC<FeebackCardProps> = ({
   reviewer,
 }) => {
   return (
-    <div className="flex max-w-[888px] flex-col gap-8 rounded-[1.25rem] border-2 border-yellow-900 bg-yellow-700 p-12 pb-16">
+    <div className="relative mx-4 my-8 flex max-w-[55.5rem] flex-col gap-4 rounded-[0.625rem] border-2 border-yellow-900 bg-yellow-700 px-4 py-5 md:gap-8 md:rounded-[1.25rem] md:p-12 md:pb-16 lg:mx-auto">
       <ReviewStar rating={rating} />
-      <p className={"text-xl font-medium text-secondary-800"}>
+      <p className={" text-xs font-medium text-secondary-800 md:text-xl"}>
         <TextHighlight
           variant="DEFUALT"
-          text={reviewText}
+          text={`"${reviewText}"`}
           highlightText={hightlightedText}
           className="font-bold"
         />
       </p>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 md:gap-4">
         <Image
           src={reviewer.image.src}
           alt={reviewer.image.alt}
           width={100}
           height={100}
-          className="rounded-full object-cover"
+          className="size-11 rounded-full object-cover md:size-20"
         />
         <div>
-          <h5 className="text-2xl font-bold">{reviewer.name}</h5>
-          <p className="font-medium italic text-secondary-600">
+          <h5 className=" text-sm font-bold md:text-2xl">{reviewer.name}</h5>
+          <p className="text-xs font-medium italic text-secondary-600 md:text-base">
             {reviewer.detail}
           </p>
         </div>
       </div>
+      <Image
+        src="/assets/icons/comma.svg"
+        alt="quotes"
+        width={112}
+        height={112}
+        className="absolute bottom-2 right-[10%] size-11 md:bottom-0 md:size-28"
+      />
     </div>
   );
 };
