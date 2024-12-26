@@ -12,21 +12,21 @@ const FamousPersonality = ({ person }: { person: FamousPersonalityProps }) => {
   return (
     <div
       key={person.name}
-      className="flex max-w-[480px] md:h-auto h-[350px] flex-col items-center gap-4"
+      className="flex h-[350px] max-w-[480px] flex-col items-center gap-4 md:h-auto"
     >
       <Image
         src={person.image}
         alt={person.name}
-        className=" size-[200px] md:size-[380px] object-contain"
+        className=" size-[200px] object-contain md:size-[380px]"
         width={380}
         height={380}
       />
       <div className="space-y-2 text-center">
-        <h3 className=" text-base md:text-2xl  font-bold">{person.name}</h3>
-        <p className="font-semibold text-sm md:text-base text-secondary-300">
+        <h3 className=" text-base font-bold  md:text-2xl">{person.name}</h3>
+        <p className="text-sm font-semibold text-secondary-300 md:text-base">
           {person.title}
         </p>
-        <p className="max-w-[420px] text-xs md:text-lg tracking-tight">
+        <p className="max-w-[420px] text-xs tracking-tight md:text-lg">
           {`"${person.quote}"`}
         </p>
       </div>
