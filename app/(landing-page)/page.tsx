@@ -1,14 +1,17 @@
 import Button from "@/components/Button";
 import StartLearningButton from "@/components/Button/StartLearningButton";
 import FeedbackCard from "@/components/Cards/FeedbackCard";
+import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
 import RatingCard from "@/components/Cards/RatingCard";
-import StudyMistakes from "@/components/Cards/StudyMistakes";
-import TopOnePercentCard from "@/components/Cards/TopOnePercentCard";
+import Carousel from "@/components/Carousel";
 import ComparisionTable from "@/components/ServiceComparisonTable";
-import data from "@/data/landingPage/data.json";
+import StudyMistakes from "@/components/StudyMistakes";
+import TopOnePercentCard from "@/components/TopOnePercentCard";
+import landingPageData from "@/data/landingPage/data.json";
 
-export default function Home() {
-  const { reviewText, highlight, reviewer } = data.carousel.review;
+export default function LandingPage() {
+  const { reviewText, highlight, reviewer } = landingPageData.carousel.review;
+
   return (
     <div className="bg-secondary-bg">
       <Button>Login</Button>
@@ -34,6 +37,8 @@ export default function Home() {
       />
       <TopOnePercentCard />
       <StudyMistakes />
+      <FirstPrinciplesCard />
+      <Carousel />
     </div>
   );
 }

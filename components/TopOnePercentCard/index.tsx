@@ -1,9 +1,9 @@
 import React from "react";
 
+import RatingCard from "@/components/Cards/RatingCard";
 import TextHighlight from "@/components/TextHighlight";
 import landingPageData from "@/data/landingPage/data.json";
 
-import RatingCard from "./RatingCard";
 import StartLearningButton from "../Button/StartLearningButton";
 
 const TopOnePercentCard = () => {
