@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import ServiceComparisonTable from "@/components/ServiceComparisonTable";
 import StudyMistakes from "@/components/StudyMistakes";
 import TopOnePercentCard from "@/components/TopOnePercentCard";
+import WhyStudentLove from "@/components/WhyStudentLove";
 import landingPageData from "@/data/landingPage/data.json";
 
 export default function LandingPage() {
@@ -19,6 +20,7 @@ export default function LandingPage() {
         hightlightedText={carouselReview.highlight}
         reviewer={carouselReview.reviewer}
       />
+      <WhyStudentLove />
       <ServiceComparisonTable />
       <FamousPersonality />
       <StudyMistakes />

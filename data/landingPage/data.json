@@ -88,8 +88,8 @@
     "sectionTitle": {
       "mainHeading": "What makes 'Ainstein' unique vs ChatGPT",
       "images": {
-        "src": "/assets/ainstein-cheer.svg",
-        "alt": "Ainstein cheer"
+        "src": "/assets/ainstein-hand-raised.svg",
+        "alt": "Ainstein hand raised"
       }
     },
     "comparisonTable": [
@@ -187,41 +187,90 @@
   "featureSection": {
     "features": [
       {
-        "title": "1000+ Exam-Aligned Questions",
-        "description": "Tailored to your curriculum (starting with CBSE)",
-        "icon": "/assets/why/card/1.png"
+        "title": {
+          "text": "1000+ Exam-Aligned Questions",
+          "highlight": "1000+ Exam-Aligned Questions"
+        },
+        "description": {
+          "text": "Tailored to your curriculum (starting with CBSE)",
+          "highlight": ""
+        },
+        "icon": "/assets/icons/mark.png",
+        "tickIcon": "/assets/icons/tick.svg"
       },
       {
-        "title": "Ask Ainstein - Your 24/7 Tutor",
-        "description": "Feel free to chat or simply talk to it in",
-        "heighlight": "Talk mode",
-        "icon": "/assets/why/card/2.png"
+        "title": {
+          "text": "Ask Ainstein - Your 24/7 Tutor",
+          "highlight": "Talk mode"
+        },
+        "description": {
+          "text": "Feel free to chat or simply talk to it in Talk mode",
+          "highlight": "Talk mode"
+        },
+        "icon": "/assets/icons/mic.png",
+        "tickIcon": "/assets/icons/tick.svg"
       },
       {
-        "title": "AI-Powered Grading",
-        "description": "Grading that feels human. Perfect for both short and long answers",
-        "icon": "/assets/why/card/3.png"
+        "title": {
+          "text": "AI-Powered Grading",
+          "highlight": ""
+        },
+        "description": {
+          "text": "Grading that feels human. Perfect for both short and long answers",
+          "highlight": ""
+        },
+        "icon": "/assets/icons/note.png",
+        "tickIcon": "/assets/icons/tick.svg"
       },
       {
-        "title": "Adaptive Questions",
-        "description": "Never too easy, never too hard. Keeps you challenged at every level",
-        "icon": "/assets/why/card/4.png"
+        "title": {
+          "text": "Adaptive Questions",
+          "highlight": ""
+        },
+        "description": {
+          "text": "Never too easy, never too hard. Keeps you challenged at every level",
+          "highlight": ""
+        },
+        "icon": "/assets/icons/finance.svg",
+        "tickIcon": "/assets/icons/tick.svg"
       },
       {
-        "title": "Progress Reports",
-        "description": "Visualize your strengths and weaknesses with clear, actionable insights",
-        "icon": "/assets/why/card/5.png"
+        "title": {
+          "text": "Progress Reports",
+          "highlight": ""
+        },
+        "description": {
+          "text": "Visualize your strengths and weaknesses with clear, actionable insights",
+          "highlight": ""
+        },
+        "icon": "/assets/icons/bar-chart.png",
+        "tickIcon": "/assets/icons/tick.svg"
       },
       {
-        "title": "Continuous Personalization",
-        "description": "Focus on areas that need improvement for maximum impact",
-        "icon": "/assets/why/card/6.png"
+        "title": {
+          "text": "Continuous Personalization",
+          "highlight": ""
+        },
+        "description": {
+          "text": "Focus on areas that need improvement for maximum impact",
+          "highlight": ""
+        },
+        "icon": "/assets/icons/pin.png",
+        "tickIcon": "/assets/icons/tick.svg"
       }
     ],
+    "title": {
+      "text": "Why students love Ask Ainstein​",
+      "highlight": "love Ask Ainstein"
+    },
     "subHeading": "✨ Features That Make Learning Smarter and Simpler",
     "image": {
-      "src": "/assets/why/ainstien.svg",
+      "src": "/assets/ainstein-cheer.svg",
       "alt": "ask Ainstein"
+    },
+    "footerText": {
+      "text": "💡 Ask Ainstein is more than a study tool – it’s your personalized guide to mastering exams and building confidence.​",
+      "highlight": "it’s your personalized guide to mastering exams and building confidence."
     }
   },
   "secondReview": {
