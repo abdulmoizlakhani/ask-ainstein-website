@@ -1,3 +1,4 @@
+import { generateKey } from "@/utils/helpers";
 import Image from "next/image";
 import React from "react";
 
@@ -11,7 +12,7 @@ interface FamousPersonalityProps {
 const FamousPersonality = ({ person }: { person: FamousPersonalityProps }) => {
   return (
     <div
-      key={person.name}
+      key={generateKey(person.name)}
       className="flex h-[350px] max-w-[480px] flex-col items-center gap-4 md:h-auto"
     >
       <Image

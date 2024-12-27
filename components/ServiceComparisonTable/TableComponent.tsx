@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import TextHighlight from "@/components/TextHighlight";
+import { generateKey } from "@/utils/helpers";
 
 interface ServiceComparisonTableComponentProps {
   title: string;
@@ -29,7 +30,7 @@ const ServiceComparisonTableComponent = ({
         return (
           <div
             className="min-h-[21.875rem] overflow-hidden rounded-xl border-[1.2px] border-secondary-50 bg-secondary-light md:rounded-none"
-            key={item.title}
+            key={generateKey(item.title)}
           >
             <div className="flex h-16 items-center gap-2 bg-purple-dark px-4 sm:gap-3 sm:px-9 md:h-[5.625rem] md:px-8">
               <Image
@@ -41,7 +42,7 @@ const ServiceComparisonTableComponent = ({
             </div>
             {item.points.map((point, index) => (
               <div
-                key={index}
+                key={generateKey(point.text)}
                 className={`flex items-start ${
                   index === 0 ? "md:h-32" : "lg:h-[5.65rem]"
                 } gap-2 px-2 py-6 md:gap-4 md:p-8 ${

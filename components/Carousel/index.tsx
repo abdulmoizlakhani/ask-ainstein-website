@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 import data from "@/data/landingPage/data.json";
+import { generateKey } from "@/utils/helpers";
 
 const Carousel = ({ className }: { className?: string }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,7 +44,7 @@ const Carousel = ({ className }: { className?: string }) => {
       <div className="flex justify-center gap-2 md:gap-6">
         {images.map((_, index) => (
           <button
-            key={index}
+            key={generateKey(index)}
             onClick={() => handleImageChange(index)}
             className={`size-[0.375rem] md:size-5 rounded-full transition-all duration-300 ${
               index === currentIndex

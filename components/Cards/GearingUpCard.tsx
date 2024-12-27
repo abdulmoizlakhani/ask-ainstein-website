@@ -1,3 +1,4 @@
+import { generateKey } from "@/utils/helpers";
 import Image from "next/image";
 import React from "react";
 
@@ -8,7 +9,7 @@ const GearingUpCard = ({
 }) => {
   return (
     <div
-      key={item.text}
+      key={generateKey(item.text)}
       className="flex p-[1.25rem] md:py-[1.5rem] shadow-dark border-dashed border-[#EDEDED] border-[0.125rem] flex-col gap-[1.25rem] md:gap-[1.5rem] rounded-[0.75rem] md:rounded-[1.25rem] items-center text-center h-[9.5rem] w-full md:h-[14.0625rem] md:max-w-[33.4375rem] bg-yellow-light"
     >
       <Image

@@ -3,6 +3,7 @@ import React from "react";
 
 import TextHighlight from "@/components/TextHighlight";
 import landingPageData from "@/data/landingPage/data.json";
+import { generateKey } from "@/utils/helpers";
 
 const StudyMistakes = () => {
   const { header, mistakes, footer } = landingPageData.studyMistakesData;
@@ -27,7 +28,7 @@ const StudyMistakes = () => {
             />
           </h1>
           {header.introduction.text.map((paragraph, index) => (
-            <p key={`study_mistakes_${index}`}>
+            <p key={`study_mistakes_${generateKey(index)}`}>
               <TextHighlight
                 text={paragraph}
                 highlightText={header.introduction.highlight}

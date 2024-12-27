@@ -1,4 +1,5 @@
 import useTextHighlight from "@/hooks/useHighlightedText";
+import { generateKey } from "@/utils/helpers";
 
 interface TextHighlightProps {
   text: string;
@@ -43,13 +44,15 @@ const TextHighlight = ({
       {parts.map((part, index) =>
         part.isHighlight ? (
           <span
-            key={`text_highlight_${index}`}
+            key={`text_highlight_${generateKey(part.text)}`}
             className={`${classes[variant]} ${className}`}
           >
             {part.text}
           </span>
         ) : (
-          <span key={`text_highlight_${index}`}>{part.text}</span>
+          <span key={`text_highlight_${generateKey(part.text)}`}>
+            {part.text}
+          </span>
         )
       )}
     </>

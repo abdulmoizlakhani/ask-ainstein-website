@@ -4,6 +4,7 @@ import TopAinsteinBox from "@/components/TopAinsteinBox";
 import GearingUpCard from "@/components/Cards/GearingUpCard";
 import TextHighlight from "@/components/TextHighlight";
 import Carousel from "@/components/Carousel";
+import { generateKey } from "@/utils/helpers";
 
 const AreYouGearingUp = () => {
   const { sectionTitle, subPara, cards, bottomText } = data.functionalityData;
@@ -31,7 +32,7 @@ const AreYouGearingUp = () => {
       {/* ALL CARDS */}
       <div className="flex md:flex-row flex-col items-center gap-[1rem] md:gap-[2rem]">
         {cards.map((item) => {
-          return <GearingUpCard item={item} key={item.text} />;
+          return <GearingUpCard item={item} key={generateKey(item.text)} />;
         })}
       </div>
 

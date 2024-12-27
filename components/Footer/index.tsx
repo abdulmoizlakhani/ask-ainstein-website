@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 import landingPageData from "@/data/landingPage/data.json";
+import { generateKey } from "@/utils/helpers";
 
 const Footer = () => {
   const footerData = landingPageData.footer;
@@ -27,14 +28,14 @@ const Footer = () => {
           {footerData.links.map((section, sectionIndex) => (
             <div
               className={`${dataPlacements[section.placement]} ${placementoOrder[section.order]}`}
-              key={`${section.title}-${sectionIndex}`}
+              key={`footer-menu-${generateKey(section.title)}`}
             >
               <h3 className="mb-3 text-sm font-medium text-secondary-light md:mb-5 md:text-xl md:font-semibold">
                 {section.title}
               </h3>
               <ul className="space-y-3 text-xs md:text-xl">
                 {section.links.map((link, linkIndex) => (
-                  <li key={`footer-menu-${linkIndex}`}>
+                  <li key={`footer-menu-links-${generateKey(link.label)}`}>
                     <Link
                       href={link.href}
                       className="flex items-center gap-2 text-secondary-400"

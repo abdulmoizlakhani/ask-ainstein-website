@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import StartLearningButton from "@/components/Button/StartLearningButton";
 import FamousPersonalityCard from "@/components/FamousPersonality/FamousPersonalityCard";
 import data from "@/data/landingPage/data.json";
+import { generateKey } from "@/utils/helpers";
 
 const FamousPersonality = () => {
   const { personalities, title, slideChangeTime } = data.personalityCardData;
@@ -31,7 +32,7 @@ const FamousPersonality = () => {
       <h2 className="text-center text-xl font-bold md:text-3xl">{title}</h2>
       <div className="hidden w-full items-center justify-between gap-4 lg:flex">
         {personalities.map((person, i) => (
-          <FamousPersonalityCard key={`famous_person_${i}`} person={person} />
+          <FamousPersonalityCard key={generateKey(i)} person={person} />
         ))}
       </div>
       <div
@@ -44,7 +45,7 @@ const FamousPersonality = () => {
         <div className="flex justify-center gap-2 md:space-x-6">
           {personalities.map((_, index) => (
             <button
-              key={index}
+              key={generateKey(index)}
               onClick={() => handleImageChange(index)}
               className={`size-[6px] rounded-full transition-all duration-300 md:size-5 ${
                 index === currentIndex
