@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import TextHighlight from "../TextHighlight";
+
+import TextHighlight from "@/components/TextHighlight";
 
 interface FeatureType {
   title: {
@@ -14,28 +15,26 @@ interface FeatureType {
   icon: string;
   tickIcon: string;
 }
+
 const FeatureCard = ({ data }: { data: FeatureType }) => {
   return (
-    // Feature Card
-    <div className="bg-secondary-light p-3 md:p-5 shadow-custom flex flex-col justify-center gap-3 md:gap-6 relative md:min-h-[200px] min-h-[5.625rem] max-w-[500px] w-full rounded-[10px] md:rounded-[28px] border-[1px] border-dashed">
-      {/* bottom icon */}
+    <div className="relative flex min-h-[5.625rem] w-full max-w-[31.45rem] flex-col justify-center gap-3 rounded-lg border border-dashed bg-secondary-light p-3 shadow-dark md:min-h-52 md:gap-6 md:p-5">
       <Image
         src={data.icon}
         alt={data.title.text}
         width={35}
         height={35}
-        className="h-6 w-6 md:h-[35px] md:w-[35px] absolute top-3 right-3 md:top-auto md:bottom-6 md:right-6"
+        className="absolute right-2 top-3 size-6 md:bottom-6 md:right-6 md:top-auto md:size-[35px]"
       />
-      {/* top section */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2">
         <Image
           src={data.tickIcon}
           alt={data.title.text}
           width={35}
           height={35}
-          className="h-6 w-6 md:h-[35px] md:w-[35px]"
+          className="size-6 md:size-[35px]"
         />
-        <h4 className={`text-sm md:text-2xl tracking- font-bold`}>
+        <h4 className="text-sm font-bold tracking-tight md:text-2xl">
           <TextHighlight
             text={data.title.text}
             highlightText={data.title.highlight}
@@ -43,8 +42,7 @@ const FeatureCard = ({ data }: { data: FeatureType }) => {
           />
         </h4>
       </div>
-      {/* Paragraph */}
-      <p className="text-secondary-800 text-xs md:text-[22px] leading-normal italic font-medium">
+      <p className="text-xs font-medium italic leading-normal tracking-tight text-secondary-800 md:text-[22px]">
         <TextHighlight
           text={data.description.text}
           highlightText={data.description.highlight}

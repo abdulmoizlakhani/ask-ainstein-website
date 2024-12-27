@@ -1,48 +1,45 @@
 import React from "react";
-import FeatureCard from "@/components/WhyStudentLove/FeedbackCard";
+
+import TextHighlight from "@/components/TextHighlight";
+import TopAinsteinBox from "@/components/TopAinsteinBox";
+import FeatureCard from "@/components/WhyStudentLove/FeatureCard";
 import data from "@/data/landingPage/data.json";
-import TopAinsteinBox from "../TopAinsteinBox";
-import TextHighlight from "../TextHighlight";
 
 const WhyStudentLove = () => {
-  const { features, title, image, footerText, subHeading } =
-    data.featureSection;
+  const { featureSection } = data;
+  const { features, title, image, footerText, subHeading } = featureSection;
+
   return (
-    <section className="bg-secondary-light mt-[30rem] p-4 relative flex justify-center items-center h-[800px]">
-      {/* FEATURES (Why students love Ask Ainstein) */}
-      <div className=" top-[0%] px-4  md:top-[-40%] absolute">
-        <div className=" rounded-[0.625rem] md:rounded-[30px] px-3 md:px-10  pb-16 relative   shadow-darkest max-w-9xl flex flex-col pt-[5.625rem] md:pt-[140px] gap-6 md:gap-12 items-center border-dashed border-primary-400 border-[3px] bg-primary-100">
-          {/* TOP COMPONENT */}
+    <section className="relative mt-[21rem] flex h-[53rem] items-center justify-center bg-secondary-light p-4 shadow-dark sm:mt-64 sm:h-[36rem] md:mt-[36rem] md:h-[62rem] lg:h-[50rem] xl:mt-[30rem]">
+      <div className="absolute top-[-27%] px-4 md:top-[-40%]">
+        <div className="relative flex max-w-9xl flex-col items-center gap-6 rounded-[0.625rem] border-[3px] border-dashed border-primary-400 bg-primary-100 px-3 pb-12 pt-[5.625rem] shadow-darkest md:gap-12 md:rounded-[30px] md:px-10 md:pt-[140px]">
           <TopAinsteinBox image={image} />
-          {/* MAIN HEADING */}
-          <div className="flex flex-col items-center gap-5 md:gap-[1.5rem]">
-            <h2 className="text-base md:text-[48px] tracking-tight font-bold text-center">
+          <div className="flex flex-col items-center gap-5 md:gap-6">
+            <h2 className="text-center text-base font-bold tracking-tight md:text-[48px] md:leading-tight">
               <TextHighlight
                 variant="primary"
                 text={title.text}
                 highlightText={title.highlight}
               />
             </h2>
-            {/* SUB HEADING */}
-            <p className="font-2xl font-semibold text-secondary-500">
+            <p className="font-2xl font-semibold tracking-tight text-secondary-600">
               {subHeading}
             </p>
           </div>
-          {/* FEATURES ALL CARDS */}
-          <div className="grid w-ful grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7">
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:gap-7 lg:grid-cols-3">
             {features.map((item, i) => {
-              return <FeatureCard key={item.title.text} data={item} />;
+              return (
+                <FeatureCard key={`${item.title.text}_${i}`} data={item} />
+              );
             })}
           </div>
-          {/* SUB HEADING */}
-          <p className="text-secondary-500 font-2xl text-center md:w-[90%] font-semibold">
+          <p className="font-2xl font-semibold tracking-tight text-secondary-600">
             <TextHighlight
               variant="tertiary"
               highlightText={footerText.highlight}
               text={footerText.text}
               className="text-sm md:text-[1.75rem]"
             />
-            ​
           </p>
         </div>
       </div>

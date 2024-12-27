@@ -21,7 +21,6 @@ export default function LandingPage() {
         reviewer={carouselReview.reviewer}
       />
       <WhyStudentLove />
-
       <ServiceComparisonTable />
       <FamousPersonality />
       <StudyMistakes />
