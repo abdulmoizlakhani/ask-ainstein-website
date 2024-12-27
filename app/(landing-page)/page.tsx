@@ -1,7 +1,7 @@
 import FeebackCard from "@/components/Cards/FeedbackCard";
-import FirstPrinciplesCard from "@/components/Cards/FirstPrincipleCard";
 import FamousPersonality from "@/components/FamousPersonality";
 import HeroSection from "@/components/HeroSection";
+import ServiceComparisonTable from "@/components/ServiceComparisonTable";
 import StudyMistakes from "@/components/StudyMistakes";
 import TopOnePercentCard from "@/components/TopOnePercentCard";
 import landingPageData from "@/data/landingPage/data.json";
@@ -19,7 +19,7 @@ export default function LandingPage() {
         hightlightedText={carouselReview.highlight}
         reviewer={carouselReview.reviewer}
       />
-      <FirstPrinciplesCard />
+      <ServiceComparisonTable />
       <FamousPersonality />
       <StudyMistakes />
       <TopOnePercentCard />

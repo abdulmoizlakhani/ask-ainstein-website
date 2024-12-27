@@ -46,6 +46,9 @@ body {
   .font-2xl {
     @apply md:text-2xl  text-xs;
   }
+  .font-2xl {
+    @apply md:text-2xl text-xs;
+  }
 }
 
 @layer base {

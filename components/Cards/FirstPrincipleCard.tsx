@@ -8,7 +8,7 @@ const FirstPrinciplesCard = () => {
   const data = landingPageData.powerOfFirstPrinciple;
 
   return (
-    <div className="mb-10 flex max-w-[91.12rem] justify-center rounded-[0.625rem] bg-secondary-dark px-4 pb-6 pt-[3.75rem] sm:mx-4 md:rounded-[1.25rem] md:pb-20 md:pt-28 xl:mx-auto">
+    <div className="absolute -bottom-10 mb-10 flex min-h-[34.125rem] w-full max-w-[91.125rem] justify-center rounded-[0.625rem] bg-secondary-dark px-4 pb-6 pt-[3.75rem] sm:mx-4 md:rounded-[1.25rem] md:pb-20 md:pt-28 lg:bottom-[-42rem] xl:mx-auto">
       <div className="relative max-w-[76.125rem] rounded-[0.625rem] border-2 border-yellow-dark bg-yellow-650 px-4 pb-8 pt-[3.75rem] text-secondary-800 md:rounded-[20px] md:border-4 md:px-10 md:pb-16 md:pt-[9.25rem]">
         <Image
           height={180}
