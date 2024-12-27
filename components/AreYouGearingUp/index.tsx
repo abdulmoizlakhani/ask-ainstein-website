@@ -9,7 +9,7 @@ const AreYouGearingUp = () => {
   const { sectionTitle, subPara, cards, bottomText } = data.functionalityData;
 
   return (
-    <section className="bg-secondary-light pb-[10rem] md:pb-[30rem] mb-[6rem] lg:mb-[37.5rem] md:mt-[5rem] pt-[5rem] md:pt-[10rem] gap-[1rem] md:gap-[2rem] flex-col flex items-center px-[1rem] relative">
+    <section className="bg-secondary-light shadow-darker pb-[10rem] md:pb-[30rem] mb-[6rem] lg:mb-[37.5rem] md:mt-[5rem] pt-[5rem] md:pt-[10rem] gap-[1rem] md:gap-[2rem] flex-col flex items-center px-[1rem] relative">
       {/* TOP COMPONENT */}
       <TopAinsteinBox image={sectionTitle.images} />
 
