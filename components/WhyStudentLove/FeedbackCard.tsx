@@ -17,7 +17,7 @@ interface FeatureType {
 const FeatureCard = ({ data }: { data: FeatureType }) => {
   return (
     // Feature Card
-    <div className="bg-secondary-light p-3 md:p-5 shadow-custom flex flex-col justify-center gap-3 md:gap-6 relative md:min-h-[200px] min-h-[5.625rem] max-w-[500px] w-full rounded-[10px] md:rounded-[28px] border-[1px] border-dashed">
+    <div className="bg-secondary-light p-3 md:p-5 shadow-custom flex flex-col justify-center gap-3 md:gap-6 relative md:min-h-[200px] min-h-[5.625rem] max-w-[500px] w-full rounded-[10px] md:rounded-[28px] border border-dashed">
       {/* bottom icon */}
       <Image
         src={data.icon}
