@@ -41,7 +41,6 @@ export default {
           150: "#D5CCE3",
           100: "#AAAAAA",
           50: "#EBEBEB",
-
           bg: "#F7F7F5",
           lighter: "#DDDDDD",
           light: "#FFFFFF",
