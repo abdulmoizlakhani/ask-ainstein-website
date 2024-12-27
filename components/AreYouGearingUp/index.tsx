@@ -1,26 +1,26 @@
 import React from "react";
 import data from "@/data/landingPage/data.json"; // Update the path to your JSON file
-import TopAinsteinBox from "../TopAinsteinBox";
+import TopAinsteinBox from "@/components/TopAinsteinBox";
 import GearingUpCard from "@/components/Cards/GearingUpCard";
-import TextHighlight from "../TextHighlight";
-import Carousel from "../Carousel";
+import TextHighlight from "@/components/TextHighlight";
+import Carousel from "@/components/Carousel";
 
 const AreYouGearingUp = () => {
   const { sectionTitle, subPara, cards, bottomText } = data.functionalityData;
 
   return (
-    <section className="bg-secondary-light md:mb-[37.5rem] mt-0 md:mt-[5rem] box-shadow pt-[10rem] gap-4 md:gap-12 flex-col flex items-center px-4 relative h-[1151px]">
+    <section className="bg-secondary-light pb-[10rem] md:pb-[30rem] mb-[6rem] lg:mb-[37.5rem] md:mt-[5rem] pt-[5rem] md:pt-[10rem] gap-[1rem] md:gap-[2rem] flex-col flex items-center px-[1rem] relative">
       {/* TOP COMPONENT */}
       <TopAinsteinBox image={sectionTitle.images} />
 
       {/* MAIN HEADING */}
-      <h2 className="text-base md:text-[2rem] text-center leading-normal tracking-tight max-w-[933px] font-semibold">
+      <h2 className="text-base md:text-[2rem] text-center leading-normal tracking-tight max-w-[58.3125rem] font-semibold">
         "{sectionTitle.mainHeading}"
         <br />"{sectionTitle.subHeading}"
       </h2>
 
       {/* SUB PARA */}
-      <h4 className="font-semibold  text-secondary-800 text-xs md:text-xl">
+      <h4 className="font-semibold text-secondary-800 text-xs md:text-xl">
         <TextHighlight
           variant="primary"
           text={subPara.text}
@@ -29,14 +29,14 @@ const AreYouGearingUp = () => {
       </h4>
 
       {/* ALL CARDS */}
-      <div className="flex md:flex-row flex-col items-center gap-4 md:gap-8">
+      <div className="flex md:flex-row flex-col items-center gap-[1rem] md:gap-[2rem]">
         {cards.map((item) => {
           return <GearingUpCard item={item} key={item.text} />;
         })}
       </div>
 
       {/* BOTTOM PARA */}
-      <h4 className="text-sm md:text-[28px]  font-bold bg-text-bg px-2 rounded">
+      <h4 className="text-sm md:text-[1.75rem] leading-normal mt-[1rem] mb-[1.5rem] md:my-[2rem] font-bold bg-text-bg px-[0.5rem] rounded">
         <TextHighlight
           variant="tertiary"
           text={bottomText}
@@ -44,7 +44,7 @@ const AreYouGearingUp = () => {
         />
       </h4>
       {/* Carousel Component */}
-      <Carousel />
+      <Carousel className="absolute px-[1rem] bottom-[-4rem] lg:bottom-[-32rem]" />
     </section>
   );
 };
