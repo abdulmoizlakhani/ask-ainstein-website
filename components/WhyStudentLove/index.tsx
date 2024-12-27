@@ -10,7 +10,7 @@ const WhyStudentLove = () => {
   const { features, title, image, footerText, subHeading } = featureSection;
 
   return (
-    <section className="relative mt-[21rem] flex h-[53rem] items-center justify-center bg-secondary-light p-4 shadow-dark sm:mt-64 sm:h-[36rem] md:mt-[36rem] md:h-[62rem] lg:h-[50rem] xl:mt-[30rem]">
+    <section className="relative mt-[21rem] flex h-[53rem] items-center justify-center bg-secondary-light p-4 shadow-dark sm:mt-64 sm:h-[36rem] md:mt-[36rem] md:h-[62rem] lg:h-[50rem] xl:mt-[30rem] xl:h-[48rem]">
       <div className="absolute top-[-27%] px-4 md:top-[-40%]">
         <div className="relative flex max-w-9xl flex-col items-center gap-6 rounded-[0.625rem] border-[3px] border-dashed border-primary-400 bg-primary-100 px-3 pb-12 pt-[5.625rem] shadow-darkest md:gap-12 md:rounded-[30px] md:px-10 md:pt-[140px]">
           <TopAinsteinBox image={image} />
