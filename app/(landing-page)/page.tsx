@@ -1,6 +1,5 @@
 import AreYouGearingUp from "@/components/AreYouGearingUp";
 import FeebackCard from "@/components/Cards/FeedbackCard";
-import Carousel from "@/components/Carousel";
 import FamousPersonality from "@/components/FamousPersonality";
 import HeroSection from "@/components/HeroSection";
 import ServiceComparisonTable from "@/components/ServiceComparisonTable";
