@@ -8,7 +8,7 @@ const StartLearningButton = () => {
       <Button variant="large" shadow={true}>
         Start Learning Today
       </Button>
-      <p className="text-end lg:text-base text-[0.625rem] text-secondary-100">
+      <p className="text-end text-[0.625rem] text-secondary-100 lg:text-base">
         Free for limited time
       </p>
     </div>

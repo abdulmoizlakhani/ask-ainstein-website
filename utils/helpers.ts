@@ -3,9 +3,11 @@ export const generateKey = (text: string | number): string => {
     return `id:${text}`;
   }
 
+  console.log("text", text);
+
   const trimmedText = text.trim();
   if (trimmedText === "") {
-    throw new Error("Key cannot be an empty string");
+    return `id:${Date.now()}`;
   }
 
   const sanitizedText = trimmedText

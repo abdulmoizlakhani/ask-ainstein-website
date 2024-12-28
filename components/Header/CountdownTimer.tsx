@@ -25,7 +25,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = (
 
   return (
     <div className="flex-center gap-3">
-      {counterData.map((item, i) => (
+      {counterData.map((item) => (
         <div
           key={`timer-unit-${generateKey(item.title)}`}
           className="flex-center flex-col"

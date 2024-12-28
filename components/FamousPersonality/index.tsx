@@ -32,7 +32,10 @@ const FamousPersonality = () => {
       <h2 className="text-center text-xl font-bold md:text-3xl">{title}</h2>
       <div className="hidden w-full items-center justify-between gap-4 lg:flex">
         {personalities.map((person, i) => (
-          <FamousPersonalityCard key={generateKey(i)} person={person} />
+          <FamousPersonalityCard
+            key={generateKey(person.name + i)}
+            person={person}
+          />
         ))}
       </div>
       <div

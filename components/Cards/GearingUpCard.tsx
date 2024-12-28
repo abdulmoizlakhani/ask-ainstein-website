@@ -1,4 +1,3 @@
-import { generateKey } from "@/utils/helpers";
 import Image from "next/image";
 import React from "react";
 
@@ -8,18 +7,15 @@ const GearingUpCard = ({
   item: { text: string; image: { alt: string; src: string } };
 }) => {
   return (
-    <div
-      key={generateKey(item.text)}
-      className="flex p-[1.25rem] md:py-[1.5rem] shadow-dark border-dashed border-[#EDEDED] border-[0.125rem] flex-col gap-[1.25rem] md:gap-[1.5rem] rounded-[0.75rem] md:rounded-[1.25rem] items-center text-center h-[9.5rem] w-full md:h-[14.0625rem] md:max-w-[33.4375rem] bg-yellow-light"
-    >
+    <div className="flex-center min-h-[7.625rem] w-full max-w-[18.5rem] flex-col rounded-xl border-[0.125rem] border-dashed border-silver-light bg-yellow-light p-4 text-center shadow-dark md:max-w-[28.5rem] md:rounded-[1.25rem] md:p-8 lg:min-h-56 lg:max-w-[33.5rem]">
       <Image
         alt={item.image.alt}
         height={3}
         width={3}
         src={item.image.src}
-        className="md:size-[3rem] size-[2rem]"
+        className="size-8 md:size-12"
       />
-      <p className="text-xl md:text-[2rem] leading-normal font-semibold">
+      <p className="mt-6 text-xl font-semibold leading-normal md:text-[2rem]">
         {item.text}
       </p>
     </div>

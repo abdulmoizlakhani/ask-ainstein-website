@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className="overflow-hidden bg-secondary-dark px-4 md:px-8">
       <div className="mx-auto flex max-w-8xl flex-col">
         <div className="grid grid-cols-2 gap-y-6 py-14 md:grid-cols-4">
-          {footerData.links.map((section, sectionIndex) => (
+          {footerData.links.map((section) => (
             <div
               className={`${dataPlacements[section.placement]} ${placementoOrder[section.order]}`}
               key={`footer-menu-${generateKey(section.title)}`}
@@ -34,7 +34,7 @@ const Footer = () => {
                 {section.title}
               </h3>
               <ul className="space-y-3 text-xs md:text-xl">
-                {section.links.map((link, linkIndex) => (
+                {section.links.map((link) => (
                   <li key={`footer-menu-links-${generateKey(link.label)}`}>
                     <Link
                       href={link.href}

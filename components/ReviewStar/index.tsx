@@ -1,6 +1,7 @@
-import { generateKey } from "@/utils/helpers";
 import Image from "next/image";
 import React from "react";
+
+import { generateKey } from "@/utils/helpers";
 
 const ReviewStar = ({ rating }: { rating: number }) => {
   return (

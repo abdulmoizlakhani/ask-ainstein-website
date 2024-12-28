@@ -29,14 +29,14 @@ const Carousel = ({ className }: { className?: string }) => {
 
   return (
     <div
-      className={`flex flex-col mx-auto items-center gap-6 md:gap-12 ${className}`}
+      className={`mx-auto flex flex-col items-center gap-6 md:gap-12 ${className}`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <Image
         src={images[currentIndex].src}
         alt={images[currentIndex].alt}
-        className=" xl:h-[54rem] xl:max-w-8xl h-[11.375rem] w-[20.5rem] md:h-[25rem] md:w-full  rounded-[1rem]  lg:rounded-[2rem] border-4 md:border-[1rem] border-primary-light drop-shadow-2xl transition-all duration-700 ease-in-out  "
+        className="w-full rounded-2xl border-4 border-primary-light drop-shadow-2xl md:border-[1rem] lg:rounded-[2rem]"
         height={865}
         width={1520}
       />
@@ -46,7 +46,7 @@ const Carousel = ({ className }: { className?: string }) => {
           <button
             key={generateKey(index)}
             onClick={() => handleImageChange(index)}
-            className={`size-[0.375rem] md:size-5 rounded-full transition-all duration-300 ${
+            className={`size-1.5 rounded-full transition-all duration-300 md:size-5 ${
               index === currentIndex
                 ? "scale-150 bg-primary-300"
                 : "bg-secondary-150"
