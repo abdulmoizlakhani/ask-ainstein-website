@@ -5,6 +5,7 @@ import React from "react";
 
 import Button from "@/components/Button";
 import landingPageData from "@/data/landingPage/data.json";
+import { generateKey } from "@/utils/helpers";
 
 interface NavigationMenuFlyoutProps {
   open: boolean;
@@ -51,7 +52,7 @@ const NavigationMenuFlyout = (props: NavigationMenuFlyoutProps) => {
             <div className="flex flex-col gap-8">
               {links.map((link) => (
                 <Link
-                  key={link.href}
+                  key={generateKey(link.href)}
                   className={`text-xl transition-colors duration-200 ${
                     pathname === link.href
                       ? "font-semibold text-orange underline decoration-orange underline-offset-8"

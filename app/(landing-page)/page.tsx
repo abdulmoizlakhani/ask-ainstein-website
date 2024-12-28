@@ -1,3 +1,4 @@
+import AreYouGearingUp from "@/components/AreYouGearingUp";
 import FeebackCard from "@/components/Cards/FeedbackCard";
 import FamousPersonality from "@/components/FamousPersonality";
 import HeroSection from "@/components/HeroSection";
@@ -14,6 +15,7 @@ export default function LandingPage() {
   return (
     <>
       <HeroSection />
+      <AreYouGearingUp />
       <FeebackCard
         rating={carouselReview.rating}
         reviewText={carouselReview.reviewText}

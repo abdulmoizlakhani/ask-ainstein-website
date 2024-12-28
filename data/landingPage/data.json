@@ -67,19 +67,31 @@
   },
   "functionalityData": {
     "sectionTitle": {
-      "images": "/assets/functionalitySection/ainstien.svg",
+      "images": {
+        "src": "/assets/ainstein-hand-raised.svg",
+        "alt": "Ainstein hand raised"
+      },
       "mainHeading": "Are you gearing up for your school or board exams?",
       "subHeading": "Need personalized attention that you are not finding outside?"
     },
-    "subPara": "With Ask Ainstein, you can unlock access to",
+    "subPara": {
+      "text": "With Ask Ainstein, you can unlock access to:​",
+      "highlight": "Ask Ainstein"
+    },
     "cards": [
       {
         "text": "Tons of adaptive practice questions",
-        "image": "practice"
+        "image": {
+          "src": "/assets/icons/finance.svg",
+          "alt": "Finance"
+        }
       },
       {
         "text": "Instant AI-powered help",
-        "image": "ai"
+        "image": {
+          "src": "/assets/icons/ai-icon.svg",
+          "alt": "AI"
+        }
       }
     ],
     "bottomText": "Don't just memorize! Get the guidance you need to excel in exams and beyond."
@@ -88,7 +100,7 @@
     "sectionTitle": {
       "mainHeading": "What makes 'Ainstein' unique vs ChatGPT",
       "images": {
-        "src": "/assets/ainstein-hand-raised.svg",
+        "src": "/assets/ainstein-search.svg",
         "alt": "Ainstein hand raised"
       }
     },

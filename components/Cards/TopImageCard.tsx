@@ -8,7 +8,7 @@ const TopImageCard = ({ image }: { image: { src: string; alt: string } }) => {
       alt={image.alt}
       width={200}
       height={200}
-      className="md:h-[200px] w-[100px] h-[100px] md:w-[200px] absolute top-[-50px] md:top-[-100px] bg-accent-brown flex items-center justify-center rounded-[10px]"
+      className="absolute top-[-50px] flex size-[100px] items-center justify-center rounded-[10px] md:top-[-100px] md:size-[200px]"
     />
   );
 };

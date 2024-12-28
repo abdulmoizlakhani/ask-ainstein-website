@@ -4,6 +4,7 @@ import TextHighlight from "@/components/TextHighlight";
 import TopAinsteinBox from "@/components/TopAinsteinBox";
 import FeatureCard from "@/components/WhyStudentLove/FeatureCard";
 import data from "@/data/landingPage/data.json";
+import { generateKey } from "@/utils/helpers";
 
 const WhyStudentLove = () => {
   const { featureSection } = data;
@@ -27,9 +28,9 @@ const WhyStudentLove = () => {
             </p>
           </div>
           <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:gap-7 lg:grid-cols-3">
-            {features.map((item, i) => {
+            {features.map((item) => {
               return (
-                <FeatureCard key={`${item.title.text}_${i}`} data={item} />
+                <FeatureCard key={generateKey(item.title.text)} data={item} />
               );
             })}
           </div>

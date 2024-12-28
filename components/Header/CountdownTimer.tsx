@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 
 import landingPageData from "@/data/landingPage/data.json";
 import useCountdown from "@/hooks/useCountdown";
+import { generateKey } from "@/utils/helpers";
 
 interface CountdownTimerProps {
   handleCounterEnded: (status: boolean) => void;
@@ -24,8 +25,11 @@ const CountdownTimer: React.FC<CountdownTimerProps> = (
 
   return (
     <div className="flex-center gap-3">
-      {counterData.map((item, i) => (
-        <div key={`timer-unit-${i}`} className="flex-center flex-col">
+      {counterData.map((item) => (
+        <div
+          key={`timer-unit-${generateKey(item.title)}`}
+          className="flex-center flex-col"
+        >
           <div className="flex-center relative">
             <Image
               src="/assets/icons/timer-bg.svg"

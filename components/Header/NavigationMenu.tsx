@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import Button from "@/components/Button";
 import NavigationMenuFlyout from "@/components/Header/NavigationMenuFlyout";
 import landingPageData from "@/data/landingPage/data.json";
+import { generateKey } from "@/utils/helpers";
 
 const NavigationMenu = () => {
   const pathname = usePathname();
@@ -20,7 +21,7 @@ const NavigationMenu = () => {
       <div className="hidden items-center justify-center gap-8 lg:flex">
         {links.map((link) => (
           <Link
-            key={link.href}
+            key={generateKey(link.href)}
             className={`text-xl ${
               pathname === link.href
                 ? "font-semibold text-orange underline decoration-orange underline-offset-8"
