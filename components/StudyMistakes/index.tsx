@@ -85,7 +85,12 @@ const StudyMistakes = () => {
             ))}
           </div>
 
-          <p className="font-2xl mt-7 font-semibold md:mt-12">
+          <p
+            style={{
+              lineHeight: "1.5",
+            }}
+            className="font-2xl mt-7 font-semibold md:mt-12"
+          >
             <TextHighlight
               text={footer.closing.split(" - ")[0]}
               highlightText="Ask Einstein"

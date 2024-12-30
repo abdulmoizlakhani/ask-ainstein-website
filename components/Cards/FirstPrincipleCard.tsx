@@ -68,11 +68,16 @@ const FirstPrinciplesCard = () => {
             </p>
           </div>
 
-          <p className="font-2xl text-secondary-800">
+          <p
+            style={{
+              lineHeight: "1.5",
+            }}
+            className="font-2xl text-secondary-800"
+          >
             <TextHighlight
               variant="secondary"
-              highlightText="tackle any challenge, innovate fearlessly, and achieve lasting success."
-              text={data.conclusion}
+              highlightText={data.conclusion.highlight}
+              text={data.conclusion.text}
             />
           </p>
         </div>

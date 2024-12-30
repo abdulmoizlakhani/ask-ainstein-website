@@ -45,12 +45,12 @@ const FamousPersonality = () => {
       >
         <FamousPersonalityCard person={personalities[currentIndex]} />
 
-        <div className="flex justify-center gap-2 md:space-x-6">
+        <div className="flex justify-center gap-2 md:gap-3">
           {personalities.map((_, index) => (
             <button
               key={generateKey(index)}
               onClick={() => handleImageChange(index)}
-              className={`size-[6px] rounded-full transition-all duration-300 md:size-5 ${
+              className={`size-1.5 rounded-full transition-all duration-300 md:size-[0.815rem] ${
                 index === currentIndex
                   ? "scale-150 bg-primary-300"
                   : "bg-secondary-150"
