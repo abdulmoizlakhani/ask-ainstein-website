@@ -3,8 +3,6 @@ export const generateKey = (text: string | number): string => {
     return `id:${text}`;
   }
 
-  console.log("text", text);
-
   const trimmedText = text.trim();
   if (trimmedText === "") {
     return `id:${Date.now()}`;

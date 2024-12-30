@@ -7,7 +7,10 @@ const GearingUpCard = ({
   item: { text: string; image: { alt: string; src: string } };
 }) => {
   return (
-    <div className="flex-center min-h-[7.625rem] w-full max-w-[18.5rem] flex-col rounded-xl border-[0.125rem] border-dashed border-silver-light bg-yellow-light p-4 text-center shadow-dark md:max-w-[28.5rem] md:rounded-[1.25rem] md:p-8 lg:min-h-56 lg:max-w-[33.5rem]">
+    <div
+      className="flex-center h-[9.5rem] w-full max-w-[18.5rem] flex-col rounded-xl border-[0.125rem] border-dashed border-silver-light bg-yellow-light p-4 text-center shadow-dark md:h-52 md:max-w-[28.5rem] md:rounded-[1.25rem] md:p-8 lg:h-56 
+    lg:max-w-[33.5rem]"
+    >
       <Image
         alt={item.image.alt}
         height={3}
