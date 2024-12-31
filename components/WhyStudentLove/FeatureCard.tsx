@@ -34,7 +34,7 @@ const FeatureCard = ({ data }: { data: FeatureType }) => {
           height={35}
           className="size-6 md:size-[35px]"
         />
-        <h4 className="text-sm font-bold tracking-tight md:text-2xl">
+        <h4 className="text-sm font-bold !leading-normal tracking-tight md:text-2xl">
           <TextHighlight
             text={data.title.text}
             highlightText={data.title.highlight}
@@ -42,7 +42,7 @@ const FeatureCard = ({ data }: { data: FeatureType }) => {
           />
         </h4>
       </div>
-      <p className="text-xs font-medium italic leading-normal tracking-tight text-secondary-800 md:text-[22px]">
+      <p className="text-xs font-medium italic !leading-normal tracking-tight text-secondary-800 md:text-[22px]">
         <TextHighlight
           text={data.description.text}
           highlightText={data.description.highlight}

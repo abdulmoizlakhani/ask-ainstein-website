@@ -41,7 +41,7 @@ const Carousel = ({ className }: { className?: string }) => {
         width={1520}
       />
 
-      <div className="flex justify-center items-center gap-2 md:gap-3">
+      <div className="flex items-center justify-center gap-2 md:gap-3">
         {images.map((_, index) => (
           <button
             key={generateKey(index)}

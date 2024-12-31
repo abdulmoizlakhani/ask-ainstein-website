@@ -20,7 +20,7 @@ const StudyMistakes = () => {
 
       <div className="mx-auto max-w-6xl px-4">
         <div className=" font-2xl flex flex-col items-center gap-4 font-semibold md:gap-10">
-          <h1 className="mb-6 text-center text-xl font-bold text-secondary-dark md:text-5xl">
+          <h1 className="mb-6 text-center text-xl font-bold !leading-normal text-secondary-dark md:text-5xl">
             <TextHighlight
               text={header.title}
               highlightText={header.redSpan}
@@ -28,7 +28,10 @@ const StudyMistakes = () => {
             />
           </h1>
           {header.introduction.text.map((paragraph, index) => (
-            <p key={`study_mistakes_${generateKey(index)}`}>
+            <p
+              className="!leading-normal"
+              key={`study_mistakes_${generateKey(index)}`}
+            >
               <TextHighlight
                 text={paragraph}
                 highlightText={header.introduction.highlight}
@@ -43,7 +46,7 @@ const StudyMistakes = () => {
         <hr className="my-4 border border-silver-dark md:my-12" />
 
         <div className="mt-2">
-          <h2 className="mb-6 text-center text-base font-bold text-black md:mb-12 md:text-[2rem]">
+          <h2 className="mb-6 text-center text-base font-bold !leading-normal text-black md:mb-12 md:text-[2rem]">
             <TextHighlight
               text="Here is what most students do wrong.."
               highlightText="do wrong.."
@@ -85,7 +88,7 @@ const StudyMistakes = () => {
             ))}
           </div>
 
-          <p className="font-2xl mt-7 font-semibold md:mt-12 !leading-normal">
+          <p className="font-2xl mt-7 font-semibold !leading-normal md:mt-12">
             <TextHighlight
               text={footer.closing.split(" - ")[0]}
               highlightText="Ask Einstein"

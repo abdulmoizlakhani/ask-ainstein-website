@@ -60,7 +60,7 @@ const About = () => {
 
         <div className="text-sm font-bold lg:text-xl">
           <h3>{secondPara.title}</h3>
-          <p className="mt-2 text-secondary-200">
+          <p className="mt-2 !leading-normal text-secondary-200">
             <TextHighlight
               variant="secondary"
               className="text-secondary-dark"
@@ -70,7 +70,7 @@ const About = () => {
           </p>
         </div>
 
-        <p className="text-sm font-bold text-secondary-200 lg:text-xl">
+        <p className="text-sm font-bold !leading-normal text-secondary-200 lg:text-xl">
           <TextHighlight
             text={thirdPara.content.split(" - ")[0]}
             highlightText="Ask Ainstein"
@@ -78,7 +78,7 @@ const About = () => {
           />
           {" - "}
           <TextHighlight
-            className="text-secondary-dark"
+            className="!leading-normal text-secondary-dark"
             text={thirdPara.content.split(" - ")[1]}
             highlightText={thirdPara.highlight}
             variant="tertiary"

@@ -20,7 +20,7 @@ const AreYouGearingUp = () => {
           &quot;{sectionTitle.subHeading}&quot;
         </h2>
 
-        <h4 className="mt-5 text-center text-xs font-semibold text-secondary-800 md:mt-8 md:text-xl">
+        <h4 className="mt-5 text-center text-xs font-semibold !leading-normal text-secondary-800 md:mt-8 md:text-xl">
           <TextHighlight
             variant="primary"
             text={subPara.text}
@@ -34,7 +34,7 @@ const AreYouGearingUp = () => {
           })}
         </div>
 
-        <h4 className="mx-auto my-6 w-[82%] rounded px-2 text-sm font-bold leading-normal md:my-10 md:w-[90%] md:text-[1.75rem] lg:text-center">
+        <h4 className="mx-auto my-6 w-[82%] rounded px-2 text-sm font-bold !leading-normal md:my-10 md:w-[90%] md:text-[1.75rem] lg:text-center">
           <TextHighlight
             variant="primary200"
             text={bottomText}

@@ -35,7 +35,7 @@ const FirstPrinciplesCard = () => {
               alt="red tick icon"
               src={data.hardTruth.icon}
             />
-            <p className="font-2xl font-bold">
+            <p className="font-2xl font-bold !leading-normal">
               <TextHighlight
                 highlightText={data.hardTruth.highlight}
                 variant="danger"
@@ -58,7 +58,7 @@ const FirstPrinciplesCard = () => {
               alt="green tick icon"
               src={data.images.greenTick}
             />
-            <p className="font-2xl">
+            <p className="font-2xl !leading-normal">
               <TextHighlight
                 highlightText="It's about how you think"
                 variant="tertiary"
@@ -68,7 +68,7 @@ const FirstPrinciplesCard = () => {
             </p>
           </div>
 
-          <p className="font-2xl text-secondary-800 !leading-normal">
+          <p className="font-2xl !leading-normal text-secondary-800">
             <TextHighlight
               variant="secondary"
               highlightText={data.conclusion.highlight}
