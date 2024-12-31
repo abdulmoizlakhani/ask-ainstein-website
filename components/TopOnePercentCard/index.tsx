@@ -21,7 +21,7 @@ const TopOnePercentCard = () => {
           className="whitespace-nowrap text-2xl md:text-4xl lg:text-5xl"
         />
       </h2>
-      <h5 className="mb-2 text-xs font-semibold leading-normal text-secondary-800 md:text-[1.625rem] lg:leading-10">
+      <h5 className="mb-2 text-xs font-semibold !leading-normal text-secondary-800 md:text-[1.625rem] lg:leading-10">
         <TextHighlight
           text={topOnePercentCardData.subHeading.text}
           highlightText={topOnePercentCardData.subHeading.highlight}

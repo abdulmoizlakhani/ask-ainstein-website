@@ -16,7 +16,7 @@ const WhyStudentLove = () => {
         <div className="relative flex max-w-9xl flex-col items-center gap-6 rounded-[0.625rem] border-[3px] border-dashed border-primary-400 bg-primary-100 px-3 pb-12 pt-[5.625rem] shadow-darkest md:gap-12 md:rounded-[30px] md:px-10 md:pt-[140px]">
           <TopAinsteinBox image={image} />
           <div className="flex flex-col items-center gap-5 md:gap-6">
-            <h2 className="text-center text-base font-bold tracking-tight md:text-[48px] md:leading-tight">
+            <h2 className="text-center text-base font-bold !leading-normal tracking-tight md:text-[48px] md:leading-tight">
               <TextHighlight
                 variant="primary"
                 text={title.text}
@@ -34,7 +34,7 @@ const WhyStudentLove = () => {
               );
             })}
           </div>
-          <p className="font-2xl font-semibold tracking-tight text-secondary-600">
+          <p className="font-2xl font-semibold !leading-normal tracking-tight text-secondary-600">
             <TextHighlight
               variant="tertiary"
               highlightText={footerText.highlight}

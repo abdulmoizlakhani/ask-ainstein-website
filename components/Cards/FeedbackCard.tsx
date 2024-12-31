@@ -27,7 +27,11 @@ const FeebackCard: React.FC<FeebackCardProps> = ({
   return (
     <div className="relative mx-4 my-8 flex max-w-[55.5rem] flex-col gap-4 rounded-[0.625rem] border-2 border-yellow-900 bg-yellow-700 px-4 py-5 md:gap-8 md:rounded-[1.25rem] md:p-12 md:pb-16 lg:mx-auto">
       <ReviewStar rating={rating} />
-      <p className={" text-xs font-medium text-secondary-800 md:text-xl"}>
+      <p
+        className={
+          " text-xs font-medium !leading-normal text-secondary-800 md:text-xl"
+        }
+      >
         <TextHighlight
           variant="DEFUALT"
           text={`"${reviewText}"`}
